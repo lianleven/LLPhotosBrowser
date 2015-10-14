@@ -1,5 +1,7 @@
 # LYPhotoBrowser
+# 一行代码为你的应用添加简单的照片浏览器，支持本地和远程
 使用很简单的照片浏览器
+
 效果如下
 ![](https://github.com/lianleven/LYPhotoBrowser/raw/master/LYBrowser.gif) 
 # 使用
