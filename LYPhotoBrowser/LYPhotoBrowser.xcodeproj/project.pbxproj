@@ -182,14 +182,10 @@
 		5CDBCD8F1BCCDAD600519862 /* LYPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				5CDE33701BCE928800D8E4ED /* photo1.jpg */,
-				5CDE33721BCE929700D8E4ED /* photo8.jpg */,
-				5CDE33761BCE930600D8E4ED /* photo5.jpg */,
-				5CDE33741BCE92D700D8E4ED /* photo6.jpg */,
 				5CDBCE651BCE64AA00519862 /* SDWebImage */,
-				5CDBCDC31BCCDAF600519862 /* PhotoBrowser */,
 				5CDBCD931BCCDAD600519862 /* AppDelegate.h */,
 				5CDBCD941BCCDAD600519862 /* AppDelegate.m */,
+				5CDBCDC31BCCDAF600519862 /* PhotoBrowser */,
 				5CDBCD961BCCDAD600519862 /* LYPhotoBrowserDemo.h */,
 				5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */,
 				5CDBCD991BCCDAD600519862 /* Main.storyboard */,
@@ -204,6 +200,10 @@
 		5CDBCD901BCCDAD600519862 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5CDE33701BCE928800D8E4ED /* photo1.jpg */,
+				5CDE33721BCE929700D8E4ED /* photo8.jpg */,
+				5CDE33761BCE930600D8E4ED /* photo5.jpg */,
+				5CDE33741BCE92D700D8E4ED /* photo6.jpg */,
 				5CDBCD911BCCDAD600519862 /* main.m */,
 			);
 			name = "Supporting Files";

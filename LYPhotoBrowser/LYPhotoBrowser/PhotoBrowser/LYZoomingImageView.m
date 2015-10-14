@@ -14,6 +14,8 @@
 
 @property (assign, nonatomic) CGRect originalZoomScaleFrame;/**< 缩放前的frame */
 @property (nonatomic, strong) UIImageView *zoomImageView;/**< 缩放的imageView */
+@property (nonatomic, strong) UIImage *image;/**< 缩放imageView的image对象 */
+@property (nonatomic, strong) UIImageView *imageView;
 
 @property (strong, nonatomic) MCPercentageDoughnutView *percentageDoughnut;/**< 进度View */
 
