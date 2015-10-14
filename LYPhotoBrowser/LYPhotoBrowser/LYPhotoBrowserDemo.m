@@ -6,16 +6,16 @@
 //  Copyright © 2015年 lichangwen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LYPhotoBrowserDemo.h"
 #import "LYPhotoBrowser.h"
-@interface ViewController ()
+@interface LYPhotoBrowserDemo ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageViewArray;
 @property (nonatomic, strong) NSMutableArray *imageArray;/**< <#属性描述#> */
 
 @end
 
-@implementation ViewController
+@implementation LYPhotoBrowserDemo
 
 - (void)viewDidLoad {
     [super viewDidLoad];

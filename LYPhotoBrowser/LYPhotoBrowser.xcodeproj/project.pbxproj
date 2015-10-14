@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5CDBCD921BCCDAD600519862 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD911BCCDAD600519862 /* main.m */; };
 		5CDBCD951BCCDAD600519862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD941BCCDAD600519862 /* AppDelegate.m */; };
-		5CDBCD981BCCDAD600519862 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD971BCCDAD600519862 /* ViewController.m */; };
+		5CDBCD981BCCDAD600519862 /* LYPhotoBrowserDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */; };
 		5CDBCD9B1BCCDAD600519862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD991BCCDAD600519862 /* Main.storyboard */; };
 		5CDBCD9D1BCCDAD600519862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */; };
 		5CDBCDA01BCCDAD600519862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD9E1BCCDAD600519862 /* LaunchScreen.storyboard */; };
@@ -67,8 +67,8 @@
 		5CDBCD911BCCDAD600519862 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CDBCD931BCCDAD600519862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CDBCD941BCCDAD600519862 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CDBCD961BCCDAD600519862 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5CDBCD971BCCDAD600519862 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CDBCD961BCCDAD600519862 /* LYPhotoBrowserDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPhotoBrowserDemo.h; sourceTree = "<group>"; };
+		5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPhotoBrowserDemo.m; sourceTree = "<group>"; };
 		5CDBCD9A1BCCDAD600519862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CDBCD9F1BCCDAD600519862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 				5CDBCDC31BCCDAF600519862 /* PhotoBrowser */,
 				5CDBCD931BCCDAD600519862 /* AppDelegate.h */,
 				5CDBCD941BCCDAD600519862 /* AppDelegate.m */,
-				5CDBCD961BCCDAD600519862 /* ViewController.h */,
-				5CDBCD971BCCDAD600519862 /* ViewController.m */,
+				5CDBCD961BCCDAD600519862 /* LYPhotoBrowserDemo.h */,
+				5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */,
 				5CDBCD991BCCDAD600519862 /* Main.storyboard */,
 				5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */,
 				5CDBCD9E1BCCDAD600519862 /* LaunchScreen.storyboard */,
@@ -442,7 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDBCE911BCE64AA00519862 /* UIImage+GIF.m in Sources */,
-				5CDBCD981BCCDAD600519862 /* ViewController.m in Sources */,
+				5CDBCD981BCCDAD600519862 /* LYPhotoBrowserDemo.m in Sources */,
 				5CDBCE8F1BCE64AA00519862 /* SDWebImagePrefetcher.m in Sources */,
 				5CDBCD951BCCDAD600519862 /* AppDelegate.m in Sources */,
 				5CDBCDC61BCCDB1700519862 /* LYPhotoBrowser.m in Sources */,
