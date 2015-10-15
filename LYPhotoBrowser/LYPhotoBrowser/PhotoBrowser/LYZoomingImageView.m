@@ -145,7 +145,15 @@
 - (void)hideProgressView{
     self.percentageDoughnut.hidden = YES;
 }
-
+- (UIImage *)imageDidEndDownloadForKey:(NSString *)key{
+    UIImage *image = nil;
+    image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:key];
+    if (!image) {
+       image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:key];
+    }
+   
+    return image;
+}
 #pragma mark - setter/getter
 - (void)setPhoto:(LYPhoto *)photo{
     _photo = photo;
@@ -162,10 +170,14 @@
         self.image = _photo.image;
     }
     [self setFrameToZoomImageView:convertRect];
+    UIImage *cacheImage = [self imageDidEndDownloadForKey:_photo.photoUrl];
+    if (cacheImage) {
+        self.image = cacheImage;
+        return;
+    }
     
     
-    
-    [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.photoUrl] placeholderImage:imageView.image options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:_photo.photoUrl] placeholderImage:imageView.image options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         NSString *progress = [NSString stringWithFormat:@"%.2f",receivedSize * 1.0/expectedSize];
         [self performSelectorOnMainThread:@selector(showProgressView:) withObject:progress waitUntilDone:NO];
         //self.percentageDoughnut.percentage = receivedSize/expectedSize;
@@ -176,12 +188,13 @@
             self.image = image;
             self.isScroll = YES;
         }
-        else
+        else{
             //TODO: 下载失败，view提示
             self.image = imageView.image;
             if (!imageView) {
                 self.image = _photo.image;
             }
+        }
         
     
         
