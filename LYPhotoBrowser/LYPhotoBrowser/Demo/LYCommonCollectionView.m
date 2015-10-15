@@ -71,6 +71,10 @@ static const CGFloat lYItemMargin = 10;
     return CGSizeMake(kItem_width_height, kItem_width_height);
 }
 
+/**
+ *  数据处理应该用代理或者block传给controller
+ *
+ */
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //LYCommonCollectionCell *cell = (LYCommonCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
@@ -102,16 +106,6 @@ static const CGFloat lYItemMargin = 10;
     
     
     
-}
-- (NSArray *)indexPathsForVisibleItems:(NSArray *)visibleCells {
-    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:visibleCells.count];
-    
-    [visibleCells enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        LYCommonCollectionCell *cell = (LYCommonCollectionCell *)obj;
-        [indexPaths addObject:@([[self indexPathForCell:cell] row])];
-    }];
-    
-    return indexPaths;
 }
 #pragma mark - getter/setter
 - (void)setCollectionDataSource:(NSArray *)collectionDataSource{
