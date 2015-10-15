@@ -41,8 +41,15 @@
     if (photos.count > 1) {
         self.pageController.numberOfPages = photos.count;
         self.countLabel.text = [NSString stringWithFormat:@"%@/%@",@(currentPhotoIndex + 1),@(photos.count)];
+    }else{
+        self.browserScrollView.scrollEnabled = NO;
     }
     switch (countType) {
+        case LYPhotoBrowserCountTypeNone: {
+            self.countLabel.hidden = YES;
+            self.pageController.hidden = YES;
+            break;
+        }
         case LYPhotoBrowserCountTypePageControl: {
             self.countLabel.hidden = YES;
             break;

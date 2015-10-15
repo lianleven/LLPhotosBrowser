@@ -10,8 +10,9 @@
 #import "LYPhoto.h"
 
 typedef NS_ENUM(NSUInteger, LYPhotoBrowserCountType){
-    LYPhotoBrowserCountTypePageControl = 0,/**< 显示PageControl */
-    LYPhotoBrowserCountTypeCountLabel = 1,/**< 显示计数Label */
+    LYPhotoBrowserCountTypeNone        = 0,
+    LYPhotoBrowserCountTypePageControl = 1,/**< 显示PageControl */
+    LYPhotoBrowserCountTypeCountLabel  = 2,/**< 显示计数Label */
 };
 @interface LYPhotoBrowser : UIView
 
