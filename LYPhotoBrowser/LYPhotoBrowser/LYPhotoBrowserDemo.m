@@ -40,7 +40,7 @@
     
     for (UIImageView *imageView in self.imageViewArray) {
         NSInteger index = [self.imageViewArray indexOfObject:imageView];
-        LYPhoto *photo = [LYPhoto photoWithImageView:imageView placeHold:imageView.image photoUrl:urlArray[index]];
+        LYPhoto *photo = [LYPhoto photoWithImageView:nil placeHold:imageView.image photoUrl:nil];
         [photoArrayM addObject:photo];
     }
     UIView *view = gestureRecognizer.view;

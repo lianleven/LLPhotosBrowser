@@ -145,6 +145,7 @@
 - (void)hideProgressView{
     self.percentageDoughnut.hidden = YES;
 }
+
 #pragma mark - setter/getter
 - (void)setPhoto:(LYPhoto *)photo{
     _photo = photo;
@@ -154,12 +155,15 @@
     _imageView = imageView;
     UIView *superView = self.superview.superview.superview;
     CGRect convertRect = [[imageView superview] convertRect:imageView.frame toView:self.superview.superview.superview];
+    self.image = imageView.image;
     if (!imageView) {
         CGRect frame = CGRectMake((CGRectGetWidth(superView.bounds) - 100)/2, (CGRectGetHeight(superView.bounds) - 100)/2, 100, 100);
         convertRect = [superView convertRect:frame toView:superView];
+        self.image = _photo.image;
     }
     [self setFrameToZoomImageView:convertRect];
-    self.image = imageView.image;
+    
+    
     
     [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:self.photo.photoUrl] placeholderImage:imageView.image options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         NSString *progress = [NSString stringWithFormat:@"%.2f",receivedSize * 1.0/expectedSize];
@@ -175,6 +179,10 @@
         else
             //TODO: 下载失败，view提示
             self.image = imageView.image;
+            if (!imageView) {
+                self.image = _photo.image;
+            }
+        
     
         
     }];
