@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5CDBCD921BCCDAD600519862 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD911BCCDAD600519862 /* main.m */; };
 		5CDBCD951BCCDAD600519862 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD941BCCDAD600519862 /* AppDelegate.m */; };
-		5CDBCD981BCCDAD600519862 /* LYPhotoBrowserDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */; };
 		5CDBCD9B1BCCDAD600519862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD991BCCDAD600519862 /* Main.storyboard */; };
 		5CDBCD9D1BCCDAD600519862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */; };
 		5CDBCDA01BCCDAD600519862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBCD9E1BCCDAD600519862 /* LaunchScreen.storyboard */; };
@@ -39,6 +38,11 @@
 		5CDBCE931BCE64AA00519862 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCE811BCE64AA00519862 /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
 		5CDBCE941BCE64AA00519862 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCE831BCE64AA00519862 /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		5CDBCE951BCE64AA00519862 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBCE851BCE64AA00519862 /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
+		5CDBE3091BCF6423009790F2 /* LYCommonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBE3031BCF6423009790F2 /* LYCommonCollectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		5CDBE30A1BCF6423009790F2 /* LYCommonCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDBE3041BCF6423009790F2 /* LYCommonCollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5CDBE30B1BCF6423009790F2 /* LYCommonCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBE3061BCF6423009790F2 /* LYCommonCollectionView.m */; settings = {ASSET_TAGS = (); }; };
+		5CDBE30C1BCF6423009790F2 /* LYPhotoBrowserDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBE3081BCF6423009790F2 /* LYPhotoBrowserDemo.m */; settings = {ASSET_TAGS = (); }; };
+		5CDBE3111BCF7838009790F2 /* LYCollectionControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDBE3101BCF7838009790F2 /* LYCollectionControllerDemo.m */; settings = {ASSET_TAGS = (); }; };
 		5CDE33711BCE928800D8E4ED /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE33701BCE928800D8E4ED /* photo1.jpg */; settings = {ASSET_TAGS = (); }; };
 		5CDE33731BCE929700D8E4ED /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE33721BCE929700D8E4ED /* photo8.jpg */; settings = {ASSET_TAGS = (); }; };
 		5CDE33751BCE92D700D8E4ED /* photo6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDE33741BCE92D700D8E4ED /* photo6.jpg */; settings = {ASSET_TAGS = (); }; };
@@ -67,8 +71,6 @@
 		5CDBCD911BCCDAD600519862 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CDBCD931BCCDAD600519862 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CDBCD941BCCDAD600519862 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CDBCD961BCCDAD600519862 /* LYPhotoBrowserDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPhotoBrowserDemo.h; sourceTree = "<group>"; };
-		5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPhotoBrowserDemo.m; sourceTree = "<group>"; };
 		5CDBCD9A1BCCDAD600519862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CDBCD9F1BCCDAD600519862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,15 @@
 		5CDBCE831BCE64AA00519862 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		5CDBCE841BCE64AA00519862 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		5CDBCE851BCE64AA00519862 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		5CDBE3021BCF6423009790F2 /* LYCommonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCommonCollectionCell.h; sourceTree = "<group>"; };
+		5CDBE3031BCF6423009790F2 /* LYCommonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCommonCollectionCell.m; sourceTree = "<group>"; };
+		5CDBE3041BCF6423009790F2 /* LYCommonCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCommonCollectionCell.xib; sourceTree = "<group>"; };
+		5CDBE3051BCF6423009790F2 /* LYCommonCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCommonCollectionView.h; sourceTree = "<group>"; };
+		5CDBE3061BCF6423009790F2 /* LYCommonCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCommonCollectionView.m; sourceTree = "<group>"; };
+		5CDBE3071BCF6423009790F2 /* LYPhotoBrowserDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPhotoBrowserDemo.h; sourceTree = "<group>"; };
+		5CDBE3081BCF6423009790F2 /* LYPhotoBrowserDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPhotoBrowserDemo.m; sourceTree = "<group>"; };
+		5CDBE30F1BCF7838009790F2 /* LYCollectionControllerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCollectionControllerDemo.h; sourceTree = "<group>"; };
+		5CDBE3101BCF7838009790F2 /* LYCollectionControllerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCollectionControllerDemo.m; sourceTree = "<group>"; };
 		5CDE33701BCE928800D8E4ED /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
 		5CDE33721BCE929700D8E4ED /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8.jpg; sourceTree = "<group>"; };
 		5CDE33741BCE92D700D8E4ED /* photo6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo6.jpg; sourceTree = "<group>"; };
@@ -186,8 +197,7 @@
 				5CDBCD931BCCDAD600519862 /* AppDelegate.h */,
 				5CDBCD941BCCDAD600519862 /* AppDelegate.m */,
 				5CDBCDC31BCCDAF600519862 /* PhotoBrowser */,
-				5CDBCD961BCCDAD600519862 /* LYPhotoBrowserDemo.h */,
-				5CDBCD971BCCDAD600519862 /* LYPhotoBrowserDemo.m */,
+				5CDBE3011BCF63E8009790F2 /* Demo */,
 				5CDBCD991BCCDAD600519862 /* Main.storyboard */,
 				5CDBCD9C1BCCDAD600519862 /* Assets.xcassets */,
 				5CDBCD9E1BCCDAD600519862 /* LaunchScreen.storyboard */,
@@ -306,6 +316,38 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		5CDBE3011BCF63E8009790F2 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBE30D1BCF6448009790F2 /* views */,
+				5CDBE30E1BCF6453009790F2 /* controller */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		5CDBE30D1BCF6448009790F2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBE3051BCF6423009790F2 /* LYCommonCollectionView.h */,
+				5CDBE3061BCF6423009790F2 /* LYCommonCollectionView.m */,
+				5CDBE3021BCF6423009790F2 /* LYCommonCollectionCell.h */,
+				5CDBE3031BCF6423009790F2 /* LYCommonCollectionCell.m */,
+				5CDBE3041BCF6423009790F2 /* LYCommonCollectionCell.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		5CDBE30E1BCF6453009790F2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5CDBE3071BCF6423009790F2 /* LYPhotoBrowserDemo.h */,
+				5CDBE3081BCF6423009790F2 /* LYPhotoBrowserDemo.m */,
+				5CDBE30F1BCF7838009790F2 /* LYCollectionControllerDemo.h */,
+				5CDBE3101BCF7838009790F2 /* LYCollectionControllerDemo.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,6 +459,7 @@
 				5CDBCD9D1BCCDAD600519862 /* Assets.xcassets in Resources */,
 				5CDE33731BCE929700D8E4ED /* photo8.jpg in Resources */,
 				5CDBCD9B1BCCDAD600519862 /* Main.storyboard in Resources */,
+				5CDBE30A1BCF6423009790F2 /* LYCommonCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDBCE911BCE64AA00519862 /* UIImage+GIF.m in Sources */,
-				5CDBCD981BCCDAD600519862 /* LYPhotoBrowserDemo.m in Sources */,
 				5CDBCE8F1BCE64AA00519862 /* SDWebImagePrefetcher.m in Sources */,
 				5CDBCD951BCCDAD600519862 /* AppDelegate.m in Sources */,
 				5CDBCDC61BCCDB1700519862 /* LYPhotoBrowser.m in Sources */,
@@ -450,17 +492,21 @@
 				5CDBCE611BCE647300519862 /* MCNewCustomLayeredView.m in Sources */,
 				5CDBCE941BCE64AA00519862 /* UIImageView+WebCache.m in Sources */,
 				5CDBCE601BCE647300519862 /* MCNewCustomLayer.m in Sources */,
+				5CDBE30C1BCF6423009790F2 /* LYPhotoBrowserDemo.m in Sources */,
 				5CDBCE901BCE64AA00519862 /* UIButton+WebCache.m in Sources */,
 				5CDBCE8D1BCE64AA00519862 /* SDWebImageDownloaderOperation.m in Sources */,
 				5CDBCDE01BCE341F00519862 /* LYPhoto.m in Sources */,
 				5CDBCE8A1BCE64AA00519862 /* SDWebImageCompat.m in Sources */,
 				5CDBCE871BCE64AA00519862 /* README.md in Sources */,
+				5CDBE30B1BCF6423009790F2 /* LYCommonCollectionView.m in Sources */,
 				5CDBCE951BCE64AA00519862 /* UIView+WebCacheOperation.m in Sources */,
 				5CDBCE921BCE64AA00519862 /* UIImage+MultiFormat.m in Sources */,
 				5CDBCD921BCCDAD600519862 /* main.m in Sources */,
 				5CDBCE621BCE647300519862 /* MCPercentageDoughnutView.m in Sources */,
 				5CDBCDC91BCCDC8D00519862 /* LYZoomingImageView.m in Sources */,
+				5CDBE3111BCF7838009790F2 /* LYCollectionControllerDemo.m in Sources */,
 				5CDBCE8C1BCE64AA00519862 /* SDWebImageDownloader.m in Sources */,
+				5CDBE3091BCF6423009790F2 /* LYCommonCollectionCell.m in Sources */,
 				5CDBCE931BCE64AA00519862 /* UIImageView+HighlightedWebCache.m in Sources */,
 				5CDBCE8B1BCE64AA00519862 /* SDWebImageDecoder.m in Sources */,
 				5CDBCE8E1BCE64AA00519862 /* SDWebImageManager.m in Sources */,
@@ -610,6 +656,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lichangwen.LYPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -622,6 +669,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lichangwen.LYPhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

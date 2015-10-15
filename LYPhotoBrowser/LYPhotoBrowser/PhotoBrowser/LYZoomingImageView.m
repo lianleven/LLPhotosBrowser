@@ -164,7 +164,11 @@
     UIView *superView = self.superview.superview.superview;
     CGRect convertRect = [[imageView superview] convertRect:imageView.frame toView:self.superview.superview.superview];
     self.image = imageView.image;
+    if (!_photo.image) {
+        _photo.image = imageView.image;
+    }
     if (!imageView) {
+        
         CGRect frame = CGRectMake((CGRectGetWidth(superView.bounds) - 100)/2, (CGRectGetHeight(superView.bounds) - 100)/2, 100, 100);
         convertRect = [superView convertRect:frame toView:superView];
         self.image = _photo.image;
@@ -173,6 +177,7 @@
     UIImage *cacheImage = [self imageDidEndDownloadForKey:_photo.photoUrl];
     if (cacheImage) {
         self.image = cacheImage;
+        _photo.image = cacheImage;
         return;
     }
     
@@ -186,6 +191,7 @@
         [self hideProgressView];
         if (image){
             self.image = image;
+            _photo.image = image;
             self.isScroll = YES;
         }
         else{
@@ -260,7 +266,7 @@
         _percentageDoughnut.gradientColor1          = [UIColor greenColor];
         _percentageDoughnut.gradientColor2          = [MCUtil iOS7DefaultGrayColorForBackground];
         _percentageDoughnut.hidden = YES;
-        
+        _percentageDoughnut.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
     return _percentageDoughnut;
 }

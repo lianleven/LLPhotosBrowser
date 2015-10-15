@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kfm-KR-fJy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -92,7 +92,9 @@
                             <constraint firstItem="0B1-6m-t4n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="cxg-wG-GP6">
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
-                            <constraint firstItem="0B1-6m-t4n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="fjX-g3-vRz"/>
+                            <constraint firstItem="0B1-6m-t4n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="fjX-g3-vRz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="Y91-uk-2pK" firstAttribute="top" secondItem="0B1-6m-t4n" secondAttribute="top" id="pMV-w3-Sm1"/>
                             <constraint firstItem="61K-ID-yOI" firstAttribute="top" secondItem="0B1-6m-t4n" secondAttribute="bottom" constant="8" id="t3M-7O-i9n"/>
                         </constraints>
@@ -123,6 +125,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="VBF-ix-43C">
+                        <barButtonItem key="rightBarButtonItem" title="collectionView" id="rie-zZ-jTB">
+                            <connections>
+                                <segue destination="kMu-n6-nuv" kind="push" id="Kb7-IY-24t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="0B1-6m-t4n" id="2rf-lT-C4u"/>
                         <outletCollection property="imageViewArray" destination="0B1-6m-t4n" id="yYp-Dt-PKi"/>
@@ -132,6 +141,101 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119" y="306"/>
+        </scene>
+        <!--Collection Controller Demo-->
+        <scene sceneID="JXS-2A-LP9">
+            <objects>
+                <viewController storyboardIdentifier="LYCollectionControllerDemo" id="kMu-n6-nuv" customClass="LYCollectionControllerDemo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aA3-rF-7Ya"/>
+                        <viewControllerLayoutGuide type="bottom" id="z3o-LP-FpU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bah-WK-uXc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yrR-vL-WAa" customClass="LYCommonCollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nh6-Ra-YrY">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yrR-vL-WAa" firstAttribute="leading" secondItem="Bah-WK-uXc" secondAttribute="leading" id="DWO-Uq-OME"/>
+                            <constraint firstItem="z3o-LP-FpU" firstAttribute="top" secondItem="yrR-vL-WAa" secondAttribute="bottom" id="Rer-6S-vV5"/>
+                            <constraint firstAttribute="trailing" secondItem="yrR-vL-WAa" secondAttribute="trailing" id="wPI-U6-hcp"/>
+                            <constraint firstItem="yrR-vL-WAa" firstAttribute="top" secondItem="aA3-rF-7Ya" secondAttribute="bottom" id="yjo-J9-Pb9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yrR-vL-WAa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DWO-Uq-OME"/>
+                                <exclude reference="wPI-U6-hcp"/>
+                                <exclude reference="yjo-J9-Pb9"/>
+                                <exclude reference="Rer-6S-vV5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yrR-vL-WAa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DWO-Uq-OME"/>
+                                <include reference="wPI-U6-hcp"/>
+                                <include reference="yjo-J9-Pb9"/>
+                                <include reference="Rer-6S-vV5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="hih-Eg-RkZ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="is5-XN-46l">
+                            <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="2列"/>
+                                <segment title="3列"/>
+                                <segment title="4列"/>
+                            </segments>
+                            <color key="tintColor" red="1" green="0.34183880550000001" blue="0.38817443930000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="segmentControlAction:" destination="kMu-n6-nuv" eventType="valueChanged" id="TWO-dJ-1cc"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="yrR-vL-WAa" id="UVX-U9-bg4"/>
+                        <outlet property="segmentView" destination="is5-XN-46l" id="Vba-xZ-bdv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9O-Sd-meZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.5" y="306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NqQ-nU-ZAR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kfm-KR-fJy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h76-hc-Gei">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OlJ-Ns-Zs8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMU-wQ-pW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="201" y="306"/>
         </scene>

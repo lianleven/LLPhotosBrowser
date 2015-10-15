@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIScrollView  *browserScrollView;
 @property (nonatomic, strong) UIPageControl *pageController;
 @property (nonatomic, strong) UILabel *countLabel;/**< 计数label */
+@property (nonatomic, strong) UIButton *saveButton;
+@property (nonatomic, strong) UILabel *maskViewLabel;
 
 
 @property (nonatomic) BOOL isScroll;
@@ -81,68 +83,48 @@
     
 }
 - (void)setup{
+    
+    self.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.backgroundColor = [UIColor blackColor];
     self.alpha = 0;
     self.isScroll = NO;
     self.currentPage = 0; //设置默认值
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     [window addSubview:self];
+    
+    
     [self addSubview:self.browserScrollView];
     [self addSubview:self.pageController];
     [self addSubview:self.countLabel];
     [self reUseZoomingImageView];
+    [self addSubview:self.saveButton];
+    [self addSubview:self.maskViewLabel];
     
+    [self setFrameForSubViews];
+    
+}
+- (void)setFrameForSubViews{
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_browserScrollView]-0-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_browserScrollView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_browserScrollView]-0-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_browserScrollView)]];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_pageController]-10-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageController]-0-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-60-[_pageController]-60-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageController]-8-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-60-[_countLabel]-60-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_countLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_countLabel(==40)]-8-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_countLabel)]];
     
-    self.countLabel.frame = CGRectMake(0, CGRectGetHeight(self.frame) - 30, CGRectGetWidth(self.frame), 30);
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[_saveButton(==40)]" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_saveButton)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_saveButton(==30)]-15-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_saveButton)]];
     
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_maskViewLabel(==100)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_maskViewLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_maskViewLabel(==40)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_maskViewLabel)]];
     
+    //垂直居中
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    //水平居中
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
 
-#pragma mark - private
-/**
- *  显示当前的image
- */
--(void)photoBrowserDidShowCurrentImage
-{
-    if (!self.photos.count>0) return;
-    
-    for (UIView *view in self.browserScrollView.subviews) {
-        if ([view isKindOfClass:[LYZoomingImageView class]]) {
-            LYZoomingImageView *imageView = (LYZoomingImageView *)view;
-            NSInteger index = [self pageIndexForZoomImageDidEndShowWithZoomImageTag:imageView.tag];
-            imageView.isScroll = self.isScroll;
-            
-            imageView.photo = self.photos[index];
-        }
-    }
-    
-    [self.browserScrollView setContentOffset:CGPointMake(self.browserScrollView.frame.size.width, 0)];
-}
-
-- (NSInteger)pageIndexForZoomImageDidEndShowWithZoomImageTag:(NSInteger)zoomImageTag{
-    NSInteger index = [self pageIndexForZoomImageWillBeginShowWithCurrentPage:self.currentPage + (zoomImageTag - 1)];
-    return index;
-}
-/**
- *  根据当前索引，获得将要显示的zoomImage的索引,循环滚动
- */
-- (NSInteger)pageIndexForZoomImageWillBeginShowWithCurrentPage:(NSInteger)CurrentPage{
-    NSInteger index = 0;
-    NSInteger imageCount = self.photos.count;
-    if (CurrentPage == -1) {
-        index = imageCount - 1;
-    }else if (CurrentPage == imageCount){
-        index = 0;
-    }else{
-        index = CurrentPage;
-    }
-    return index;
-}
 #pragma mark - UIScrollViewDelegate
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -187,6 +169,74 @@
     self.isScroll = NO;
     [scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.browserScrollView.frame), 0)];
 }
+#pragma mark - private Action
+/**
+ *  显示当前的image
+ */
+-(void)photoBrowserDidShowCurrentImage
+{
+    if (!self.photos.count>0) return;
+    
+    for (UIView *view in self.browserScrollView.subviews) {
+        if ([view isKindOfClass:[LYZoomingImageView class]]) {
+            LYZoomingImageView *imageView = (LYZoomingImageView *)view;
+            NSInteger index = [self pageIndexForZoomImageDidEndShowWithZoomImageTag:imageView.tag];
+            imageView.isScroll = self.isScroll;
+            
+            imageView.photo = self.photos[index];
+        }
+    }
+    
+    [self.browserScrollView setContentOffset:CGPointMake(self.browserScrollView.frame.size.width, 0)];
+}
+
+- (NSInteger)pageIndexForZoomImageDidEndShowWithZoomImageTag:(NSInteger)zoomImageTag{
+    NSInteger index = [self pageIndexForZoomImageWillBeginShowWithCurrentPage:self.currentPage + (zoomImageTag - 1)];
+    return index;
+}
+/**
+ *  根据当前索引，获得将要显示的zoomImage的索引,循环滚动
+ */
+- (NSInteger)pageIndexForZoomImageWillBeginShowWithCurrentPage:(NSInteger)CurrentPage{
+    NSInteger index = 0;
+    NSInteger imageCount = self.photos.count;
+    if (CurrentPage == -1) {
+        index = imageCount - 1;
+    }else if (CurrentPage == imageCount){
+        index = 0;
+    }else{
+        index = CurrentPage;
+    }
+    return index;
+}
+- (void)saveCurrentImage:(UIButton *)sender{
+    [self saveImage];
+}
+- (void)saveImage
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        LYPhoto *photo = _photos[self.currentPage];
+        UIImageWriteToSavedPhotosAlbum(photo.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    });
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        
+        [self showCompletedMaskWithText:@"保存失败"];
+    } else {
+        [self showCompletedMaskWithText:@"保存成功"];
+    }
+}
+- (void)showCompletedMaskWithText:(NSString *)text{
+    self.maskViewLabel.text = text;
+    [UIView animateWithDuration:.8 animations:^{
+        self.maskViewLabel.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        self.maskViewLabel.alpha = 0;
+    }];
+}
 #pragma mark - setter/getter
 - (UIScrollView *)browserScrollView{
     if (!_browserScrollView) {
@@ -199,6 +249,7 @@
         _browserScrollView.backgroundColor = [UIColor clearColor];
         _browserScrollView.contentOffset  = CGPointMake(0, 0);
         _browserScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+        _browserScrollView.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
     return _browserScrollView;
 }
@@ -210,6 +261,7 @@
         _pageController.currentPageIndicatorTintColor = [UIColor orangeColor];
         _pageController.pageIndicatorTintColor = [UIColor lightGrayColor];
         _pageController.translatesAutoresizingMaskIntoConstraints = NO;
+        _pageController.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
     return  _pageController;
 }
@@ -220,9 +272,43 @@
         _countLabel.textColor = [UIColor whiteColor];
         _countLabel.textAlignment = NSTextAlignmentCenter;
         _countLabel.backgroundColor = [UIColor clearColor];
-        
+        _countLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        _countLabel.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
     return _countLabel;
+}
+- (UIButton *)saveButton{
+    if (!_saveButton) {
+        
+        _saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_saveButton setTitle:@"保存" forState:UIControlStateNormal];
+        [_saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_saveButton setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+        _saveButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        _saveButton.layer.cornerRadius = 4;
+        _saveButton.layer.masksToBounds = YES;
+        _saveButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _saveButton.layer.borderWidth = 1;
+        _saveButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [_saveButton addTarget:self action:@selector(saveCurrentImage:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _saveButton;
+}
+- (UILabel *)maskViewLabel{
+    if (!_maskViewLabel) {
+        _maskViewLabel = [[UILabel alloc] init];
+        
+        _maskViewLabel.font = [UIFont systemFontOfSize:16];
+        _maskViewLabel.textColor = [UIColor whiteColor];
+        _maskViewLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+        _maskViewLabel.layer.cornerRadius = 4;
+        _maskViewLabel.layer.masksToBounds = YES;
+        _maskViewLabel.textAlignment = NSTextAlignmentCenter;
+        _maskViewLabel.alpha = 0;
+        _maskViewLabel.translatesAutoresizingMaskIntoConstraints = NO;
+       
+    }
+    return _maskViewLabel;
 }
 /**
  *  创建三个可重用的缩放对象
@@ -236,6 +322,7 @@
         imageView.frame = CGRectMake(i * width, 0, width, height);
         imageView.userInteractionEnabled = YES;
         imageView.backgroundColor = self.backgroundColor;
+        _countLabel.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self.browserScrollView addSubview:imageView];
     }
 }
