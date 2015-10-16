@@ -278,7 +278,6 @@
         _countLabel.font = [UIFont systemFontOfSize:16];
         _countLabel.textColor = [UIColor whiteColor];
         _countLabel.textAlignment = NSTextAlignmentCenter;
-        _countLabel.backgroundColor = [UIColor clearColor];
         _countLabel.translatesAutoresizingMaskIntoConstraints = NO;
         _countLabel.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
@@ -291,6 +290,7 @@
         [_saveButton setTitle:@"保存" forState:UIControlStateNormal];
         [_saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_saveButton setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+        _saveButton.backgroundColor = [UIColor colorWithWhite:0.267 alpha:0.600];
         _saveButton.titleLabel.font = [UIFont systemFontOfSize:14];
         _saveButton.layer.cornerRadius = 4;
         _saveButton.layer.masksToBounds = YES;
