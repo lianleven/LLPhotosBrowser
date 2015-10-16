@@ -21,6 +21,7 @@
 
 @end
 @implementation LYZoomingImageView
+#pragma mark - life
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -53,9 +54,7 @@
     [self addSubview:self.zoomImageView];
     [self addSubview:self.percentageDoughnut];
 }
-
-#pragma mark -
-#pragma mark - scroll delegate
+#pragma mark - UIScrollViewDelegate
 - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.zoomImageView;
@@ -80,9 +79,7 @@
     
     self.zoomImageView.center = centerPoint;
 }
-
-#pragma mark -
-#pragma mark - touch
+#pragma mark - UIGestureRecognizer Action
 - (void)sigleTapAction:(UIGestureRecognizer *)gestureRecognizer{
     [UIView animateWithDuration:0.4 animations:^{
         [self resetZoom];

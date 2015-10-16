@@ -26,46 +26,7 @@
 @end
 
 @implementation LYPhotoBrowser
-
-
-#pragma mark - public method
-
-+ (LYPhotoBrowser *)showPhotos:(NSArray *)photos currentPhotoIndex:(NSInteger)currentIndex countType:(LYPhotoBrowserCountType)countType{
-    LYPhotoBrowser *photoBrowser = [[LYPhotoBrowser alloc] init];
-    [photoBrowser showPhotos:photos currentPhotoIndex:currentIndex countType:countType];
-    return photoBrowser;
-}
-- (void)showPhotos:(NSArray *)photos currentPhotoIndex:(NSInteger)currentPhotoIndex countType:(LYPhotoBrowserCountType)countType{
-    self.photos = photos.copy;
-    self.currentPage = currentPhotoIndex;
-    if (photos.count > 1) {
-        self.pageController.numberOfPages = photos.count;
-        self.countLabel.text = [NSString stringWithFormat:@"%@/%@",@(currentPhotoIndex + 1),@(photos.count)];
-    }else{
-        self.browserScrollView.scrollEnabled = NO;
-    }
-    switch (countType) {
-        case LYPhotoBrowserCountTypeNone: {
-            self.countLabel.hidden = YES;
-            self.pageController.hidden = YES;
-            break;
-        }
-        case LYPhotoBrowserCountTypePageControl: {
-            self.countLabel.hidden = YES;
-            break;
-        }
-        case LYPhotoBrowserCountTypeCountLabel: {
-            self.pageController.hidden = YES;
-            break;
-        }
-        default: {
-            self.countLabel.hidden = YES;
-            break;
-        }
-    }
-    [self photoBrowserDidShowCurrentImage];
-}
-
+#pragma mark - life
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -131,7 +92,43 @@
     //水平居中
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
+#pragma mark - public method
 
++ (LYPhotoBrowser *)showPhotos:(NSArray *)photos currentPhotoIndex:(NSInteger)currentIndex countType:(LYPhotoBrowserCountType)countType{
+    LYPhotoBrowser *photoBrowser = [[LYPhotoBrowser alloc] init];
+    [photoBrowser showPhotos:photos currentPhotoIndex:currentIndex countType:countType];
+    return photoBrowser;
+}
+- (void)showPhotos:(NSArray *)photos currentPhotoIndex:(NSInteger)currentPhotoIndex countType:(LYPhotoBrowserCountType)countType{
+    self.photos = photos.copy;
+    self.currentPage = currentPhotoIndex;
+    if (photos.count > 1) {
+        self.pageController.numberOfPages = photos.count;
+        self.countLabel.text = [NSString stringWithFormat:@"%@/%@",@(currentPhotoIndex + 1),@(photos.count)];
+    }else{
+        self.browserScrollView.scrollEnabled = NO;
+    }
+    switch (countType) {
+        case LYPhotoBrowserCountTypeNone: {
+            self.countLabel.hidden = YES;
+            self.pageController.hidden = YES;
+            break;
+        }
+        case LYPhotoBrowserCountTypePageControl: {
+            self.countLabel.hidden = YES;
+            break;
+        }
+        case LYPhotoBrowserCountTypeCountLabel: {
+            self.pageController.hidden = YES;
+            break;
+        }
+        default: {
+            self.countLabel.hidden = YES;
+            break;
+        }
+    }
+    [self photoBrowserDidShowCurrentImage];
+}
 #pragma mark - UIScrollViewDelegate
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
