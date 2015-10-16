@@ -26,7 +26,7 @@
 @end
 
 @implementation LYPhotoBrowser
-#pragma mark - life
+#pragma mark - Life
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -61,11 +61,10 @@
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     [window addSubview:self];
     
-    
+    [self reUseZoomingImageView];
     [self addSubview:self.browserScrollView];
     [self addSubview:self.pageController];
     [self addSubview:self.countLabel];
-    [self reUseZoomingImageView];
     [self addSubview:self.saveButton];
     [self addSubview:self.maskViewLabel];
     
@@ -92,7 +91,7 @@
     //水平居中
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
-#pragma mark - public method
+#pragma mark - Public Method
 
 + (LYPhotoBrowser *)showPhotos:(NSArray *)photos currentPhotoIndex:(NSInteger)currentIndex countType:(LYPhotoBrowserCountType)countType{
     LYPhotoBrowser *photoBrowser = [[LYPhotoBrowser alloc] init];
@@ -108,25 +107,7 @@
     }else{
         self.browserScrollView.scrollEnabled = NO;
     }
-    switch (countType) {
-        case LYPhotoBrowserCountTypeNone: {
-            self.countLabel.hidden = YES;
-            self.pageController.hidden = YES;
-            break;
-        }
-        case LYPhotoBrowserCountTypePageControl: {
-            self.countLabel.hidden = YES;
-            break;
-        }
-        case LYPhotoBrowserCountTypeCountLabel: {
-            self.pageController.hidden = YES;
-            break;
-        }
-        default: {
-            self.countLabel.hidden = YES;
-            break;
-        }
-    }
+    [self configurePhotoBrowserCountType:countType];
     [self photoBrowserDidShowCurrentImage];
 }
 #pragma mark - UIScrollViewDelegate
@@ -213,6 +194,28 @@
     }
     return index;
 }
+- (void)configurePhotoBrowserCountType:(LYPhotoBrowserCountType)countType{
+    switch (countType) {
+        case LYPhotoBrowserCountTypeNone: {
+            self.countLabel.hidden = YES;
+            self.pageController.hidden = YES;
+            break;
+        }
+        case LYPhotoBrowserCountTypePageControl: {
+            self.countLabel.hidden = YES;
+            break;
+        }
+        case LYPhotoBrowserCountTypeCountLabel: {
+            self.pageController.hidden = YES;
+            break;
+        }
+        default: {
+            self.countLabel.hidden = YES;
+            break;
+        }
+    }
+}
+#pragma mark - save Current Image
 - (void)saveCurrentImage:(UIButton *)sender{
     [self saveImage];
 }

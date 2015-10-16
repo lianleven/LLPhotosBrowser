@@ -48,10 +48,10 @@
         //photo = [LYPhoto photoWithImageView:nil placeHold:imageView.image photoUrl:nil];
         
         //只有图片对应的imageView
-        //photo = [LYPhoto photoWithImageView:imageView placeHold:nil photoUrl:nil];
+        photo = [LYPhoto photoWithImageView:imageView placeHold:nil photoUrl:nil];
         
         //只有图片对应的url
-        photo = [LYPhoto photoWithImageView:nil placeHold:nil photoUrl:imageUrlArray[index]];
+        //photo = [LYPhoto photoWithImageView:nil placeHold:nil photoUrl:imageUrlArray[index]];
         [photoArrayM addObject:photo];
     }
     UIView *view = gestureRecognizer.view;

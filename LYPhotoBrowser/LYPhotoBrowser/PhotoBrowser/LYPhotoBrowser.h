@@ -12,7 +12,7 @@
 typedef NS_ENUM(NSUInteger, LYPhotoBrowserCountType){
     LYPhotoBrowserCountTypeNone        = 0,
     LYPhotoBrowserCountTypePageControl = 1,/**< 显示PageControl */
-    LYPhotoBrowserCountTypeCountLabel  = 2,/**< 显示计数Label */
+    LYPhotoBrowserCountTypeCountLabel  = 2,/**< 显示计数如 1/16 */
 };
 @interface LYPhotoBrowser : UIView
 
