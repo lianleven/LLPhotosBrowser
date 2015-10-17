@@ -15,7 +15,6 @@
 @property (assign, nonatomic) CGRect originalZoomScaleFrame;/**< 缩放前的frame */
 @property (nonatomic, strong) UIImageView *zoomImageView;/**< 缩放的imageView */
 @property (nonatomic, strong) UIImage *image;/**< 缩放imageView的image对象 */
-@property (nonatomic, strong) UIImageView *imageView;
 
 @property (strong, nonatomic) MCPercentageDoughnutView *percentageDoughnut;/**< 进度View */
 
@@ -86,6 +85,7 @@
         self.superview.superview.alpha = 0;
     } completion:^(BOOL finished) {
         [self.superview.superview removeFromSuperview];
+        [self.zoomImageView sd_cancelCurrentAnimationImagesLoad];
     }];
 }
 - (void)doubleTapAction:(UIGestureRecognizer *)gestureRecognizer{
@@ -123,7 +123,7 @@
     }
     return zoomScale;
 }
-- (void)setFrameToZoomImageView:(CGRect)rect
+- (void)setOriginalFrameToZoomImageView:(CGRect)rect
 {
     self.zoomImageView.frame = rect;
     self.originalZoomScaleFrame = rect;
@@ -154,24 +154,20 @@
 #pragma mark - setter/getter
 - (void)setPhoto:(LYPhoto *)photo{
     _photo = photo;
-    self.imageView = photo.imageView;
-}
-- (void)setImageView:(UIImageView *)imageView{
-    _imageView = imageView;
     UIView *superView = self.superview.superview.superview;
-    CGRect convertRect = [[imageView superview] convertRect:imageView.frame toView:self.superview.superview.superview];
-    self.image = imageView.image;
-    if (!_photo.image) {
-        _photo.image = imageView.image;
-    }
-    if (!imageView) {
-        
-        CGRect frame = CGRectMake((CGRectGetWidth(superView.bounds) - 100)/2, (CGRectGetHeight(superView.bounds) - 100)/2, 100, 100);
-        convertRect = [superView convertRect:frame toView:superView];
-        self.image = _photo.image;
-    }
-    [self setFrameToZoomImageView:convertRect];
+    
+    UIImage *tempImage = photo.image?photo.image:photo.imageView.image;
+    self.image = tempImage;
+    _photo.image = tempImage;
+    
+    
     UIImage *cacheImage = [self imageDidEndDownloadForKey:_photo.photoUrl];
+    CGRect frame = CGRectMake((CGRectGetWidth(superView.bounds) - 100)/2, (CGRectGetHeight(superView.bounds) - 100)/2, 100, 100);
+    CGRect convertRect = [superView convertRect:frame toView:superView];
+    if (photo.imageView && cacheImage) {
+        convertRect = [[photo.imageView superview] convertRect:photo.imageView.frame toView:self.superview.superview.superview];
+    }
+    [self setOriginalFrameToZoomImageView:convertRect];
     if (cacheImage) {
         self.image = cacheImage;
         _photo.image = cacheImage;
@@ -179,7 +175,8 @@
     }
     
     
-    [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:_photo.photoUrl] placeholderImage:imageView.image options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    
+    [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:_photo.photoUrl] placeholderImage:tempImage options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         NSString *progress = [NSString stringWithFormat:@"%.2f",receivedSize * 1.0/expectedSize];
         [self performSelectorOnMainThread:@selector(showProgressView:) withObject:progress waitUntilDone:NO];
         //self.percentageDoughnut.percentage = receivedSize/expectedSize;
@@ -187,19 +184,21 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [self hideProgressView];
         if (image){
+            if (photo.imageView){
+            CGRect convertRect = [[photo.imageView superview] convertRect:photo.imageView.frame toView:self.superview.superview.superview];
+            [self setOriginalFrameToZoomImageView:convertRect];
+            }
             self.image = image;
             _photo.image = image;
             self.isScroll = YES;
         }
         else{
             //TODO: 下载失败，view提示
-            self.image = imageView.image;
-            if (!imageView) {
-                self.image = _photo.image;
-            }
+            self.image = tempImage;
+        
         }
         
-    
+        
         
     }];
 }
