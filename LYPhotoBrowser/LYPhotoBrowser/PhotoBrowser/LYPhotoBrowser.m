@@ -208,8 +208,8 @@
             LYZoomingImageView *imageView = (LYZoomingImageView *)view;
             NSInteger index = [self pageIndexForZoomImageDidEndShowWithZoomImageTag:imageView.tag];
             imageView.isScroll = self.isScroll;
-            
             imageView.photo = self.photos[index];
+            
         }
     }
     
