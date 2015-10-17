@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LYPhoto.h"
+
 @interface LYZoomingImageView : UIScrollView
 
 @property (nonatomic) BOOL isScroll;/**< 是否滑动显示 */

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
+
+//开始下载
+#define kPhotoBrowserBeginDownLodingNotification  @"kPhotoBrowserBeginDownLoding"
+#define kPhotoBrowserDidCompletedDownLodedNotification @"kPhotoBrowserDidCompletedDownLoded"
 @interface LYPhoto : NSObject
-
-
 
 + (instancetype)photoWithImageView:(UIImageView *)imageView placeHold:(UIImage *)image photoUrl:(NSString *)photoUrl;
 - (instancetype)initWithImageView:(UIImageView *)imageView placeHold:(UIImage *)image photoUrl:(NSString *)photoUrl;

@@ -8,7 +8,7 @@
 
 #import "LYZoomingImageView.h"
 #import "UIImageView+WebCache.h"
-#import "MCPercentageDoughnutView.h"
+
 
 @interface LYZoomingImageView()<UIScrollViewDelegate>
 
@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UIImageView *zoomImageView;/**< 缩放的imageView */
 @property (nonatomic, strong) UIImage *image;/**< 缩放imageView的image对象 */
 
-@property (strong, nonatomic) MCPercentageDoughnutView *percentageDoughnut;/**< 进度View */
+
 
 @end
 @implementation LYZoomingImageView
@@ -51,7 +51,7 @@
     
     
     [self addSubview:self.zoomImageView];
-    [self addSubview:self.percentageDoughnut];
+    
 }
 #pragma mark - UIScrollViewDelegate
 - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -133,15 +133,6 @@
     self.zoomScale = self.minimumZoomScale;
     self.zoomImageView.frame = self.originalZoomScaleFrame;
 }
-
-- (void)showProgressView:(id)sender{
-    CGFloat progress = (sender)?[sender floatValue]:0;
-    self.percentageDoughnut.percentage = progress;
-    self.percentageDoughnut.hidden = NO;
-}
-- (void)hideProgressView{
-    self.percentageDoughnut.hidden = YES;
-}
 - (UIImage *)imageDidEndDownloadForKey:(NSString *)key{
     UIImage *image = nil;
     image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:key];
@@ -178,15 +169,24 @@
     
     [self.zoomImageView sd_setImageWithURL:[NSURL URLWithString:_photo.photoUrl] placeholderImage:tempImage options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         NSString *progress = [NSString stringWithFormat:@"%.2f",receivedSize * 1.0/expectedSize];
-        [self performSelectorOnMainThread:@selector(showProgressView:) withObject:progress waitUntilDone:NO];
+        //[self performSelectorOnMainThread:@selector(showProgressView:) withObject:progress waitUntilDone:NO];
         //self.percentageDoughnut.percentage = receivedSize/expectedSize;
+        if (expectedSize > 0) {
+            float progress = receivedSize / (float)expectedSize;
+            NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithFloat:progress], @"progress",
+                                  photo, @"photo", nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kPhotoBrowserBeginDownLodingNotification object:dict];
+        }
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [self hideProgressView];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kPhotoBrowserDidCompletedDownLodedNotification object:nil];
+        
         if (image){
             if (photo.imageView){
-            CGRect convertRect = [[photo.imageView superview] convertRect:photo.imageView.frame toView:self.superview.superview.superview];
-            [self setOriginalFrameToZoomImageView:convertRect];
+                CGRect convertRect = [[photo.imageView superview] convertRect:photo.imageView.frame toView:self.superview.superview.superview];
+                [self setOriginalFrameToZoomImageView:convertRect];
             }
             self.image = image;
             _photo.image = image;
@@ -195,11 +195,8 @@
         else{
             //TODO: 下载失败，view提示
             self.image = tempImage;
-        
+            
         }
-        
-        
-        
     }];
 }
 - (void)setImage:(UIImage *)image
@@ -234,7 +231,7 @@
         }else{//滑动显示
             self.zoomImageView.frame = zoomImageViewOriginalFrame;
         }
-        self.percentageDoughnut.frame = CGRectMake((self.frame.size.width - 60)/2, (self.frame.size.height - 60)/2, 60, 60);
+        
         
     }
 }
@@ -246,24 +243,5 @@
     }
     return _zoomImageView;
 }
-- (MCPercentageDoughnutView *)percentageDoughnut{
-    if (!_percentageDoughnut) {
-        _percentageDoughnut = [[MCPercentageDoughnutView alloc] init];
-        _percentageDoughnut.percentage              = 0.5;
-        _percentageDoughnut.linePercentage          = 0.15;
-        _percentageDoughnut.animationDuration       = 2;
-        _percentageDoughnut.decimalPlaces           = 1;
-        _percentageDoughnut.showTextLabel           = YES;
-        _percentageDoughnut.animatesBegining        = NO;
-        _percentageDoughnut.fillColor               = [UIColor orangeColor];
-        _percentageDoughnut.unfillColor             = [MCUtil iOS7DefaultGrayColorForBackground];
-        _percentageDoughnut.textLabel.textColor     = [UIColor whiteColor];
-        _percentageDoughnut.textLabel.font          = [UIFont systemFontOfSize:25];
-        _percentageDoughnut.gradientColor1          = [UIColor greenColor];
-        _percentageDoughnut.gradientColor2          = [MCUtil iOS7DefaultGrayColorForBackground];
-        _percentageDoughnut.hidden = YES;
-        _percentageDoughnut.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    }
-    return _percentageDoughnut;
-}
+
 @end

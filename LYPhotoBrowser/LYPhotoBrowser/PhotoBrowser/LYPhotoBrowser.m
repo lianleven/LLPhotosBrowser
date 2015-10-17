@@ -8,6 +8,8 @@
 
 #import "LYPhotoBrowser.h"
 #import "LYZoomingImageView.h"
+#import "MCPercentageDoughnutView.h"
+
 @interface LYPhotoBrowser()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray *photos;
@@ -16,9 +18,10 @@
 
 @property (nonatomic, strong) UIScrollView  *browserScrollView;
 @property (nonatomic, strong) UIPageControl *pageController;
+@property (strong, nonatomic) MCPercentageDoughnutView *percentageDoughnut;/**< 进度View */
 @property (nonatomic, strong) UILabel *countLabel;/**< 计数label */
 @property (nonatomic, strong) UIButton *saveButton;
-@property (nonatomic, strong) UILabel *maskViewLabel;
+@property (nonatomic, strong) UILabel *maskViewLabel;/**< 提示信息Mask */
 
 
 @property (nonatomic) BOOL isScroll;
@@ -64,32 +67,52 @@
     [self reUseZoomingImageView];
     [self addSubview:self.browserScrollView];
     [self addSubview:self.pageController];
+    [self addSubview:self.percentageDoughnut];
     [self addSubview:self.countLabel];
     [self addSubview:self.saveButton];
     [self addSubview:self.maskViewLabel];
     
     [self setFrameForSubViews];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kPhotoBrowserBeginDownLodingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(beginDownloadingNotification:) name:kPhotoBrowserBeginDownLodingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kPhotoBrowserDidCompletedDownLodedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didCompletedDownloadedNotification:) name:kPhotoBrowserDidCompletedDownLodedNotification object:nil];
     
 }
 - (void)setFrameForSubViews{
+    //browserScrollView
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_browserScrollView]-0-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_browserScrollView)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_browserScrollView]-0-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_browserScrollView)]];
-    
+    //pageController
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-60-[_pageController]-60-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pageController]-8-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_pageController)]];
+    
+    //countLabel
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-60-[_countLabel]-60-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_countLabel)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_countLabel(==40)]-8-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_countLabel)]];
     
+    //percentageDoughnut
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_percentageDoughnut(==60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_percentageDoughnut)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_percentageDoughnut(==60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_percentageDoughnut)]];
+    //垂直居中
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_percentageDoughnut attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    //水平居中
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:_percentageDoughnut attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    
+    //saveButton
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[_saveButton(==40)]" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_saveButton)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_saveButton(==30)]-15-|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(_saveButton)]];
     
+    //maskViewLabel
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_maskViewLabel(==100)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_maskViewLabel)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_maskViewLabel(==40)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_maskViewLabel)]];
-    
     //垂直居中
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
     //水平居中
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_maskViewLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    
+    
+    
 }
 #pragma mark - Public Method
 
@@ -153,6 +176,24 @@
 {
     self.isScroll = NO;
     [scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.browserScrollView.frame), 0)];
+}
+#pragma mark - Notification
+- (void)beginDownloadingNotification:(NSNotification *)notification{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSDictionary *dict = [notification object];
+        LYPhoto *photoWithProgress = [dict objectForKey:@"photo"];
+        if (photoWithProgress == _photos[self.currentPage]) {
+            //            NSLog(@"%f", [[dict valueForKey:@"progress"] floatValue]);
+            float progress = [[dict valueForKey:@"progress"] floatValue];
+            self.percentageDoughnut.percentage = progress;
+            self.percentageDoughnut.hidden = NO;
+        }else{
+            self.percentageDoughnut.hidden = YES;
+        }
+    });
+}
+- (void)didCompletedDownloadedNotification:(NSNotification *)notification{
+    self.percentageDoughnut.hidden = YES;
 }
 #pragma mark - private Action
 /**
@@ -271,6 +312,27 @@
         _pageController.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     }
     return  _pageController;
+}
+- (MCPercentageDoughnutView *)percentageDoughnut{
+    if (!_percentageDoughnut) {
+        _percentageDoughnut = [[MCPercentageDoughnutView alloc] init];
+        _percentageDoughnut.percentage              = 0.5;
+        _percentageDoughnut.linePercentage          = 0.15;
+        _percentageDoughnut.animationDuration       = 2;
+        _percentageDoughnut.decimalPlaces           = 1;
+        _percentageDoughnut.showTextLabel           = YES;
+        _percentageDoughnut.animatesBegining        = NO;
+        _percentageDoughnut.fillColor               = [UIColor orangeColor];
+        _percentageDoughnut.unfillColor             = [MCUtil iOS7DefaultGrayColorForBackground];
+        _percentageDoughnut.textLabel.textColor     = [UIColor whiteColor];
+        _percentageDoughnut.textLabel.font          = [UIFont systemFontOfSize:25];
+        _percentageDoughnut.gradientColor1          = [UIColor greenColor];
+        _percentageDoughnut.gradientColor2          = [MCUtil iOS7DefaultGrayColorForBackground];
+        _percentageDoughnut.hidden = YES;
+        _percentageDoughnut.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        _percentageDoughnut.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _percentageDoughnut;
 }
 - (UILabel *)countLabel{
     if (!_countLabel) {
