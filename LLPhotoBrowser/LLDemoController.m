@@ -12,11 +12,15 @@
 #import "LLPhotoBrowser.h"
 
 #define kCellHeight ceil((kScreenWidth) * 3.0 / 4.0)
+@class LLDemoControllerCell;
+typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
 @interface LLDemoControllerCell : UITableViewCell<UIGestureRecognizerDelegate>
+
 @property (nonatomic, strong) FLAnimatedImageView *webImageView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicator;
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, copy) LLDemoControllerCellDidSelectedBlcok didSelectedBlock;
 @end
 
 @implementation LLDemoControllerCell
@@ -39,14 +43,15 @@
     _indicator.hidden = YES;
     //[self.contentView addSubview:_indicator]; //use progress bar instead..
     
-    _label = [UILabel new];
-    _label.size = self.size;
-    _label.textAlignment = NSTextAlignmentCenter;
-    _label.text = @"Load fail, tap to reload.";
-    _label.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
-    _label.hidden = YES;
-    _label.userInteractionEnabled = YES;
-    [self.contentView addSubview:_label];
+    _button = [UIButton new];
+    _button.size = self.size;
+    [_button setTitle:@"Load fail, tap to reload." forState:0];
+    [_button setTitleColor:[UIColor colorWithWhite:0.7 alpha:1.0] forState:0];
+    _button.hidden = YES;
+    _button.userInteractionEnabled = YES;
+    _button.restorationIdentifier = [[_webImageView ll_imageURL] absoluteString];
+    [_button addTarget:self action:@selector(setImageButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:_button];
     
     CGFloat lineHeight = 4;
     _progressLayer = [CAShapeLayer layer];
@@ -64,15 +69,20 @@
     
     __weak typeof(self) _self = self;
     UITapGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id sender) {
-        [_self setImageURL:[_self.webImageView ll_imageURL]];
+        if (_self.didSelectedBlock) {
+            _self.didSelectedBlock(_self);
+        }
     }];
-    g.delegate = self;
-    [_label addGestureRecognizer:g];
+    [_webImageView addGestureRecognizer:g];
     
     return self;
 }
-- (void)setImageURL:(NSURL *)url {
-    _label.hidden = YES;
+- (void)setImageButtonAction:(UIButton *)button {
+    NSURL *url = [NSURL URLWithString:button.restorationIdentifier];
+    [self setImageURL:url];
+}
+- (void)setImageURL:(NSURL *)url{
+    _button.hidden = YES;
     _indicator.hidden = NO;
     [_indicator startAnimating];
     __weak typeof(self) _self = self;
@@ -93,10 +103,9 @@
         _self.progressLayer.hidden = YES;
         [_self.indicator stopAnimating];
         _self.indicator.hidden = YES;
-        if (!image) _self.label.hidden = NO;
+        if (!image) _self.button.hidden = NO;
     }];
 }
-
 @end
 
 @interface LLDemoController ()
@@ -182,7 +191,9 @@
 }
 
 
-
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    return NO;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _imageLinks.count;
 }
@@ -194,29 +205,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LLDemoControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) cell = [[LLDemoControllerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        [cell setImageURL:[NSURL URLWithString:_imageLinks[indexPath.row % _imageLinks.count]]];
+    [cell setImageURL:[NSURL URLWithString:_imageLinks[indexPath.row % _imageLinks.count]]];
+    __weak typeof(self) _self = self;
+    cell.didSelectedBlock = ^(LLDemoControllerCell *cell) {
+        [_self tableView:tableView didSelectCell:cell];
+    };
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIView *fromView = nil;
-    NSInteger index = indexPath.row;
-    LLDemoControllerCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
+- (void)tableView:(UITableView *)tableView didSelectCell:(LLDemoControllerCell *)cell{
+    UIView *fromView = cell.webImageView;
     NSMutableArray *items = [NSMutableArray new];
-    
     for (NSInteger i = 0,max = _imageLinks.count;i < max;i++) {
-        LLPhotoItem *item = [LLPhotoItem new];
         LLDemoControllerCell *ce = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         UIView *view = ce.webImageView;
         if(!ce || !ce.webImageView){
             view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_loading_en"]];
         }
-        item.thumbView = view;
-        item.largeImageURL = [NSURL URLWithString:_imageLinks[i % _imageLinks.count]];
+        LLPhotoItem *item = [LLPhotoItem photoItemWithThumbView:view
+                                                 largeImageSize:CGSizeZero
+                                                       imageURL:[NSURL URLWithString:_imageLinks[i % _imageLinks.count]]];
+        
+       
         [items addObject:item];
-        if (i == index) {
-            fromView = cell.webImageView;
-        }
     }
     
     LLPhotoBrowser *v = [[LLPhotoBrowser alloc] initWithPhotoItems:items];
