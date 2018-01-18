@@ -11,7 +11,6 @@
 #import "UIButton+WebCache.h"
 #import "UIView+WebCache.h"
 #import "NSData+ImageContentType.h"
-#import "YYImage.h"
 @implementation UIView (LLWebCache)
 - (void)ll_setImageWithURL:(nullable NSURL *)imageURL placeholder:(nullable UIImage *)placeholder{
     if ([self isKindOfClass:[UIImageView class]]) {
@@ -41,20 +40,7 @@
                 completion:(SDExternalCompletionBlock)completion{
     if ([self isKindOfClass:[UIImageView class]]) {
         UIImageView *imageView = (UIImageView *)self;
-        if ([imageView isKindOfClass:NSClassFromString(@"YYAnimatedImageView")]) {
-             SDSetImageBlock imageBlock = ^(UIImage * _Nullable image, NSData * _Nullable imageData) {
-                 // This setImageBlock may not called from main queue
-                 YYImage *animatedImage = [YYImage imageWithData:imageData];
-                 dispatch_main_async_safe(^{
-                     if (animatedImage) {
-                         imageView.image = animatedImage;
-                     }
-                 });
-            };
-            [imageView sd_internalSetImageWithURL:imageURL placeholderImage:placeholder options:0 operationKey:nil setImageBlock:imageBlock progress:progressBlock completed:completion];
-        }else{
-            [imageView sd_setImageWithURL:imageURL placeholderImage:placeholder options:options progress:progressBlock completed:completion];
-        }
+        [imageView sd_setImageWithURL:imageURL placeholderImage:placeholder options:options progress:progressBlock completed:completion];
         
         
     }else if ([self isKindOfClass:[UIButton class]]){
@@ -81,7 +67,6 @@
 - (NSURL *)ll_imageURL;{
     return [self sd_imageURL];
 }
-
 + (UIImage *)imageCacheWithURL:(NSURL *)imageURL{
     if (!imageURL) return nil;
     NSString *URLString = imageURL.absoluteString;

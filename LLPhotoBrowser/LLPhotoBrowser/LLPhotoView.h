@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "LLPhotoItem.h"
 #import "UIView+LLWebCache.h"
-#import "YYImage.h"
 #import "FLAnimatedImage.h"
 @interface LLPhotoView : UIScrollView<UIScrollViewDelegate>
 

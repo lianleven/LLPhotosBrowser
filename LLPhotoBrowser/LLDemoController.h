@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "YYCategories.h"
-#import "YYImage.h"
 @interface LLDemoController : UITableViewController
 
 @end
