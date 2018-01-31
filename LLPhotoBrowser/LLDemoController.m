@@ -11,7 +11,10 @@
 #import "FLAnimatedImage.h"
 #import "LLPhotoBrowser.h"
 
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kCellHeight ceil((kScreenWidth) * 3.0 / 4.0)
+#define kiOS7Later ([UIDevice currentDevice].systemVersion.doubleValue > 7.0)
+#define kiOS8Later ([UIDevice currentDevice].systemVersion.doubleValue > 8.0)
 @class LLDemoControllerCell;
 typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
 @interface LLDemoControllerCell : UITableViewCell<UIGestureRecognizerDelegate>
@@ -67,15 +70,15 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
     _progressLayer.strokeEnd = 0;
     [_webImageView.layer addSublayer:_progressLayer];
     
-    __weak typeof(self) _self = self;
-    UITapGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id sender) {
-        if (_self.didSelectedBlock) {
-            _self.didSelectedBlock(_self);
-        }
-    }];
+    UITapGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
     [_webImageView addGestureRecognizer:g];
     
     return self;
+}
+- (void)tapAction{
+    if (self.didSelectedBlock) {
+        self.didSelectedBlock(self);
+    }
 }
 - (void)setImageButtonAction:(UIButton *)button {
     NSURL *url = [NSURL URLWithString:button.restorationIdentifier];
@@ -187,7 +190,7 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
 
 - (void)reload {
     [UIView removeAllCacheImage];
-    [self.tableView performSelector:@selector(reloadData) afterDelay:0.1];
+    [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.1];
 }
 
 

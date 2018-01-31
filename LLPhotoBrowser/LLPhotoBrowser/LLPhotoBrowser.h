@@ -14,7 +14,6 @@
 
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
 @property (nonatomic, readonly) NSInteger currentPage;
-@property (nonatomic, assign) BOOL blurEffectBackground; ///< Default is YES
 
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

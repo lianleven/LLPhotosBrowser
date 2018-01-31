@@ -10,6 +10,8 @@
 
 @interface UIView (LLAdd)
 
+@property (nonatomic, strong, readonly) UIViewController *ll_viewController;
+
 /**
  Create a snapshot image of the complete view hierarchy.
  */

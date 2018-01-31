@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YYCategories.h"
+#import "UIView+LLAdd.h"
 @import UIKit;
 @interface LLPhotoItem : NSObject
 

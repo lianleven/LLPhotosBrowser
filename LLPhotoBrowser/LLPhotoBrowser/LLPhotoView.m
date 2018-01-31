@@ -78,25 +78,25 @@
         return;
     }
     
-    @weakify(self);
+    __weak typeof(self) weakSelf = self;
     [_imageView ll_setImageWithURL:item.largeImageURL placeholder:item.thumbImage progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        @strongify(self);
-        if (!self) return;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) return;
         CGFloat progress = receivedSize / (float)expectedSize;
         progress = progress < 0.01 ? 0.01 : progress > 1 ? 1 : progress;
         if (isnan(progress)) progress = 0;
-        self.progressLayer.hidden = NO;
-        self.progressLayer.strokeEnd = progress;
+        strongSelf.progressLayer.hidden = NO;
+        strongSelf.progressLayer.strokeEnd = progress;
     } completion:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        @strongify(self);
-        if (!self) return;
-        self.progressLayer.hidden = YES;
-        self.maximumZoomScale = 3;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!strongSelf) return;
+        strongSelf.progressLayer.hidden = YES;
+        strongSelf.maximumZoomScale = 3;
         if (image) {
-            self->_itemDidLoad = YES;
+            strongSelf->_itemDidLoad = YES;
             
-            [self resizeSubviewSize];
-            [self.imageView.layer addFadeAnimationWithDuration:0.1 curve:UIViewAnimationCurveLinear];
+            [strongSelf resizeSubviewSize];
+            [strongSelf.imageView.layer addFadeAnimationWithDuration:0.1 curve:UIViewAnimationCurveLinear];
         }
     }];
     [self resizeSubviewSize];

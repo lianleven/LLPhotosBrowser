@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "UIImageView+WebCache.h"
+#import "NSData+ImageContentType.h"
 
+typedef NS_ENUM(NSInteger, LLImageFormat) {
+    LLImageFormatUndefined = -1,
+    LLImageFormatJPEG = 0,
+    LLImageFormatPNG,
+    LLImageFormatGIF,
+    LLImageFormatTIFF,
+    LLImageFormatWebP,
+    LLImageFormatHEIC
+};
 @interface UIView (LLWebCache)
 
 
@@ -32,5 +42,7 @@ placeholder:(UIImage *)placeholder
 + (void)removeAllCacheImage;
 + (void)ll_setImage:(UIImage *)image imageData:(NSData *)imageData forKey:(NSString *)key;
 
+
++ (LLImageFormat)ll_imageFormatForImageData:(nullable NSData *)data;
 @end
 

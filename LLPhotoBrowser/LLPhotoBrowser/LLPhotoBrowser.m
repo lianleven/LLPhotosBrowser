@@ -9,7 +9,6 @@
 #import "LLPhotoBrowser.h"
 
 
-
 #define kSysVersion ([UIDevice currentDevice].systemVersion.doubleValue)
 #define kPadding 20
 #define kHiColor ([UIColor colorWithRed:45/255.0 green:214/255.0 blue:184/255.0 alpha:1])
@@ -47,6 +46,8 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 @property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 @property (nonatomic, assign) CGPoint panGestureBeginPoint;
 
+@property (nonatomic, assign) BOOL blurEffectBackground; ///< Default is NO
+
 @end
 
 @implementation LLPhotoBrowser
@@ -55,7 +56,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     self = [super init];
     if (photoItems.count == 0) return nil;
     _groupItems = photoItems.copy;
-    _blurEffectBackground = YES;
+    _blurEffectBackground = NO;
     self.backgroundColor = [UIColor clearColor];
     self.frame = [UIScreen mainScreen].bounds;
     self.clipsToBounds = YES;
@@ -144,18 +145,18 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     if (page == -1) page = 0;
     _fromItemIndex = page;
     
-    _snapshotImage = [_toContainerView snapshotImageAfterScreenUpdates:NO];
+    _snapshotImage = [self snapshotImageWithView:_toContainerView afterScreenUpdates:NO];
     BOOL fromViewHidden = fromView.hidden;
     fromView.hidden = YES;
-    _snapshorImageHideFromView = [_toContainerView snapshotImage];
+    _snapshorImageHideFromView = [self snapshotImageWithView:_toContainerView];
     fromView.hidden = fromViewHidden;
     
     _background.image = _snapshorImageHideFromView;
-    if (_blurEffectBackground) {
-        _blurBackground.image = [_snapshorImageHideFromView imageByBlurDark]; //Same to UIBlurEffectStyleDark
-    } else {
-        _blurBackground.image = [UIImage imageWithColor:[UIColor blackColor]];
-    }
+//    if (_blurEffectBackground) {
+//        _blurBackground.image = [_snapshorImageHideFromView imageByBlurDark]; //Same to UIBlurEffectStyleDark
+//    } else {
+        _blurBackground.image = [LLPhotoBrowser imageWithColor:[UIColor blackColor]];
+//    }
     
     self.size = _toContainerView.size;
     self.blurBackground.alpha = 0;
@@ -527,24 +528,15 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 
     LLPhotoView *tile = [self cellForPage:self.currentPage];
     if (!tile.imageView.image) return;
-
-    // try to save original image data if the image contains multi-frame (such as GIF/APNG)
-    id imageItem = [tile.imageView.image yy_imageDataRepresentation];
-    YYImageType type = YYImageDetectType((__bridge CFDataRef)(imageItem));
-    if (type != YYImageTypePNG &&
-        type != YYImageTypeJPEG &&
-        type != YYImageTypeGIF) {
-        imageItem = tile.imageView.image;
-    }
-
+    id imageItem = tile.imageView.image;
     UIActivityViewController *activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:@[imageItem] applicationActivities:nil];
     if ([activityViewController respondsToSelector:@selector(popoverPresentationController)]) {
         activityViewController.popoverPresentationController.sourceView = self;
     }
 
-    UIViewController *toVC = self.toContainerView.viewController;
-    if (!toVC) toVC = self.viewController;
+    UIViewController *toVC = self.toContainerView.ll_viewController;
+    if (!toVC) toVC = self.ll_viewController;
     [toVC presentViewController:activityViewController animated:YES completion:nil];
 }
 
@@ -624,4 +616,42 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     }
 }
 
+#pragma mark - private helper method
+- (UIImage *)snapshotImageWithView:(UIView *)view afterScreenUpdates:(BOOL)afterUpdates{
+    if (![view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
+        return [self snapshotImageWithView:view];
+    }
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:afterUpdates];
+    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snap;
+}
+- (UIImage *)snapshotImageWithView:(UIView *)view {
+    UIImage *image = nil;
+    if ([view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);
+        [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }else{
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0);
+        [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+    }
+    return image;
+}
++ (UIImage *)imageWithColor:(UIColor *)color{
+    if (!color) return nil;
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 @end

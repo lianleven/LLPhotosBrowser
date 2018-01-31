@@ -31,30 +31,16 @@ PODS:
   - SDWebImage/WebP (4.2.2):
     - libwebp
     - SDWebImage/Core
-  - YYCategories (1.0.4):
-    - YYCategories/no-arc (= 1.0.4)
-  - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
   - SDWebImage/GIF
   - SDWebImage/WebP
-  - YYCategories (from `https://github.com/lianleven/YYCategories.git`)
-
-EXTERNAL SOURCES:
-  YYCategories:
-    :git: https://github.com/lianleven/YYCategories.git
-
-CHECKOUT OPTIONS:
-  YYCategories:
-    :commit: af60b53de32256538efcfd45007627483fafbabe
-    :git: https://github.com/lianleven/YYCategories.git
 
 SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   libwebp: 1d5a07c2eb97f9c31bd5f154bb82efc0ea67c6a2
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
-  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: ea20304bf2cde8d8ea19b5ee67845310be59b86e
+PODFILE CHECKSUM: 43e7657c07c6d684365ed2eff86805be77a84667
 
 COCOAPODS: 1.3.1

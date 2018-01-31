@@ -9,7 +9,15 @@
 #import "UIView+LLAdd.h"
 
 @implementation UIView (LLAdd)
-
+- (UIViewController *)ll_viewController{
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
 - (UIImage *)snapshotImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];

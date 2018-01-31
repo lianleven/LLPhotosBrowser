@@ -41,8 +41,6 @@
     if ([self isKindOfClass:[UIImageView class]]) {
         UIImageView *imageView = (UIImageView *)self;
         [imageView sd_setImageWithURL:imageURL placeholderImage:placeholder options:options progress:progressBlock completed:completion];
-        
-        
     }else if ([self isKindOfClass:[UIButton class]]){
         UIButton *button = (UIButton *)self;
         [button sd_setImageWithURL:imageURL forState:UIControlStateNormal placeholderImage:placeholder options:options completed:completion];
@@ -93,6 +91,10 @@
         [[[SDWebImageManager sharedManager] imageCache] storeImage:image forKey:key completion:nil];
     }
     
+}
+
++ (LLImageFormat)ll_imageFormatForImageData:(nullable NSData *)data;{
+    return (LLImageFormat)[NSData sd_imageFormatForImageData:data];
 }
 
 
