@@ -36,7 +36,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSMutableArray *cells;
-@property (nonatomic, strong) UIPageControl *pager;
+@property (nonatomic, strong) LLPageControl *pager;
 @property (nonatomic, assign) CGFloat pagerCurrentPage;
 @property (nonatomic, assign) BOOL fromNavigationBarHidden;
 
@@ -108,8 +108,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     _scrollView.delaysContentTouches = NO;
     _scrollView.canCancelContentTouches = YES;
     
-    _pager = [[UIPageControl alloc] init];
-    _pager.hidesForSinglePage = YES;
+    _pager = [[LLPageControl alloc] init];
     _pager.userInteractionEnabled = NO;
     _pager.width = self.width - 36;
     _pager.height = 10;

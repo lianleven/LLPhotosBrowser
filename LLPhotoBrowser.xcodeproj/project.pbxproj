@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C2D657320109883005A364F /* UIView+LLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2D657220109883005A364F /* UIView+LLAdd.m */; };
 		5C2D657620109892005A364F /* UIView+LLWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2D657420109891005A364F /* UIView+LLWebCache.m */; };
+		5C6748332021C2EF00351337 /* LLPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6748322021C2EF00351337 /* LLPageControl.m */; };
 		5C8321E61FF2316200A36D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8321E51FF2316200A36D07 /* AppDelegate.m */; };
 		5C8321E91FF2316200A36D07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8321E81FF2316200A36D07 /* ViewController.m */; };
 		5C8321EC1FF2316200A36D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8321EA1FF2316200A36D07 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 		5C2D657220109883005A364F /* UIView+LLAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLAdd.m"; sourceTree = "<group>"; };
 		5C2D657420109891005A364F /* UIView+LLWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLWebCache.m"; sourceTree = "<group>"; };
 		5C2D657520109892005A364F /* UIView+LLWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLWebCache.h"; sourceTree = "<group>"; };
+		5C6748312021C2EF00351337 /* LLPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPageControl.h; sourceTree = "<group>"; };
+		5C6748322021C2EF00351337 /* LLPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPageControl.m; sourceTree = "<group>"; };
 		5C8321E11FF2316200A36D07 /* LLPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8321E41FF2316200A36D07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C8321E51FF2316200A36D07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				5C8321FF1FF2325000A36D07 /* LLPhotoItem.m */,
 				5C8322061FF3330800A36D07 /* LLPhotoView.h */,
 				5C8322071FF3330800A36D07 /* LLPhotoView.m */,
+				5C6748312021C2EF00351337 /* LLPageControl.h */,
+				5C6748322021C2EF00351337 /* LLPageControl.m */,
 				5C2D657120109883005A364F /* UIView+LLAdd.h */,
 				5C2D657220109883005A364F /* UIView+LLAdd.m */,
 				5C2D657520109892005A364F /* UIView+LLWebCache.h */,
@@ -266,6 +271,7 @@
 				5C2D657320109883005A364F /* UIView+LLAdd.m in Sources */,
 				5C2D657620109892005A364F /* UIView+LLWebCache.m in Sources */,
 				5C8322081FF3330800A36D07 /* LLPhotoView.m in Sources */,
+				5C6748332021C2EF00351337 /* LLPageControl.m in Sources */,
 				5C8321E91FF2316200A36D07 /* ViewController.m in Sources */,
 				5C8321FD1FF2320200A36D07 /* LLPhotoBrowser.m in Sources */,
 				5C8322001FF2325000A36D07 /* LLPhotoItem.m in Sources */,

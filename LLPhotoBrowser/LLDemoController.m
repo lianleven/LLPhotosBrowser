@@ -234,6 +234,8 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
     }
     
     LLPhotoBrowser *v = [[LLPhotoBrowser alloc] initWithPhotoItems:items];
+//    v.pager.pageType = LLPageControlTypeSystem;
+    v.pager.pageType = LLPageControlTypeNumber;
     [v presentFromImageView:fromView toContainer:self.navigationController.view animated:YES completion:nil];
 }
 

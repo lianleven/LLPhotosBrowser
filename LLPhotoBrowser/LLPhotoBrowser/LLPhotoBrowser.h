@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "LLPhotoItem.h"
 #import "LLPhotoView.h"
+#import "LLPageControl.h"
 
 @interface LLPhotoBrowser : UIView
 
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
 @property (nonatomic, readonly) NSInteger currentPage;
+@property (nonatomic, strong, readonly) LLPageControl *pager;
 
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
