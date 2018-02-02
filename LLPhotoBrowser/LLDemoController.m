@@ -222,11 +222,7 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
     for (NSInteger i = 0,max = _imageLinks.count;i < max;i++) {
         LLDemoControllerCell *ce = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         UIView *view = ce.webImageView;
-        if(!ce || !ce.webImageView){
-            view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_loading_en"]];
-        }
         LLPhotoItem *item = [LLPhotoItem photoItemWithThumbView:view
-                                                 largeImageSize:CGSizeZero
                                                        imageURL:[NSURL URLWithString:_imageLinks[i % _imageLinks.count]]];
         
        

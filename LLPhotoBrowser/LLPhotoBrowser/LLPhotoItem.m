@@ -16,11 +16,10 @@
 
 @implementation LLPhotoItem
 
-+ (instancetype)photoItemWithThumbView:(UIView *)thumbView largeImageSize:(CGSize)largeImageSize imageURL:(NSURL *)imageURL;{
++ (instancetype)photoItemWithThumbView:(UIView *)thumbView imageURL:(NSURL *)imageURL;{
     LLPhotoItem *item = [LLPhotoItem new];
     item.thumbView = thumbView;
     item.largeImageURL = imageURL;
-    item.largeImageSize = largeImageSize;
     return item;
 }
 

@@ -12,12 +12,11 @@
 @interface LLPhotoItem : NSObject
 
 @property (nonatomic, strong) UIView *thumbView; ///< thumb image, used for animation position calculation
-@property (nonatomic, assign) CGSize largeImageSize;
 @property (nonatomic, strong) NSURL *largeImageURL;
 
 @property (nonatomic, readonly) UIImage *thumbImage;
 @property (nonatomic, readonly) BOOL thumbClippedToTop;
 
-+ (instancetype)photoItemWithThumbView:(UIView *)thumbView largeImageSize:(CGSize)largeImageSize imageURL:(NSURL *)imageURL;
++ (instancetype)photoItemWithThumbView:(UIView *)thumbView imageURL:(NSURL *)imageURL;
 
 @end
