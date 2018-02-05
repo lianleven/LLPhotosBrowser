@@ -1,0 +1,15 @@
+  
+pod::Spec.new do |s|
+  s.name         = 'LLPhotoBrowser'
+  s.version      = '1.0'
+  s.summary      = '简单的图片浏览器'
+  s.homepage     = 'https://github.com/lianleven/LLPhotoBrowser'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.authors       = { 'lianleven' => 'lianleven@163.com' }
+  s.source       = { :git => 'https://github.com/lianleven/LLPhotoBrowser.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '7.0'
+  s.platform     = :ios, '7.0'
+  s.source_files = 'LLPhotoBrowser/**/*.{h,m}'
+
+  s.requires_arc = true
+end
