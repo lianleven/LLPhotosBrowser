@@ -1,12 +1,12 @@
 //
-//  LLPhotoBrowser.m
-//  LLPhotoBrowser
+//  LLPhotosBrowser.m
+//  LLPhotosBrowser
 //
 //  Created by LianLeven on 2017/12/26.
 //  Copyright © 2017年 LianLeven. All rights reserved.
 //
 
-#import "LLPhotoBrowser.h"
+#import "LLPhotosBrowser.h"
 
 
 #define kSysVersion ([UIDevice currentDevice].systemVersion.doubleValue)
@@ -22,7 +22,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     return CGSizeMake(ceil(size.width * scale) / scale,
                       ceil(size.height * scale) / scale);
 }
-@interface LLPhotoBrowser ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
+@interface LLPhotosBrowser ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 @property (nonatomic, weak) UIView *fromView;
 @property (nonatomic, weak) UIView *toContainerView;
@@ -50,7 +50,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 
 @end
 
-@implementation LLPhotoBrowser
+@implementation LLPhotosBrowser
 
 - (instancetype)initWithPhotoItems:(NSArray <LLPhotoItem *>*)photoItems; {
     self = [super init];
@@ -154,7 +154,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 //    if (_blurEffectBackground) {
 //        _blurBackground.image = [_snapshorImageHideFromView imageByBlurDark]; //Same to UIBlurEffectStyleDark
 //    } else {
-        _blurBackground.image = [LLPhotoBrowser imageWithColor:[UIColor blackColor]];
+        _blurBackground.image = [LLPhotosBrowser imageWithColor:[UIColor blackColor]];
 //    }
     
     self.size = _toContainerView.size;

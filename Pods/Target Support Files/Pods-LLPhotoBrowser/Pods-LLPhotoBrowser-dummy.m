@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_LLPhotoBrowser : NSObject
+@interface PodsDummy_Pods_LLPhotosBrowser : NSObject
 @end
-@implementation PodsDummy_Pods_LLPhotoBrowser
+@implementation PodsDummy_Pods_LLPhotosBrowser
 @end

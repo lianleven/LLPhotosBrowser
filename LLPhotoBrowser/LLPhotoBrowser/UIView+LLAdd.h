@@ -1,6 +1,6 @@
 //
 //  UIView+LLAdd.h
-//  LLPhotoBrowser
+//  LLPhotosBrowser
 //
 //  Created by LianLeven on 2017/12/26.
 //  Copyright © 2017年 LianLeven. All rights reserved.

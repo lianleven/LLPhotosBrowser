@@ -1,6 +1,6 @@
 //
-//  LLPhotoBrowser.h
-//  LLPhotoBrowser
+//  LLPhotosBrowser.h
+//  LLPhotosBrowser
 //
 //  Created by LianLeven on 2017/12/26.
 //  Copyright © 2017年 LianLeven. All rights reserved.
@@ -11,7 +11,7 @@
 #import "LLPhotoView.h"
 #import "LLPageControl.h"
 
-@interface LLPhotoBrowser : UIView
+@interface LLPhotosBrowser : UIView
 
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
 @property (nonatomic, readonly) NSInteger currentPage;

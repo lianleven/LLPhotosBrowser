@@ -1,6 +1,6 @@
 //
 //  LLDemoController.m
-//  LLPhotoBrowser
+//  LLPhotosBrowser
 //
 //  Created by LianLeven on 2017/12/27.
 //  Copyright © 2017年 LianLeven. All rights reserved.
@@ -9,7 +9,7 @@
 #import "LLDemoController.h"
 #import "UIView+LLWebCache.h"
 #import "FLAnimatedImage.h"
-#import "LLPhotoBrowser.h"
+#import "LLPhotosBrowser.h"
 
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define kCellHeight ceil((kScreenWidth) * 3.0 / 4.0)
@@ -229,7 +229,7 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
         [items addObject:item];
     }
     
-    LLPhotoBrowser *v = [[LLPhotoBrowser alloc] initWithPhotoItems:items];
+    LLPhotosBrowser *v = [[LLPhotosBrowser alloc] initWithPhotoItems:items];
 //    v.pager.pageType = LLPageControlTypeSystem;
     v.pager.pageType = LLPageControlTypeNumber;
     [v presentFromImageView:fromView toContainer:self.navigationController.view animated:YES completion:nil];

@@ -1,6 +1,6 @@
 //
 //  LLPageControl.h
-//  LLPhotoBrowser
+//  LLPhotosBrowser
 //
 //  Created by LianLeven on 2018/1/31.
 //  Copyright © 2018年 LianLeven. All rights reserved.
