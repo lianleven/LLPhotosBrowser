@@ -1,7 +1,7 @@
   
 pod::Spec.new do |s|
   s.name         = 'LLPhotosBrowser'
-  s.version      = '1.0.3'
+  s.version      = '1.1'
   s.summary      = 'A simple iOS photo browser'
   s.homepage     = 'https://github.com/lianleven/LLPhotosBrowser'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }

@@ -169,8 +169,9 @@
     // last_y may be 0, means no enough bitmap data to decode, ignore this
     if (width + height > 0 && last_y > 0 && height >= last_y) {
         // Construct a UIImage from the decoded RGBA value array
+        size_t rgbaSize = last_y * stride;
         CGDataProviderRef provider =
-        CGDataProviderCreateWithData(NULL, rgba, 0, NULL);
+        CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
         CGColorSpaceRef colorSpaceRef = SDCGColorSpaceGetDeviceRGB();
         
         CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
@@ -253,7 +254,7 @@
     CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
     
 #if SD_UIKIT || SD_WATCH
-    image = [UIImage imageWithCGImage:newImageRef];
+    image = [[UIImage alloc] initWithCGImage:newImageRef];
 #elif SD_MAC
     image = [[UIImage alloc] initWithCGImage:newImageRef size:NSZeroSize];
 #endif
@@ -393,6 +394,9 @@
     
     size_t bytesPerRow = CGImageGetBytesPerRow(imageRef);
     CGDataProviderRef dataProvider = CGImageGetDataProvider(imageRef);
+    if (!dataProvider) {
+        return nil;
+    }
     CFDataRef dataRef = CGDataProviderCopyData(dataProvider);
     uint8_t *rgba = (uint8_t *)CFDataGetBytePtr(dataRef);
     
