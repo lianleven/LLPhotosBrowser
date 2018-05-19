@@ -7,7 +7,6 @@
 //
 
 #import "LLPhotoView.h"
-#import "UIView+LLAdd.h"
 
 @implementation LLPhotoView
 

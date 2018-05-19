@@ -7,238 +7,238 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0386233203373BFF6FDEC669ED50D476 /* dec_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = E66C806C111ED59D77E3B756F68F6DE7 /* dec_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		001179A9FE922BC41FCEE89FE3453912 /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1316952C4022999AA717E77B86ABF73E /* rescaler_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		003915EC277B217AC133538FD92F06D9 /* io_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = CAC983EE525B6B8A5E08AFE62488FFF9 /* io_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		011DC592D6A0E269BDFBAB3B6E8E6B17 /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = EB05E17CD5D87FF68F769B76B3F89F13 /* dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		02AAB4616CDE44A157906061C1DC3E57 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1625835BB5ADF638F27B2A11AFAECEDD /* NSImage+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03126E65F97F5221C2ABA26C81A5906C /* lossless_enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = D57FC9D23FD2AF592CC107BB293BAB53 /* lossless_enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		048B7B4A7E14D5D7B3F6E3B2BE3CF5CE /* endian_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B94243C9090B063D11888E984DE4913 /* endian_inl_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		05C1FC864E8C4263CD0C1E38F9A2FDB5 /* color_cache_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A9E279BF03B4395905D1A4A03D0413 /* color_cache_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		05F06B12AAC5CD0C807ECE5B3B3D2BAC /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A52F8C90F9FAD7A915BE9ACFD32197 /* FLAnimatedImage-dummy.m */; };
+		04D677B053D29F01EFCBE546D081B9CD /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 47CB58645D96A6258225E740995A355E /* rescaler.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05EEC057A9F46E99B8C5CC53F6AD4619 /* bit_reader_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D57FAF87AD00D2C23449372BDAD47720 /* bit_reader_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05EED369424D64430ED9CB53A316CA3A /* alpha_processing_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C88142F18A38243A5DE0E9F1445D968 /* alpha_processing_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		063F3279CD4E2141DA8AF5587193DBBD /* tree_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4069EA2993C644B926203862FCFD9938 /* tree_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		06704B6B66FC2F7531F056C6FCB9CBDD /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 25347A75F2CFD13784956A70CCEF7513 /* UIImage+ForceDecode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		06AF04D5DBCA654A0DABC9853E829855 /* NSButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E435B5D4E43BA3AAB918893DC76F9A /* NSButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		08643BABF9B73CD60D230707A83CCB76 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0EDEA6F7B7750C5C3262AE45496C1 /* ImageIO.framework */; };
-		098744DEF0878DB05A6ABA9664058AEA /* tree_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4069EA2993C644B926203862FCFD9938 /* tree_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		0A5DE14808B51C1E7107D4B6B8701C21 /* vp8l_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 06C8AD43A97D01C766D183E99410FF64 /* vp8l_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		08D2DD21C40B5B0062831D7273DD557D /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3223D1E3489C1EEF808C8E8A74DE7 /* SDAnimatedImageRep.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		08EAE6394885CA7B4AC9CFAFAC263E74 /* cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C295721001B1B3E93A3A7248AE4DB09 /* cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		09D33F08947CC5081C0A61D3326CD1EF /* muxread.c in Sources */ = {isa = PBXBuildFile; fileRef = 950EB70BF863E4F80C40DB1E89029BA2 /* muxread.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A131BF505E4DD82749A95339CF181B0 /* analysis_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = FE4ECC3A4D08B12B76F90ABBEDF1E73F /* analysis_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0A3FBF0950CE71C5D5D65EECE7DBA2AD /* dec_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 64D70746DB133D69C1F577A45C049025 /* dec_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B16BF6A3C3680A702E5E0C5D6A1024B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829BF7C1EB30FBE9F728AC1ABC16C3A /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0B31BF16DBCB02F001CA0A6D5DC8E0DB /* predictor_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BADDCA503F98CDEE3250F39C1092139 /* predictor_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0C155BE7DD4CD98B4C1A62998F837758 /* demux.h in Headers */ = {isa = PBXBuildFile; fileRef = E748E1C871DB017124E3ADDC0E585282 /* demux.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0C3A2060E0B97C22EF9ADDAD4800AC36 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A2398E45F4E712266F7C4E5DABC46373 /* SDImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0D3ACA47D55DD1C87FA03EA7FBF23096 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1FF73409BE3EA2B35A92E61A452F1 /* SDWebImage-dummy.m */; };
+		0CD024A8B65BDBB62B6A15CE07519CEB /* vp8l_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 06C8AD43A97D01C766D183E99410FF64 /* vp8l_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0D716FD3DC6CA4BE223A4205776D62EB /* UIImage+WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = 86EF40812DC4258A1E1D1558BE147133 /* UIImage+WebP.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0D9AD0FB1F5D8183823496586FFC4367 /* lossless_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 31D64231231211EBB2EF540B5C26BEF3 /* lossless_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		0E47FB8143A27B7467AA2108E5E3A954 /* common_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFEF6F847B81AC5A4E8D282F9DC257B /* common_sse2.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E4D6B4F0924E0146F7079BC81FCB077 /* cost_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DC86AB6865B8ACAEE9A3539BA694132 /* cost_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		101DD05D50FF23FDBE0A123DDC7F8607 /* histogram_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E8B70C8F6C8E9DDDD7F8B4ABCD0C83A /* histogram_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		102AF4276262AE3E556CA777260B9EEF /* rescaler.c in Sources */ = {isa = PBXBuildFile; fileRef = 47CB58645D96A6258225E740995A355E /* rescaler.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		10A7BCF65001A7A3CCE656FE6E30550B /* dec_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 64D70746DB133D69C1F577A45C049025 /* dec_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		113E70610F0D6E19C90DA0BE647271A1 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6249248FA04DAE73A3845795CDD56D7D /* SDWebImageCompat.m */; };
+		0EF943884F415C2763DDEDED2CE5B57F /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 578B78B605F4B960A9AD7E8C5B28F490 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F3BDB57DDF0223EE8541D93B66CB2F9 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7676B2A2764347A608474BA098CDEF69 /* UIImage+WebP.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1169683911339DF848010FC4143E5B0D /* cost.c in Sources */ = {isa = PBXBuildFile; fileRef = 07EF90F3033999693662FE029269DBD6 /* cost.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		117F2EB00F857734B7F2442E8218990F /* quant_levels_dec_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F57B1A28F207308FC8DAC8BED739D6F /* quant_levels_dec_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		11E28DA1D9C66DCC014EAF80F24EBD40 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 735AF1F0EF7C5B19D7B438E3FF59FC27 /* UIImage+GIF.m */; };
-		1251339203F7B7922F75597AB9C6C07B /* picture_psnr_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A939B56A3EFBB10D01232768C53E7D4 /* picture_psnr_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		12F247472C2C8D54A7358E0D5C4F6F9B /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B056C602A522AD1E4C73C4EFCCFFC997 /* SDWebImageCoder.m */; };
-		1313339F0DA4B0A1D3D6C6F82BCB892E /* SDWebImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F65E90C2E37090F48FC94D4DCFA924D2 /* SDWebImageCoderHelper.m */; };
-		13259687A2C6FF51D5C4D49934970673 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF6B8D84A36C792C4165D8002ECA2A /* SDImageCache.m */; };
 		13E0BCCA63EA3CBF11308D5634E236BD /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = EB2266F2CC578E09C26C11FCDCDA1E05 /* encode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		13F2B81D1DDEADE0FFD9A664A8E6307F /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E173DE3942BAB3F815C65B1C2887BB66 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		13F6E0492B28AB3993D524EBEF29E199 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF0AA1B466D33B0573EDF183AA7A493 /* SDWebImagePrefetcher.m */; };
-		140663C9C38DA0A6AC377135A6F76064 /* enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F88093D84DD2776DCC8914E0638644A /* enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		142EB92368E577016B3FF710177ABBEF /* yuv_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 64E4CEB0B830E3E7A97C7BB1637F4C9E /* yuv_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		149FE385386535349085EE3CD7CF372C /* filters_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8D30B1114EC4FF76385FBA48B079CD /* filters_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		16C878C54D92A7C132F9381440DCA3C1 /* upsampling_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = DD2CF8B712700117BC279772F05A7CA6 /* upsampling_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		15044B015AD938F9D9495A6812CEB7F5 /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E02A9E89DAFA9753666C74A63B5BA /* SDWebImageImageIOCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1531A0BEB3CF491ABC4B7E8FDE415205 /* quant_levels_dec_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = AEEB7BC194AC7312A5573D586C21A797 /* quant_levels_dec_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15C18A2D1DE92EE77538C69B14A73CCF /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AFA0331ED127D732218A44C6081CB /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		15CD785C716D3428BCC69B5B6E60E6F9 /* alpha_processing_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = B8DDA1237CF2DBA157EDCF2610DDA3BD /* alpha_processing_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		16C0D21A86AF245562B6E25272B8FBD3 /* lossless_enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE8C00CEA7767061163745066C0E37 /* lossless_enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		16EF20E5B52818488819760AEDA906D8 /* lossless.c in Sources */ = {isa = PBXBuildFile; fileRef = 291D3CD1DA897243253CA8BC60487F36 /* lossless.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		17A96C92A41B0A923977BD978B72BAF7 /* SDWebImageImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 434CEEC3B545A29B912B1E61129BCE5A /* SDWebImageImageIOCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		17F4B097DEC3ADF58DD1F987FD45FB7A /* upsampling_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F4E89A2C000C9B03BC0AC43E0E933669 /* upsampling_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		19DF5365B66E69037C22305E8EE1E3D9 /* lossless_enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 055C0BD0B2ECDA01AB6A371DBF4DAD8D /* lossless_enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		1BC81FC33B420183F2813526F555E49A /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3223D1E3489C1EEF808C8E8A74DE7 /* SDAnimatedImageRep.m */; };
-		1CC688F390A5E754800C2126F34D520E /* rescaler_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AD42A20F6ECA943F3F83A5F52E5C27A /* rescaler_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		1D988C4E7C54590425E3A768C2AC4ADE /* picture_rescale_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 36E655D879B64C967362F23A3F54C5EE /* picture_rescale_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		1FCC173F34C1986C8564B4B5D466BEF7 /* config_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = B036713B79F986198E17814EE46853EB /* config_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		203FFF0AA61C1166ABDC0A803B1B750C /* alpha_processing.c in Sources */ = {isa = PBXBuildFile; fileRef = 597288AAF8155A3A31EDBB5A1E419A3B /* alpha_processing.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		208005557B135C7E10DE78FAE339AA90 /* lossless_enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6247255D6CEC44B281C449DF577F3B1A /* lossless_enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		17DA45FC43BF5C39AA992C6D7DBE8220 /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 30873B6433F36700EAA304B8892D9613 /* filters.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C0FEFC90CE5ABB87B8295796D04113E /* dec_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = E66C806C111ED59D77E3B756F68F6DE7 /* dec_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E82A69D2458F2A3C4554923BA51B3B8 /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C8474E6A5E990B6956FEDE085A14D24E /* SDImageCacheConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		21AE921C56F7502DEA0A9330B52EB4AA /* anim_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E9BE1B7E34136FE1E16D51C9D6F5B24 /* anim_encode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		233FA540976B45FB72CEA8D5BBF05269 /* lossless_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 31D64231231211EBB2EF540B5C26BEF3 /* lossless_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2445CF38E3385B1B9C2A640F23F70EC1 /* picture_rescale_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 36E655D879B64C967362F23A3F54C5EE /* picture_rescale_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2585143241925DE55DD907586340CD5E /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F8D05E64E214A0F0F3ACC4AEEF5D7A /* bit_reader_inl_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		28533A28C8E90C8FD49C532BEBDA73EE /* cost_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = C59597933FC5E7BA2605A8CEADF29829 /* cost_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		296D117B2639CD7F5F675F00B393DB65 /* yuv_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 07C6C6BDC1A3F1336915D63473A4C4B3 /* yuv_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		2A72BBD37619675A16674D2830740929 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2877594251B150EDB222E96167C95D5F /* SDWebImageCodersManager.m */; };
-		2A97A46E6304977C4ECDF4A6B1932439 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CD5193E176F8B9A0EBDDF5F238A35A /* UIImageView+WebCache.m */; };
+		25EC176130C1C317D3AF10893EBA1A24 /* thread_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 943D8B57FC345A7A1959905674DB939E /* thread_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2642DFAB7595A9FFF411A36786CF74FB /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A89AF4FF483C55D842FE156B678F01 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		283FEFD45B28B1FD6D725DB2A8291EF6 /* quant_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE91CD9B4B20CEA92B84F21438F568 /* quant_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2A3B8B9A4FD4C3625CBAFB22EF68E03A /* yuv_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 07C6C6BDC1A3F1336915D63473A4C4B3 /* yuv_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2AC92781FDBA4B29B1DEDE1D4140EA0C /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 518FF3A949A18A3265EB07C1227DB710 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2B5FEA8377B267CE91653EF5FBB856FF /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DA5477F7BB01AAAA6A9396064FFED7 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2D6DE94E8328B81C6ECDF8CD156E9B03 /* Pods-LLPhotosBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92AE4932F33543D0A51F491F8447993F /* Pods-LLPhotosBrowser-dummy.m */; };
-		2D7E9094DAC408EB44809D2618CD34E3 /* backward_references_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B56D8C0B01040A71F2C2D406677715D /* backward_references_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		2D87F36031B3DD7C1763E9132EF6565E /* frame_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E8055DCC848D845E15D4DE2FB260580 /* frame_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2ED8A9BD2EDFBDD30D8CE2BE7B1D1169 /* backward_references_cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F071B26BBF7ACD1DE1E77DF866EC0C /* backward_references_cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2EF5D8488410EFA8F50C8AEE624FF273 /* lossless_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = FF9C8797C5D795131D58E327922B2489 /* lossless_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F04684293C29C2781559A59A3688420 /* FLAnimatedImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C93D9EF9FB3FF6F88FBD59ADFD624C6A /* FLAnimatedImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F16F7C233BF623EB68B458B9E9743BD /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F0F9AD474EA2D44B0C4BAC6994DB1 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30D0DB6ECCCE2B836AD79B56E983CD05 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D6304363D0035B040D0B1E538540FEA /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		32BBF2626A7FC443C40EA556D9BCBA21 /* webp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = E607459C1D9243318D6BF0241FA229B4 /* webp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		325144F80B02A2A473215D05B4BBDD37 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1FF73409BE3EA2B35A92E61A452F1 /* SDWebImage-dummy.m */; };
 		33FEE01D56BB57DD8A88F1F97153513F /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C16E56816AB72FE9952CFCC397FDFF6 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3446231F5EFA8DFB5D740DC18928C9F3 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 24A2BE13B972F788302D29ED7DB94C8B /* utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		35DEC90C73FA4480409848B90CAF9371 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF0AA1B466D33B0573EDF183AA7A493 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		35E3CDB259AE877B0BB5AB5A8E323CE5 /* mux.h in Headers */ = {isa = PBXBuildFile; fileRef = 4710738BABF30CA568B03002E9D73681 /* mux.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3670E24E6B5BEA995904BB563D44CADC /* near_lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B447F0AB1A7124ECC4BD5F938EDCC /* near_lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		36C6233926955BF5AA38B2CB043483C0 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FCB8C76A5EC122AAC969221EEF8A877 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		36D2670B513D3CC11B27D51A1786990C /* huffman_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 01900A089785EF2C99CAB80D07E96913 /* huffman_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		386625266659C05F1CEE3A3BECFC4FF3 /* frame_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 479FA0E3917C93C9F531B8C32DD95153 /* frame_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3A7B0AFDBFE553461124B391EB24763A /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 466A165B6ABE54D4D042A418480276FA /* yuv.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3BB987708031B6300E4670B4A13A8FE7 /* rescaler_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AD42A20F6ECA943F3F83A5F52E5C27A /* rescaler_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3C4BA058A1C6C80FD77B013E3A72F776 /* common_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 368BB058A59C85AFDEF2B0AB56E5D8EA /* common_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3F440FC96E80EFBB306ED59D5681B4FF /* lossless.c in Sources */ = {isa = PBXBuildFile; fileRef = 291D3CD1DA897243253CA8BC60487F36 /* lossless.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		3FB481714048748FA92045CB9802C09C /* vp8_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3825B6A3749372B25D5F65A49076E6 /* vp8_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3FE0505327BBD9D41AB689569E65F05A /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 98A459DF1AC1D74DA302AFEFAB06E07C /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		416886BFDC503EDCBC2C45D28F143B03 /* filters_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = EA039A71DD7DF00FF76903EA434E35CE /* filters_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		4497F65B0630842F73A3CB8908519B6B /* enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4C727E854674F0E83BD36637AA72 /* enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		426E9CA26CD8D1B056568572BFE9BE7B /* iterator_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = D907EFCE021F7C6D000C1E87EF1AF5AE /* iterator_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4707335BA140A8C7BDB3F8CCD69FBCE1 /* format_constants.h in Headers */ = {isa = PBXBuildFile; fileRef = CF110AECD58C76D59FAF17781B15181E /* format_constants.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		49183981A8973A28FF783CDB297F3066 /* demux.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD71B8318DBCE12B33A233D5A85B11 /* demux.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		49C051946C1C4462B4669B2D3968C5D1 /* lossless_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = EE06FA6C7BCA0FDA892776303624B022 /* lossless_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		4A49FFC64359E5F4B1A61A558BCB2ED3 /* SDWebImageWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58308B75BB7BE9DA9478594AF1F6972B /* SDWebImageWebPCoder.m */; };
-		4B0EF983C56B5DAE1D6EDFBD25304623 /* lossless_enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE8C00CEA7767061163745066C0E37 /* lossless_enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		4C4AB36C0AEDB4E18E881FB7A5160F7B /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5C614B65E8D62B8998EE56CE0CE835 /* FLAnimatedImageView.m */; };
-		4C7ACFB2BF6B8D9D74A4514999A0724F /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C8474E6A5E990B6956FEDE085A14D24E /* SDImageCacheConfig.m */; };
-		4C7D2438B788E0084917307A90AF0C97 /* enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 772BE51AC41B3601ADA51177AAF26570 /* enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		50387CE601619F25C09C89077ADB4525 /* yuv_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 42697F8521EAF9F00D040E1725476191 /* yuv_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		50EFE35A2A6C93CFCBDED66588B5733C /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = FC77BD96B7A978A68E8026C3F01409BF /* upsampling.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		4B677FE11B6F9D1B0F8255B4B25061D8 /* lossless_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = EE06FA6C7BCA0FDA892776303624B022 /* lossless_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4D615BD431A3FFBCD1941BDAED570A68 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6249248FA04DAE73A3845795CDD56D7D /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		507E6F149E3B3CDCA6890428BF3F2951 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = BC98DF6E3B3D8C5D98D25E98A6A1EA4A /* cpu.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		517A09061C78B948A740B26CE74031CB /* SDWebImageWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58308B75BB7BE9DA9478594AF1F6972B /* SDWebImageWebPCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		52FBDC11D1EF484415FE5776DE840612 /* idec_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 12A74EE4CD1E3E82110A796698EC1452 /* idec_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		534FBD8D0E92F8D5A4A7FED6F0033F27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C816A7B84A930D6BE3C2C8F5F3BA3 /* Foundation.framework */; };
+		54713746A732CB71EB888B1BEA5EF236 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92811B90EC29D3D0F54E91598F54829 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		54F0A238489A8D6DF7B44EA9ACA4C219 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D249ED41C1AD64ABE64963EFE98ECF25 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5687B8BD474747A4006EEA235E173233 /* huffman_encode_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 292E33D2C6193355649FEBA2C1CA64E1 /* huffman_encode_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		56B767DFD464AB5395E2AA36A2A240F0 /* filters_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4EC02095C4A7016FB5C5036A0AC223E5 /* filters_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		57922DD75AE60DEC9F29DF1DB2CC9519 /* lossless_enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = D57FC9D23FD2AF592CC107BB293BAB53 /* lossless_enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		58004E2353DECE0A2A046C8A01CEAE00 /* histogram_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D5712E76E1868ABAA29E7D6C88DE51 /* histogram_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5A19DB379AA201552A6312411EDC063D /* dec_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 34EB5A1741B0D12F30FE238BD41B1BF2 /* dec_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		5C68ACDFA8A5566BFFCF12440988A84E /* analysis_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = FE4ECC3A4D08B12B76F90ABBEDF1E73F /* analysis_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		58110375ACC3288EEEAFF758A06200CB /* filter_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6339832723901390248FEDBCDB98EECB /* filter_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B26C7C87FB5F94668C21CB902D8216C /* dec_clip_tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E3247F05E5D2874E4D12FA2B2DD18 /* dec_clip_tables.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5C87011CEC436FB353C9B4C6D3A39E61 /* tree_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C27B7167D2F5B2CCE78A1AC48740ADB /* tree_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5C9AA2A60B07AA4EE36209B878362A23 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A52F8C90F9FAD7A915BE9ACFD32197 /* FLAnimatedImage-dummy.m */; };
 		5CE7EE1CEBA322B16D5329814D97F4E0 /* backward_references_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = A4A353EBC1E99E419A80293F41EF287A /* backward_references_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5DF59DEEE6105C60AD3B3E46320C37F1 /* SDWebImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DBE8EC207D1FDA7DE6893C9FBF30A /* SDWebImageGIFCoder.m */; };
+		5FBA27B8F29C613FB59B48A3FB099FE4 /* enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 772BE51AC41B3601ADA51177AAF26570 /* enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6050F470FC5874ED5AF9847F5F008002 /* enc.c in Sources */ = {isa = PBXBuildFile; fileRef = A290ED46475749AD8E62803B3F508BB1 /* enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		606A5F664EA9DCDC08685B8DC2E00947 /* lossless_enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E747226DF6F6FA6CEF465522890D42F /* lossless_enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		617D90E980CFF631AB202AA49B2EA05B /* msa_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 05455C3C22E2E2BB11121F130EA28E92 /* msa_macro.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		630759C065E434A2BBEC65E0AC5CF0D7 /* alpha_processing_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = DD00B314D557912B41E4D0D63E43ECC7 /* alpha_processing_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		646C91D4C7A82D8AA890D4EBCFEF912C /* delta_palettization_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E793ECBEAD6E1308DBDC746DC93030D /* delta_palettization_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		64A15121726CD0ACFF77821576893CD0 /* bit_reader_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = B21E0C7AF9B63921551BA3A23228E554 /* bit_reader_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		65DA536A7CED08739113B1DE210F3A3F /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E02A9E89DAFA9753666C74A63B5BA /* SDWebImageImageIOCoder.m */; };
+		653D63A193AD0C4A227353E1EDE5B861 /* webp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = E607459C1D9243318D6BF0241FA229B4 /* webp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		667D850D499A5564B1A4FAD277501493 /* filters_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = EA039A71DD7DF00FF76903EA434E35CE /* filters_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		67C95928494CF05BD7B33620E6969B4D /* upsampling_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = DD2CF8B712700117BC279772F05A7CA6 /* upsampling_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		68337D1145FE38534E5B1CF9934CFD33 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5A54F71C383274A80839B553DE92E6 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6972537988CCF241945BBAEB5C0FF9E3 /* SDWebImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2717C94AA2F28590453AF119E7C51F /* SDWebImageFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		699C948177F5BA611941716A443C314F /* filters_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4EC02095C4A7016FB5C5036A0AC223E5 /* filters_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C6B50BAB6FE14D40F90BFFC83F379F5 /* huffman_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6E91C0F68097A1359E6D73D86A9BA2 /* huffman_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6D4A07634C8546BAA0CEE7E271E6826A /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 578B78B605F4B960A9AD7E8C5B28F490 /* NSData+ImageContentType.m */; };
-		6EED7C6395C6033CFF1C286733B144C5 /* picture_tools_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E68A8F71C59C4CF8F02D9AE5545EF86 /* picture_tools_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		6DF37BDC4B8F3713B76A371F4EE3FA02 /* enc_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D53E236EBE9FE9A9868E551F8128D07 /* enc_avx2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6EFB9DFFA17844774F1FEBF30EF4BBD7 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EC6578691AF04ED4CBFA4C0178723C8 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6FC7E8203AA3671015E866F0C6FA0EBD /* delta_palettization_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E793ECBEAD6E1308DBDC746DC93030D /* delta_palettization_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		711349F6C8306F457382088894846F79 /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 359E0B1EBD0740469A70A72899EEE2F7 /* filters_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		737579A708EF778CDC201D0D8E4DFACE /* tree_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C27B7167D2F5B2CCE78A1AC48740ADB /* tree_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		6F8835A72AE80C4586916F72BE637BF8 /* rescaler_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AB15DDE12D1292D5B1785E7BE04B0BC /* rescaler_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		72627A2F1BC0646707BC32D0E21C2D4A /* huffman_encode_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 292E33D2C6193355649FEBA2C1CA64E1 /* huffman_encode_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		73CAE7A7DC8C274504CFAA8DE3D155B9 /* vp8li_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FBCC07E86104A4664E7435044CF9298 /* vp8li_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		753391CA1C51BE4E046A4F455578510B /* random_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = DE192E689FFEED1A28334634BB8E0AD6 /* random_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75A74EA06F74054ABB70BC13A50E891B /* dec_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A2E59995331F9ACBD18A4C7608D35B /* dec_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75B0DD9BABE38FD2EFFFA9D16D67EC12 /* muxinternal.c in Sources */ = {isa = PBXBuildFile; fileRef = 752C7165CB8EC41502074F7C18C1C36A /* muxinternal.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		75E06C091E256220CBF6359F0BEF1DE9 /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C45D9821E5B3A96F775D989EA2E383 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		76D7840FF7EE2B9CF69E90438551DF49 /* dec_clip_tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E3247F05E5D2874E4D12FA2B2DD18 /* dec_clip_tables.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		77AC176D88B0888A14BE613CD68F6EB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC368A1B02B98F61907E4056911649 /* CoreGraphics.framework */; };
-		783B7F6E80C8E995CC565EA4B7824D2F /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92811B90EC29D3D0F54E91598F54829 /* SDWebImageDownloaderOperation.m */; };
-		7AF09DAA12D6D3DBAD07891F11063A11 /* cost_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 18A18414B8332B610681AA54EF50C40C /* cost_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		79432D17BFF940D85D4C5D5A80AFF5DC /* syntax_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 74ACC0A6C6E23C43D5A09BB88A64E6A0 /* syntax_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7B5AC456B9B6BD809D2F6890A3A61EBB /* delta_palettization_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA02A4CD9EA89B17EDDECB2755CB606 /* delta_palettization_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7ECF0A28328F1184E985CA8C9B4CFE56 /* filter_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6339832723901390248FEDBCDB98EECB /* filter_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		7FBFDE920C2B478B856BF26295C865D5 /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = EB05E17CD5D87FF68F769B76B3F89F13 /* dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		7B69A8B3A537C69239D9BBD8294C73E3 /* SDWebImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F65E90C2E37090F48FC94D4DCFA924D2 /* SDWebImageCoderHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7FF90160CDD81E244CFDF37CAB1CF909 /* dsp.h in Headers */ = {isa = PBXBuildFile; fileRef = C553D0844C982DFF9726117D89DDFF75 /* dsp.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		81954B774A3B2AF101A2128B8E7B31B9 /* bit_reader_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D57FAF87AD00D2C23449372BDAD47720 /* bit_reader_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		81AE222A8963864A3B5C07DCDBBA5F99 /* vp8_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8D08C2E4FF885DCA7936F75C85F /* vp8_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		81CB7DAC8E29E39D916688D8DE1C4554 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C816A7B84A930D6BE3C2C8F5F3BA3 /* Foundation.framework */; };
-		81D0A2F86C7E6B1D4DEB3C44467E98B8 /* alpha_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = CCAA929A526D750A469AFF7196255D7B /* alpha_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		820E155F71366281401F6C28F013BAAB /* yuv_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC220231C55E2861BE7EA39A839D141 /* yuv_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		82AD4799A1559328661BFC35F07E94D6 /* muxinternal.c in Sources */ = {isa = PBXBuildFile; fileRef = 752C7165CB8EC41502074F7C18C1C36A /* muxinternal.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		85427219CC0C588AF77F5FB5BDFA3F29 /* token_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 42DD1833416BB6AD1ED14E1C9E467046 /* token_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		85FC5902B6D8742425E8C2CE1292AA94 /* idec_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 12A74EE4CD1E3E82110A796698EC1452 /* idec_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		866353E88BED4DCE6A6FFA421DF0F775 /* lossless_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D1E4CFA17F2E578741C51F605CC9D3 /* lossless_common.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		86CEF2717A222225D3BA3A1D5B596B0C /* filters_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 15C67594E612E50A61E9D038245925ED /* filters_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		87BA294631A4DEC7FC5EC73B877451B7 /* yuv_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC220231C55E2861BE7EA39A839D141 /* yuv_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		88142EE4487B391327119AD14A9A5E64 /* vp8i_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4896DD65F8325BC6E369AA7CF239F2 /* vp8i_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8A2467D58488A9A6F5ED348F451AEC3A /* rescaler_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1316952C4022999AA717E77B86ABF73E /* rescaler_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		8A4AD1B800F48962DAF82198D3B7F5F5 /* io_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = CAC983EE525B6B8A5E08AFE62488FFF9 /* io_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		8AA36E0659CEC49220A13BEEF7C5FDAC /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829BF7C1EB30FBE9F728AC1ABC16C3A /* UIView+WebCacheOperation.m */; };
 		8B3A5F4ED6E9088242C22422B7A56625 /* mips_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 685974A6A3F4757BEE20B30B3145A561 /* mips_macro.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8B839314100CCF1C1CB70098366F2CE2 /* upsampling_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = ADEC85423FE848C74E88837A7BD7D8D2 /* upsampling_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		8BC1685BF1E6A5B82421775D2526945D /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 25347A75F2CFD13784956A70CCEF7513 /* UIImage+ForceDecode.m */; };
-		8D2B1754E423F35366EC327FC9C4F2F1 /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EE987B2E787F9EBB46B49AA8A0B14E7 /* ssim.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		90F8B995B97EDB0DE2BF3C0C2885AE48 /* rescaler_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB91CD91D6BEA1A6A54B5505DE64B6 /* rescaler_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		8C246848F99533E7EBC5CE7EA94DE1E1 /* quant_levels_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D2E5C5AEB9AEF0E102DD34E9A54845E9 /* quant_levels_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E2B5E429A9744BFF7D4FD3165A37D9D /* enc_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4C727E854674F0E83BD36637AA72 /* enc_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E38FF8332FCEA195581DE41431887BA /* rescaler_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CEB91CD91D6BEA1A6A54B5505DE64B6 /* rescaler_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FAAB8F0396F678083F107E18562FDA8 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5C614B65E8D62B8998EE56CE0CE835 /* FLAnimatedImageView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		901E2A7F68BA45B71CC77964A0BB207D /* filters_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 359E0B1EBD0740469A70A72899EEE2F7 /* filters_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9109CB70176251363252A20027AA44FB /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E32280E42693239994C354DFD66A3866 /* SDWebImageFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		910B6FA2C85B80BA87EA13F5E1FD4629 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC7B51CB237B5F30BDED048676D81AC /* SDWebImageTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		91525093216410FE94EC985FA31BA1A7 /* SDWebImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0297C669F6740F0CD52845E8F945D3 /* SDWebImageCodersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91960B8AF47355D5F6E5A3DF0D3B1F9C /* muxi.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D2BF8F614E6A764358E75BA1290A52D /* muxi.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		94F948B1278D421ED2E6F14B24B967E2 /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 5183D7D6D5AA358B7A71F24A88BA1891 /* lossless_enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		934596ECD9BC15832D68C893CF66D43F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF6B8D84A36C792C4165D8002ECA2A /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		94ABF2BCF952B3466D0BEBC07CE53366 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CD5193E176F8B9A0EBDDF5F238A35A /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		951AF20F2777E9823C4F4C49BF58A68E /* SDWebImageWebPCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32DEA13AE54057AC4A9EAF5B5A8A60AD /* SDWebImageWebPCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		955EEF41CA713C80B4AFCE1DA4155701 /* dec_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E1C2DB546BBB4F5F2272F966113E3 /* dec_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		957496D0A6364DF5BC4FF41391DC3F1E /* anim_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = CA006BAD04B9C683FD997D86E03801A1 /* anim_decode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		967D445620CA56F4C159D63FF3650CC9 /* token_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 42DD1833416BB6AD1ED14E1C9E467046 /* token_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		96F22E99DD00ACAFAB33C2A9667AB729 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 02CC0618738F492B7F1596A9A323B3E2 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		983B069287538222B0DDE900BE60A825 /* bit_writer_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = B9B4EFD4B265A0A0A88F20C6300C3267 /* bit_writer_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		98CF27CCB7A2EB22E53E8201331E3678 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 557A5C4CB6263547C6E8D9BB8DA8C167 /* SDWebImageManager.m */; };
-		9A104A95ED9A01D913F76EDE280755F5 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = BC98DF6E3B3D8C5D98D25E98A6A1EA4A /* cpu.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		98824057411F6BE22A9708CD6DA15361 /* picture_csp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = EA73327DE707DFE8F3014B802F6AC732 /* picture_csp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9899EDF27484F11D62E5F0E6853E0587 /* filters_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 15C67594E612E50A61E9D038245925ED /* filters_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B141752FADA2686B88589CBDE99AF67 /* dec_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F6328CD83B0FE2A60252CCBC0D8A9 /* dec_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9B51DED9F2800F5715AC998686A4DEBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA30DF791FA304201CB56C383A9480CF /* QuartzCore.framework */; };
-		9CEBCD2D0B905A4CD5EFEE977DE3075E /* lossless_enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E747226DF6F6FA6CEF465522890D42F /* lossless_enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		9D2BBF9FF5AD89B4C9F20B5FD616B1B6 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1DD203C665793C9F6565F554F8963 /* UIImageView+HighlightedWebCache.m */; };
-		9D4E09DE337BB53800910D440ED053EC /* alpha_processing_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = B8DDA1237CF2DBA157EDCF2610DDA3BD /* alpha_processing_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		9E4A0FBE6BDCC32112E15B15DD11C9F2 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1625835BB5ADF638F27B2A11AFAECEDD /* NSImage+WebCache.m */; };
-		A52963D31F6AAAC51393D074842658D4 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 61486EB433A347EDBDB6D8A59B4684DC /* NSButton+WebCache.m */; };
-		A95257ECC13F3629178EB39B28250F0D /* frame_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 479FA0E3917C93C9F531B8C32DD95153 /* frame_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		AAF65BD90A7AB29D681401B5EF2680F5 /* picture_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B69F20E2E766AC7508EB5512356D8F2 /* picture_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		9EA545DBEC20E5D6DF742AA9A6823D8A /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 61486EB433A347EDBDB6D8A59B4684DC /* NSButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A12AEB1E4B78756E45B32425AF25F79F /* yuv_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 42697F8521EAF9F00D040E1725476191 /* yuv_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A70EF5100DC963AD1B8466C2AF74FCBD /* vp8l_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D715E1D00B57746492489725349D1 /* vp8l_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A7CFDCD95589553D00700EC8C18595F9 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2877594251B150EDB222E96167C95D5F /* SDWebImageCodersManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAF7CE4E4B2AD894B0BAF65866DEFDC9 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 417FCEC6F5E1AFB180FE2D5EF8E92451 /* UIView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AB1987AC084B1E6947258F66DE421DF3 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7743E8AD7E92C181CB2A9F69149E33BF /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AB5246E9AF830B55E3B28AA04BF2AA5A /* backward_references_cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F071B26BBF7ACD1DE1E77DF866EC0C /* backward_references_cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		AD0E1790919F4E9E263D82EE98C11473 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8C4611BFCD6DEA4DA5EE9C64AF4E69 /* FLAnimatedImage.m */; };
-		AD5BE9D3CE6976B58A0709DE16960F76 /* quant_levels_dec_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = AEEB7BC194AC7312A5573D586C21A797 /* quant_levels_dec_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		AD5DFAD1E31467E8862CAE2D0EE6CCC4 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CB8E29748B3B773B1388CDE6ADD751 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD6895C8BC630EBEA7FE0ADE150F429C /* lossless_enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6247255D6CEC44B281C449DF577F3B1A /* lossless_enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AEC22BED22CDA0196A425D104D91CD2D /* color_cache_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6366F9185E4859AB63C4F7A814080433 /* color_cache_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AEC4D32C758F485A5D25AF5803378591 /* random_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E2FE441E224640C2C68239C7E6B4A2D /* random_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B026769B8626E845CD0A98E5F53E142B /* thread_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 943D8B57FC345A7A1959905674DB939E /* thread_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		B150155812239DE6685F494DCEF80E7E /* enc_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D53E236EBE9FE9A9868E551F8128D07 /* enc_avx2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		B0172FFD01F1DD0259632265CF9E4A96 /* dec_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 34EB5A1741B0D12F30FE238BD41B1BF2 /* dec_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B0682FEA36F1A4DEC23360C4C28595D4 /* color_cache_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A9E279BF03B4395905D1A4A03D0413 /* color_cache_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B0C7AD42D0CECB646A508A8074B42547 /* enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = EB78AB8C4E7F122974EFF8FD574535BF /* enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B1BFD03888FD9D4CFECAED886C477D24 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E5EA91BCBDDE3D99536D5D99706900D /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B1D2041C84BAC86AAE23627399C67BA2 /* buffer_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC0A77D6EC8AB8C7C3E2BF14FB5DC /* buffer_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		B2D6C1019473C5D73EEE6623F8D2E971 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0AFA0331ED127D732218A44C6081CB /* UIImage+MultiFormat.m */; };
-		B4BC97BEFE5D8393248AA746FD15DEB7 /* enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B168B2C175608184F21AA461F77DF1C /* enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		B25F1E5441E9E027DA0FD53DE7BC7D53 /* enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 0F88093D84DD2776DCC8914E0638644A /* enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B4F352F90D063DD3D3843F2EE042658B /* alphai_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C08A3B9C77B760DE8404334D2B62B78 /* alphai_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5507C6FA8756F21FE45964AC597936F /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7676B2A2764347A608474BA098CDEF69 /* UIImage+WebP.m */; };
-		B5B79D887A97489B117D6470C6F6C570 /* rescaler_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 30AF8B36261354BC8B13A6A5861FA153 /* rescaler_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		B92254E92E402B981433353AD0899201 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4603DAEDBD195841857107A8E00A0852 /* FLAnimatedImageView+WebCache.m */; };
-		B952385ED2BAB00B78C1029C95D0189B /* ssim_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C2350C2639276E05418D75B3669E6 /* ssim_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		B5190C8667DCB3E80BE8C56F16D28422 /* quant_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = DC737A4B9C33E85D8045A94345E6918B /* quant_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B53BEBD5088978AB958AFCA53B535034 /* alpha_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = CCAA929A526D750A469AFF7196255D7B /* alpha_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B543D7C2F50814E840A12E40734E2C11 /* demux.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD71B8318DBCE12B33A233D5A85B11 /* demux.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B60ABD35F5AFEB6226A49225009FFD37 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 24A2BE13B972F788302D29ED7DB94C8B /* utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B60FA6E1CDA3A4BE7250950525166000 /* upsampling_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = F4E89A2C000C9B03BC0AC43E0E933669 /* upsampling_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8FF7A2D79CC722BFC7D6D54D3F8A209 /* histogram_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E8B70C8F6C8E9DDDD7F8B4ABCD0C83A /* histogram_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B97E59C7FC38241B298CB627C5A2EBE8 /* types.h in Headers */ = {isa = PBXBuildFile; fileRef = 39717B15A908CE974F5B6DF208AA5EF8 /* types.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B9D750D30E0BE2E0D9A16511231C8FD3 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 679E0733B04D6F045959E4B7A22255C0 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB06742ABC03C6C2969BDF3E56981C9B /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A89AF4FF483C55D842FE156B678F01 /* SDWebImageDownloader.m */; };
-		BF25F07B97EC9A3DC0D598269F128E83 /* cost_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C295721001B1B3E93A3A7248AE4DB09 /* cost_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		BF3DD46CF35B65E96BB36932628DB299 /* dec_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F6328CD83B0FE2A60252CCBC0D8A9 /* dec_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		BF5C423B46D6A4E15A8D6506FAB2B108 /* quant_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE91CD9B4B20CEA92B84F21438F568 /* quant_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		BF6F54D2B7550341855E50B86CFAD71F /* upsampling_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = A27D88FE764EE21FB0EA4F6E27031D61 /* upsampling_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		BB160C93946840D6C20538993EF73A49 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4603DAEDBD195841857107A8E00A0852 /* FLAnimatedImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDB5F1C2195B3584D06361892CCFB342 /* picture_psnr_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3A939B56A3EFBB10D01232768C53E7D4 /* picture_psnr_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE6003FD98447B42609E5A6267851863 /* lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70CD2650E213C720E8E743E54E06B707 /* lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BFE8851B7531C9BCA7E363552EEFFEB0 /* neon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B28661DF13CC975C20CAE2A73963359 /* neon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C048A5B27C8B4C51BB401CFFA799D9F8 /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E32280E42693239994C354DFD66A3866 /* SDWebImageFrame.m */; };
+		C1185B14BCC27180C168F8034A090504 /* near_lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B447F0AB1A7124ECC4BD5F938EDCC /* near_lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C16BC1F14AF36CB1F659FF0D9E6E40D2 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = B390B09B80B1AADB2007C7AF90982E44 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C185E96C8A3B0695BEB31B6051E1DBFF /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8B13CB9253BAB25F085C7D02B38814 /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C28CB249857BDE4B2D338326F66FB42B /* alpha_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 135770D6839E0397EE75BFC904DC72CB /* alpha_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		C386FA9FCD073A04402DB99088ADA739 /* animi.h in Headers */ = {isa = PBXBuildFile; fileRef = BB31DE5B8242A2021A35ACD0F2C388ED /* animi.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C474F929EB485CEAD16B6AF2A5BE5838 /* anim_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E9BE1B7E34136FE1E16D51C9D6F5B24 /* anim_encode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		C4843B5285A039BDBEC490C34723F2CE /* upsampling_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = A27D88FE764EE21FB0EA4F6E27031D61 /* upsampling_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C57CC9982ADAD29CAC873250B5BAF875 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B056C602A522AD1E4C73C4EFCCFFC997 /* SDWebImageCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C5D94D8054CDE1E4B92240EB6824C323 /* webpi_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6ADD37E3AAE2051B279F46721A1C21 /* webpi_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C5F8925276D2CCF139D5D04A334FCAF1 /* muxedit.c in Sources */ = {isa = PBXBuildFile; fileRef = DEC211E5B0435D44F55ADA0FEB6DA901 /* muxedit.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		C6771FE8EEF854ADFA6D0552CD1B0218 /* quant_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = DC737A4B9C33E85D8045A94345E6918B /* quant_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		C777C00BECB42AF994C69186A90BDAD6 /* anim_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = CA006BAD04B9C683FD997D86E03801A1 /* anim_decode.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		C8B4CA357C127C1C794AEE8DBC7CEFB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652280033EE9EB75C9B133929E4B4EA6 /* MobileCoreServices.framework */; };
-		C8C8F67E1E2B573FCDD50CE4525553DF /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 417FCEC6F5E1AFB180FE2D5EF8E92451 /* UIView+WebCache.m */; };
+		C90B5DFA49138ACA6272A58660DA0C9F /* buffer_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B7BC0A77D6EC8AB8C7C3E2BF14FB5DC /* buffer_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C9396D96CA245FC9F76AFA6FB077618D /* upsampling_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = ADEC85423FE848C74E88837A7BD7D8D2 /* upsampling_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C9EF7890533437CF78928FD6E51F689C /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD7DF6FE789E26FC91F2646A8E51144 /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CAEF00E5AEFDAFEE05FB150596B8737A /* picture_csp_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = EA73327DE707DFE8F3014B802F6AC732 /* picture_csp_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		CB47BB807E4533E5C227176631C11EAC /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F0F9AD474EA2D44B0C4BAC6994DB1 /* UIButton+WebCache.m */; };
-		CBDB6061D223D03F12C2B691642A3A4C /* cost.c in Sources */ = {isa = PBXBuildFile; fileRef = 07EF90F3033999693662FE029269DBD6 /* cost.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		CC146C7C0EB5CAF45DC661D07BB000A0 /* lossless.h in Headers */ = {isa = PBXBuildFile; fileRef = A29D99B1FB95B7E766AE16A0D4EE8A40 /* lossless.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CC298B2454BA8CE87E800944FAF7AFCF /* iterator_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = D907EFCE021F7C6D000C1E87EF1AF5AE /* iterator_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		CCF56E6B86A3EF8302BE4FE74C53CD05 /* vp8l_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D715E1D00B57746492489725349D1 /* vp8l_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		CD375F4EBF117E2D8DB9C2819347A809 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C816A7B84A930D6BE3C2C8F5F3BA3 /* Foundation.framework */; };
+		CDAFCC402592C4243C919625C6D9FDA7 /* config_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = B036713B79F986198E17814EE46853EB /* config_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CEBA762D5C680F5C5E30104C2D592F42 /* bit_writer_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = B9B4EFD4B265A0A0A88F20C6300C3267 /* bit_writer_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CF71C8E288FDA36575C3A03FF2430F1C /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 33941CD54DAA9B6DE216328827B95BF2 /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D0B0866D5E568C3DF118A99F82894A91 /* muxread.c in Sources */ = {isa = PBXBuildFile; fileRef = 950EB70BF863E4F80C40DB1E89029BA2 /* muxread.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		D0BA364C0B8A483800AF9F101A93EAAB /* enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = D8DF3B4F5AE4E8BCF365208A5CBAF55A /* enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		D0CE9BC0E6A863710F692701F0A28C29 /* filters.c in Sources */ = {isa = PBXBuildFile; fileRef = 30873B6433F36700EAA304B8892D9613 /* filters.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		D3041C222C15BBBCF87E503534B5F732 /* dec_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = C0A2E59995331F9ACBD18A4C7608D35B /* dec_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		D51E17DE5F6597F1B4F1BC2FB5DDA33D /* alpha_processing_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = DD00B314D557912B41E4D0D63E43ECC7 /* alpha_processing_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		D111A3843CA9CCE35E3140BD91D24275 /* enc_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = D8DF3B4F5AE4E8BCF365208A5CBAF55A /* enc_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D472BB5FFA7F18E00107F4A1D3DAD74D /* rescaler_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 30AF8B36261354BC8B13A6A5861FA153 /* rescaler_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D5E58CA64ACA2E3657BAB9D3FAC7437D /* SDWebImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DBE8EC207D1FDA7DE6893C9FBF30A /* SDWebImageGIFCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D621F42052797AA8F27BF787FFA8BD15 /* bit_writer_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = CEFBA508A1318133D1D30507AEA05BD6 /* bit_writer_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D64CD2D24C028575BAD3F7063DAD3148 /* decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 948E7998553A5C91D9FD1A7B0369C3BD /* decode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DABC1FE340E4BE390AEFD12020868167 /* predictor_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BADDCA503F98CDEE3250F39C1092139 /* predictor_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		DBCCC2F33A50B500F08C9E39E4A38D80 /* filters_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED1B03BC60460C3B5DF57728E66A9EC2 /* filters_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		D78FD3646CC75E7093CBA4FAFA322742 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1DD203C665793C9F6565F554F8963 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D80538B7C42C07BD7D64D590C091C048 /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = B429DD3D46C48DFB4D985BDD7D016CB5 /* rescaler_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9263E77850E19072DE3C8FD06272E1A /* filters_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED1B03BC60460C3B5DF57728E66A9EC2 /* filters_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9FAC19A37A78D3283D9E1F3D096740C /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 557A5C4CB6263547C6E8D9BB8DA8C167 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD77C81CA3C198C9BE817A37AF1F6D96 /* cost_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = C59597933FC5E7BA2605A8CEADF29829 /* cost_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DDA640DE83B83C43285ABA7CF32FD69E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE0EDEA6F7B7750C5C3262AE45496C1 /* ImageIO.framework */; };
 		DDAE83F91EF5AC7CCD362A7797275354 /* libwebp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F29880FF0A6B5618FA022E5725DF0B14 /* libwebp-dummy.m */; };
 		DE609C52B1519525CE5C7DD30BC44C4C /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = AFC320DDAA832EAC09D355C86E80F309 /* utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DFA41CCDB1FE4452E8A05B2448FEA76E /* quant_levels_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D2E5C5AEB9AEF0E102DD34E9A54845E9 /* quant_levels_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		DFA42816CA68994E80E154D78251F27B /* random_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = DE192E689FFEED1A28334634BB8E0AD6 /* random_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		E1A47EC5634731853EC750A1424183B2 /* alpha_processing_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0947EA1469DB90D4F1499B0C203E19FB /* alpha_processing_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		E087EB049DBE4030D16E9C1B2BC1EF1B /* alpha_processing_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 0947EA1469DB90D4F1499B0C203E19FB /* alpha_processing_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E163B85193B2B231CBAA79D7D970855F /* alpha_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 135770D6839E0397EE75BFC904DC72CB /* alpha_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E208C4401C161AA39E834A1D10AED0AC /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = C597959690ADD2518A8F79FEF5E90AB6 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E309A755D6DF2A85DE939739E6316967 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC7B51CB237B5F30BDED048676D81AC /* SDWebImageTransition.m */; };
+		E258027B79964DC37705E6FBDEB2A781 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8C4611BFCD6DEA4DA5EE9C64AF4E69 /* FLAnimatedImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E2F2C76CCA5EBB050D8DE1397EEDF018 /* lossless_enc_msa.c in Sources */ = {isa = PBXBuildFile; fileRef = 5183D7D6D5AA358B7A71F24A88BA1891 /* lossless_enc_msa.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3D89C0F99433A0A1C15E2612F52E392 /* lossless_enc_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 055C0BD0B2ECDA01AB6A371DBF4DAD8D /* lossless_enc_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E42F229D134C551D49C25B6782D35DCC /* muxedit.c in Sources */ = {isa = PBXBuildFile; fileRef = DEC211E5B0435D44F55ADA0FEB6DA901 /* muxedit.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E45B5EF84866D75BB307F648722349DD /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1817814F3D2C51F75BE238C524BCFB02 /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E4D08B205EA226BDC4F02650E1B8DFB6 /* dec_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = E28E1C2DB546BBB4F5F2272F966113E3 /* dec_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		E575F0D15499A49EA58995D48E89E7AC /* enc.c in Sources */ = {isa = PBXBuildFile; fileRef = A290ED46475749AD8E62803B3F508BB1 /* enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		E49611EEE66B39572FD12CA1B0603305 /* vp8_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = F5A1E8D08C2E4FF885DCA7936F75C85F /* vp8_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E552AE014B449240BD66909FFB988CED /* alpha_processing.c in Sources */ = {isa = PBXBuildFile; fileRef = 597288AAF8155A3A31EDBB5A1E419A3B /* alpha_processing.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E6282B8DB75E2DCCFD1EEA7BBCA47235 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 7122B91D7BF17C519185F5BFF83C450F /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E71FA4723E22442B29B770F701826730 /* cost_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DC86AB6865B8ACAEE9A3539BA694132 /* cost_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E82BB0FA894D191190F4AC07C3CE354C /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C219F6A34F2E9FE3DF9F635039B94BB1 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E8645FAB4CB36ACF0F84521DFDE11547 /* lossless_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = FF9C8797C5D795131D58E327922B2489 /* lossless_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		E8E8E9D48DA62C05DAE73A19E68F7446 /* syntax_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 74ACC0A6C6E23C43D5A09BB88A64E6A0 /* syntax_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		E8882750224DD55962832F56A2391FB0 /* enc_neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B168B2C175608184F21AA461F77DF1C /* enc_neon.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E914579722ADF7538F2B93608C7D8680 /* picture_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B69F20E2E766AC7508EB5512356D8F2 /* picture_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EA0479BB26740298DEAD2CE1C0160948 /* quant_levels_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CC974DF675A856F707496BBA859952A /* quant_levels_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EB00C4624C690B233882A3CF69B965D5 /* frame_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E8055DCC848D845E15D4DE2FB260580 /* frame_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		EB1C97C183DDD92EA5C812E2C3B0B668 /* ssim_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C2350C2639276E05418D75B3669E6 /* ssim_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB2FBB62EBBD2F9B09699272274E7D2E /* ssim.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EE987B2E787F9EBB46B49AA8A0B14E7 /* ssim.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EB8BA59DAC8981C5A7140E357D4B3ADF /* yuv.h in Headers */ = {isa = PBXBuildFile; fileRef = C026299E96C2645D852065C1EB2D9E0F /* yuv.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EC4D944BB3EE58A14FFFC50A38986DD2 /* webp_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D8301E600E1C1D5A6BF84478E0BE1 /* webp_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		ECF471BD35B4E19B2F3F7179ED0C6C51 /* lossless_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED0052329D0E48FEB359047A37BA12A4 /* lossless_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		ED3490D881FF1D93957203C5253AD51D /* thread_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 699E9560D90BA77E88F35B53F7142E6B /* thread_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE4B9A5FE4053E7D5DFB75D8101D6899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C816A7B84A930D6BE3C2C8F5F3BA3 /* Foundation.framework */; };
-		F557DD1E7B9D490E621F371251FC27D5 /* rescaler_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = B429DD3D46C48DFB4D985BDD7D016CB5 /* rescaler_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		EF39EC700BDB9E8A5EF49C6B4DF3862C /* picture_tools_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E68A8F71C59C4CF8F02D9AE5545EF86 /* picture_tools_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F3B68B41EE9FFCFA1FA7CC1BDB5A110A /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 735AF1F0EF7C5B19D7B438E3FF59FC27 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F637965C7D4488B1EE29B06445E381BF /* rescaler_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E7452ECB2F312B7A1E4FFA36753E3E2E /* rescaler_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F66D94DFA85EF7EBCC881659642D7889 /* yuv.c in Sources */ = {isa = PBXBuildFile; fileRef = 466A165B6ABE54D4D042A418480276FA /* yuv.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		F81A0D3D812DA47895C18D11EC7A619C /* mux_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 5432C079B11311D2D1B8BD9949354CAC /* mux_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F88DF91E77A38C8FC0C634DE26D0E6D3 /* cost_mips32.c in Sources */ = {isa = PBXBuildFile; fileRef = 18A18414B8332B610681AA54EF50C40C /* cost_mips32.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8D103FF92D707B8F59B8291D796342E /* cost_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F1E1741DAB2B5CE6C3151230A5FDB21 /* cost_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F9064130D7041F69B1697D357FD9F77A /* alpha_processing_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C88142F18A38243A5DE0E9F1445D968 /* alpha_processing_sse41.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		F906F3D7BB03A949023888088ACF132A /* upsampling.c in Sources */ = {isa = PBXBuildFile; fileRef = FC77BD96B7A978A68E8026C3F01409BF /* upsampling.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F9528B6D637E18AFDB585A28D899F99E /* vp8i_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = C7B032B0AE93D26DB4F734A805DD9504 /* vp8i_enc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F9575D6F38F80FB421E676E44A86F5A3 /* lossless_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 70CD2650E213C720E8E743E54E06B707 /* lossless_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
 		FA7815167CB306BB70937E7A886E8083 /* huffman_encode_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DA8CD7B864EA87F8B33BB9F10DB028 /* huffman_encode_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FDDB00D0F0C08BD4C48E4B14A93E159F /* huffman_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 01900A089785EF2C99CAB80D07E96913 /* huffman_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		FAF2287F455EAC712BEA09C9D008CCEF /* webp_dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D8301E600E1C1D5A6BF84478E0BE1 /* webp_dec.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD087AF9F649AD4775AB981E856D7D80 /* lossless_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED0052329D0E48FEB359047A37BA12A4 /* lossless_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FE63FD8BFB5E62F9269096161504DCDC /* vp8li_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6ECE6E7AF62554D22B938091B07DA2 /* vp8li_dec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FEA1C737FE812330927E9A41DAECACF7 /* rescaler_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AB15DDE12D1292D5B1785E7BE04B0BC /* rescaler_utils.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
-		FFD155DE486B21F0B6A444425919B21C /* enc_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = EB78AB8C4E7F122974EFF8FD574535BF /* enc_sse2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc"; }; };
+		FEA0B27714590F9D469D0A41C2350171 /* backward_references_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B56D8C0B01040A71F2C2D406677715D /* backward_references_enc.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FEEA21A0D33FA0F390457C43F3EE2D98 /* yuv_mips_dsp_r2.c in Sources */ = {isa = PBXBuildFile; fileRef = 64E4CEB0B830E3E7A97C7BB1637F4C9E /* yuv_mips_dsp_r2.c */; settings = {COMPILER_FLAGS = "-D_THREAD_SAFE -fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1084,7 +1084,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EA4F995CBBF1300B4D566BFA7DD3B38 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */;
 			buildPhases = (
-				9A240679857C41948A668489081D7FB6 /* Sources */,
+				7AE2B9876FC7B6898B64C81D3973EE56 /* Sources */,
 				8E86703F96A4090BC5045C37B7C91BBB /* Frameworks */,
 				7302CE7D9AE53174060E2127FEC17174 /* Headers */,
 			);
@@ -1137,7 +1137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 478B35A284F10A52A3E077D8656D20AB /* Build configuration list for PBXNativeTarget "SDWebImage" */;
 			buildPhases = (
-				AA70F27A2804DEC0ABD2B45A76346433 /* Sources */,
+				B73E925CF0451A1AD5469EB5DAEFA121 /* Sources */,
 				E387B211268BBFDF11F7245FD5E6D80C /* Frameworks */,
 				5689693D9F4E8801CF7608CB7B543F72 /* Headers */,
 			);
@@ -1182,50 +1182,13 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9A240679857C41948A668489081D7FB6 /* Sources */ = {
+		7AE2B9876FC7B6898B64C81D3973EE56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F06B12AAC5CD0C807ECE5B3B3D2BAC /* FLAnimatedImage-dummy.m in Sources */,
-				AD0E1790919F4E9E263D82EE98C11473 /* FLAnimatedImage.m in Sources */,
-				4C4AB36C0AEDB4E18E881FB7A5160F7B /* FLAnimatedImageView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA70F27A2804DEC0ABD2B45A76346433 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B92254E92E402B981433353AD0899201 /* FLAnimatedImageView+WebCache.m in Sources */,
-				A52963D31F6AAAC51393D074842658D4 /* NSButton+WebCache.m in Sources */,
-				6D4A07634C8546BAA0CEE7E271E6826A /* NSData+ImageContentType.m in Sources */,
-				9E4A0FBE6BDCC32112E15B15DD11C9F2 /* NSImage+WebCache.m in Sources */,
-				1BC81FC33B420183F2813526F555E49A /* SDAnimatedImageRep.m in Sources */,
-				13259687A2C6FF51D5C4D49934970673 /* SDImageCache.m in Sources */,
-				4C7ACFB2BF6B8D9D74A4514999A0724F /* SDImageCacheConfig.m in Sources */,
-				0D3ACA47D55DD1C87FA03EA7FBF23096 /* SDWebImage-dummy.m in Sources */,
-				12F247472C2C8D54A7358E0D5C4F6F9B /* SDWebImageCoder.m in Sources */,
-				1313339F0DA4B0A1D3D6C6F82BCB892E /* SDWebImageCoderHelper.m in Sources */,
-				2A72BBD37619675A16674D2830740929 /* SDWebImageCodersManager.m in Sources */,
-				113E70610F0D6E19C90DA0BE647271A1 /* SDWebImageCompat.m in Sources */,
-				BB06742ABC03C6C2969BDF3E56981C9B /* SDWebImageDownloader.m in Sources */,
-				783B7F6E80C8E995CC565EA4B7824D2F /* SDWebImageDownloaderOperation.m in Sources */,
-				C048A5B27C8B4C51BB401CFFA799D9F8 /* SDWebImageFrame.m in Sources */,
-				5DF59DEEE6105C60AD3B3E46320C37F1 /* SDWebImageGIFCoder.m in Sources */,
-				65DA536A7CED08739113B1DE210F3A3F /* SDWebImageImageIOCoder.m in Sources */,
-				98CF27CCB7A2EB22E53E8201331E3678 /* SDWebImageManager.m in Sources */,
-				13F6E0492B28AB3993D524EBEF29E199 /* SDWebImagePrefetcher.m in Sources */,
-				E309A755D6DF2A85DE939739E6316967 /* SDWebImageTransition.m in Sources */,
-				4A49FFC64359E5F4B1A61A558BCB2ED3 /* SDWebImageWebPCoder.m in Sources */,
-				CB47BB807E4533E5C227176631C11EAC /* UIButton+WebCache.m in Sources */,
-				8BC1685BF1E6A5B82421775D2526945D /* UIImage+ForceDecode.m in Sources */,
-				11E28DA1D9C66DCC014EAF80F24EBD40 /* UIImage+GIF.m in Sources */,
-				B2D6C1019473C5D73EEE6623F8D2E971 /* UIImage+MultiFormat.m in Sources */,
-				B5507C6FA8756F21FE45964AC597936F /* UIImage+WebP.m in Sources */,
-				9D2BBF9FF5AD89B4C9F20B5FD616B1B6 /* UIImageView+HighlightedWebCache.m in Sources */,
-				2A97A46E6304977C4ECDF4A6B1932439 /* UIImageView+WebCache.m in Sources */,
-				C8C8F67E1E2B573FCDD50CE4525553DF /* UIView+WebCache.m in Sources */,
-				8AA36E0659CEC49220A13BEEF7C5FDAC /* UIView+WebCacheOperation.m in Sources */,
+				5C9AA2A60B07AA4EE36209B878362A23 /* FLAnimatedImage-dummy.m in Sources */,
+				E258027B79964DC37705E6FBDEB2A781 /* FLAnimatedImage.m in Sources */,
+				8FAAB8F0396F678083F107E18562FDA8 /* FLAnimatedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,124 +1200,161 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B73E925CF0451A1AD5469EB5DAEFA121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB160C93946840D6C20538993EF73A49 /* FLAnimatedImageView+WebCache.m in Sources */,
+				9EA545DBEC20E5D6DF742AA9A6823D8A /* NSButton+WebCache.m in Sources */,
+				0EF943884F415C2763DDEDED2CE5B57F /* NSData+ImageContentType.m in Sources */,
+				02AAB4616CDE44A157906061C1DC3E57 /* NSImage+WebCache.m in Sources */,
+				08D2DD21C40B5B0062831D7273DD557D /* SDAnimatedImageRep.m in Sources */,
+				934596ECD9BC15832D68C893CF66D43F /* SDImageCache.m in Sources */,
+				1E82A69D2458F2A3C4554923BA51B3B8 /* SDImageCacheConfig.m in Sources */,
+				325144F80B02A2A473215D05B4BBDD37 /* SDWebImage-dummy.m in Sources */,
+				C57CC9982ADAD29CAC873250B5BAF875 /* SDWebImageCoder.m in Sources */,
+				7B69A8B3A537C69239D9BBD8294C73E3 /* SDWebImageCoderHelper.m in Sources */,
+				A7CFDCD95589553D00700EC8C18595F9 /* SDWebImageCodersManager.m in Sources */,
+				4D615BD431A3FFBCD1941BDAED570A68 /* SDWebImageCompat.m in Sources */,
+				2642DFAB7595A9FFF411A36786CF74FB /* SDWebImageDownloader.m in Sources */,
+				54713746A732CB71EB888B1BEA5EF236 /* SDWebImageDownloaderOperation.m in Sources */,
+				9109CB70176251363252A20027AA44FB /* SDWebImageFrame.m in Sources */,
+				D5E58CA64ACA2E3657BAB9D3FAC7437D /* SDWebImageGIFCoder.m in Sources */,
+				15044B015AD938F9D9495A6812CEB7F5 /* SDWebImageImageIOCoder.m in Sources */,
+				D9FAC19A37A78D3283D9E1F3D096740C /* SDWebImageManager.m in Sources */,
+				35DEC90C73FA4480409848B90CAF9371 /* SDWebImagePrefetcher.m in Sources */,
+				910B6FA2C85B80BA87EA13F5E1FD4629 /* SDWebImageTransition.m in Sources */,
+				517A09061C78B948A740B26CE74031CB /* SDWebImageWebPCoder.m in Sources */,
+				2F16F7C233BF623EB68B458B9E9743BD /* UIButton+WebCache.m in Sources */,
+				06704B6B66FC2F7531F056C6FCB9CBDD /* UIImage+ForceDecode.m in Sources */,
+				F3B68B41EE9FFCFA1FA7CC1BDB5A110A /* UIImage+GIF.m in Sources */,
+				15C18A2D1DE92EE77538C69B14A73CCF /* UIImage+MultiFormat.m in Sources */,
+				0F3BDB57DDF0223EE8541D93B66CB2F9 /* UIImage+WebP.m in Sources */,
+				D78FD3646CC75E7093CBA4FAFA322742 /* UIImageView+HighlightedWebCache.m in Sources */,
+				94ABF2BCF952B3466D0BEBC07CE53366 /* UIImageView+WebCache.m in Sources */,
+				AAF7CE4E4B2AD894B0BAF65866DEFDC9 /* UIView+WebCache.m in Sources */,
+				0B16BF6A3C3680A702E5E0C5D6A1024B /* UIView+WebCacheOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C528E91F656ECA2566A6CE450802C665 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28CB249857BDE4B2D338326F66FB42B /* alpha_dec.c in Sources */,
-				81D0A2F86C7E6B1D4DEB3C44467E98B8 /* alpha_enc.c in Sources */,
-				203FFF0AA61C1166ABDC0A803B1B750C /* alpha_processing.c in Sources */,
-				E1A47EC5634731853EC750A1424183B2 /* alpha_processing_mips_dsp_r2.c in Sources */,
-				D51E17DE5F6597F1B4F1BC2FB5DDA33D /* alpha_processing_neon.c in Sources */,
-				9D4E09DE337BB53800910D440ED053EC /* alpha_processing_sse2.c in Sources */,
-				F9064130D7041F69B1697D357FD9F77A /* alpha_processing_sse41.c in Sources */,
-				5C68ACDFA8A5566BFFCF12440988A84E /* analysis_enc.c in Sources */,
-				C777C00BECB42AF994C69186A90BDAD6 /* anim_decode.c in Sources */,
-				C474F929EB485CEAD16B6AF2A5BE5838 /* anim_encode.c in Sources */,
-				AB5246E9AF830B55E3B28AA04BF2AA5A /* backward_references_cost_enc.c in Sources */,
-				2D7E9094DAC408EB44809D2618CD34E3 /* backward_references_enc.c in Sources */,
-				81954B774A3B2AF101A2128B8E7B31B9 /* bit_reader_utils.c in Sources */,
-				983B069287538222B0DDE900BE60A825 /* bit_writer_utils.c in Sources */,
-				B1D2041C84BAC86AAE23627399C67BA2 /* buffer_dec.c in Sources */,
-				05C1FC864E8C4263CD0C1E38F9A2FDB5 /* color_cache_utils.c in Sources */,
-				1FCC173F34C1986C8564B4B5D466BEF7 /* config_enc.c in Sources */,
-				CBDB6061D223D03F12C2B691642A3A4C /* cost.c in Sources */,
-				BF25F07B97EC9A3DC0D598269F128E83 /* cost_enc.c in Sources */,
-				7AF09DAA12D6D3DBAD07891F11063A11 /* cost_mips32.c in Sources */,
-				28533A28C8E90C8FD49C532BEBDA73EE /* cost_mips_dsp_r2.c in Sources */,
-				0E4D6B4F0924E0146F7079BC81FCB077 /* cost_sse2.c in Sources */,
-				9A104A95ED9A01D913F76EDE280755F5 /* cpu.c in Sources */,
-				7FBFDE920C2B478B856BF26295C865D5 /* dec.c in Sources */,
-				76D7840FF7EE2B9CF69E90438551DF49 /* dec_clip_tables.c in Sources */,
-				D3041C222C15BBBCF87E503534B5F732 /* dec_mips32.c in Sources */,
-				E4D08B205EA226BDC4F02650E1B8DFB6 /* dec_mips_dsp_r2.c in Sources */,
-				0386233203373BFF6FDEC669ED50D476 /* dec_msa.c in Sources */,
-				5A19DB379AA201552A6312411EDC063D /* dec_neon.c in Sources */,
-				10A7BCF65001A7A3CCE656FE6E30550B /* dec_sse2.c in Sources */,
-				BF3DD46CF35B65E96BB36932628DB299 /* dec_sse41.c in Sources */,
-				6FC7E8203AA3671015E866F0C6FA0EBD /* delta_palettization_enc.c in Sources */,
-				49183981A8973A28FF783CDB297F3066 /* demux.c in Sources */,
-				E575F0D15499A49EA58995D48E89E7AC /* enc.c in Sources */,
-				B150155812239DE6685F494DCEF80E7E /* enc_avx2.c in Sources */,
-				4497F65B0630842F73A3CB8908519B6B /* enc_mips32.c in Sources */,
-				4C7D2438B788E0084917307A90AF0C97 /* enc_mips_dsp_r2.c in Sources */,
-				140663C9C38DA0A6AC377135A6F76064 /* enc_msa.c in Sources */,
-				B4BC97BEFE5D8393248AA746FD15DEB7 /* enc_neon.c in Sources */,
-				FFD155DE486B21F0B6A444425919B21C /* enc_sse2.c in Sources */,
-				D0BA364C0B8A483800AF9F101A93EAAB /* enc_sse41.c in Sources */,
-				7ECF0A28328F1184E985CA8C9B4CFE56 /* filter_enc.c in Sources */,
-				D0CE9BC0E6A863710F692701F0A28C29 /* filters.c in Sources */,
-				DBCCC2F33A50B500F08C9E39E4A38D80 /* filters_mips_dsp_r2.c in Sources */,
-				86CEF2717A222225D3BA3A1D5B596B0C /* filters_msa.c in Sources */,
-				711349F6C8306F457382088894846F79 /* filters_neon.c in Sources */,
-				416886BFDC503EDCBC2C45D28F143B03 /* filters_sse2.c in Sources */,
-				56B767DFD464AB5395E2AA36A2A240F0 /* filters_utils.c in Sources */,
-				EB00C4624C690B233882A3CF69B965D5 /* frame_dec.c in Sources */,
-				A95257ECC13F3629178EB39B28250F0D /* frame_enc.c in Sources */,
-				101DD05D50FF23FDBE0A123DDC7F8607 /* histogram_enc.c in Sources */,
-				5687B8BD474747A4006EEA235E173233 /* huffman_encode_utils.c in Sources */,
-				FDDB00D0F0C08BD4C48E4B14A93E159F /* huffman_utils.c in Sources */,
-				85FC5902B6D8742425E8C2CE1292AA94 /* idec_dec.c in Sources */,
-				8A4AD1B800F48962DAF82198D3B7F5F5 /* io_dec.c in Sources */,
-				CC298B2454BA8CE87E800944FAF7AFCF /* iterator_enc.c in Sources */,
+				E163B85193B2B231CBAA79D7D970855F /* alpha_dec.c in Sources */,
+				B53BEBD5088978AB958AFCA53B535034 /* alpha_enc.c in Sources */,
+				E552AE014B449240BD66909FFB988CED /* alpha_processing.c in Sources */,
+				E087EB049DBE4030D16E9C1B2BC1EF1B /* alpha_processing_mips_dsp_r2.c in Sources */,
+				630759C065E434A2BBEC65E0AC5CF0D7 /* alpha_processing_neon.c in Sources */,
+				15CD785C716D3428BCC69B5B6E60E6F9 /* alpha_processing_sse2.c in Sources */,
+				05EED369424D64430ED9CB53A316CA3A /* alpha_processing_sse41.c in Sources */,
+				0A131BF505E4DD82749A95339CF181B0 /* analysis_enc.c in Sources */,
+				957496D0A6364DF5BC4FF41391DC3F1E /* anim_decode.c in Sources */,
+				21AE921C56F7502DEA0A9330B52EB4AA /* anim_encode.c in Sources */,
+				2ED8A9BD2EDFBDD30D8CE2BE7B1D1169 /* backward_references_cost_enc.c in Sources */,
+				FEA0B27714590F9D469D0A41C2350171 /* backward_references_enc.c in Sources */,
+				05EEC057A9F46E99B8C5CC53F6AD4619 /* bit_reader_utils.c in Sources */,
+				CEBA762D5C680F5C5E30104C2D592F42 /* bit_writer_utils.c in Sources */,
+				C90B5DFA49138ACA6272A58660DA0C9F /* buffer_dec.c in Sources */,
+				B0682FEA36F1A4DEC23360C4C28595D4 /* color_cache_utils.c in Sources */,
+				CDAFCC402592C4243C919625C6D9FDA7 /* config_enc.c in Sources */,
+				1169683911339DF848010FC4143E5B0D /* cost.c in Sources */,
+				08EAE6394885CA7B4AC9CFAFAC263E74 /* cost_enc.c in Sources */,
+				F88DF91E77A38C8FC0C634DE26D0E6D3 /* cost_mips32.c in Sources */,
+				DD77C81CA3C198C9BE817A37AF1F6D96 /* cost_mips_dsp_r2.c in Sources */,
+				E71FA4723E22442B29B770F701826730 /* cost_sse2.c in Sources */,
+				507E6F149E3B3CDCA6890428BF3F2951 /* cpu.c in Sources */,
+				011DC592D6A0E269BDFBAB3B6E8E6B17 /* dec.c in Sources */,
+				5B26C7C87FB5F94668C21CB902D8216C /* dec_clip_tables.c in Sources */,
+				75A74EA06F74054ABB70BC13A50E891B /* dec_mips32.c in Sources */,
+				955EEF41CA713C80B4AFCE1DA4155701 /* dec_mips_dsp_r2.c in Sources */,
+				1C0FEFC90CE5ABB87B8295796D04113E /* dec_msa.c in Sources */,
+				B0172FFD01F1DD0259632265CF9E4A96 /* dec_neon.c in Sources */,
+				0A3FBF0950CE71C5D5D65EECE7DBA2AD /* dec_sse2.c in Sources */,
+				9B141752FADA2686B88589CBDE99AF67 /* dec_sse41.c in Sources */,
+				646C91D4C7A82D8AA890D4EBCFEF912C /* delta_palettization_enc.c in Sources */,
+				B543D7C2F50814E840A12E40734E2C11 /* demux.c in Sources */,
+				6050F470FC5874ED5AF9847F5F008002 /* enc.c in Sources */,
+				6DF37BDC4B8F3713B76A371F4EE3FA02 /* enc_avx2.c in Sources */,
+				8E2B5E429A9744BFF7D4FD3165A37D9D /* enc_mips32.c in Sources */,
+				5FBA27B8F29C613FB59B48A3FB099FE4 /* enc_mips_dsp_r2.c in Sources */,
+				B25F1E5441E9E027DA0FD53DE7BC7D53 /* enc_msa.c in Sources */,
+				E8882750224DD55962832F56A2391FB0 /* enc_neon.c in Sources */,
+				B0C7AD42D0CECB646A508A8074B42547 /* enc_sse2.c in Sources */,
+				D111A3843CA9CCE35E3140BD91D24275 /* enc_sse41.c in Sources */,
+				58110375ACC3288EEEAFF758A06200CB /* filter_enc.c in Sources */,
+				17DA45FC43BF5C39AA992C6D7DBE8220 /* filters.c in Sources */,
+				D9263E77850E19072DE3C8FD06272E1A /* filters_mips_dsp_r2.c in Sources */,
+				9899EDF27484F11D62E5F0E6853E0587 /* filters_msa.c in Sources */,
+				901E2A7F68BA45B71CC77964A0BB207D /* filters_neon.c in Sources */,
+				667D850D499A5564B1A4FAD277501493 /* filters_sse2.c in Sources */,
+				699C948177F5BA611941716A443C314F /* filters_utils.c in Sources */,
+				2D87F36031B3DD7C1763E9132EF6565E /* frame_dec.c in Sources */,
+				386625266659C05F1CEE3A3BECFC4FF3 /* frame_enc.c in Sources */,
+				B8FF7A2D79CC722BFC7D6D54D3F8A209 /* histogram_enc.c in Sources */,
+				72627A2F1BC0646707BC32D0E21C2D4A /* huffman_encode_utils.c in Sources */,
+				36D2670B513D3CC11B27D51A1786990C /* huffman_utils.c in Sources */,
+				52FBDC11D1EF484415FE5776DE840612 /* idec_dec.c in Sources */,
+				003915EC277B217AC133538FD92F06D9 /* io_dec.c in Sources */,
+				426E9CA26CD8D1B056568572BFE9BE7B /* iterator_enc.c in Sources */,
 				DDAE83F91EF5AC7CCD362A7797275354 /* libwebp-dummy.m in Sources */,
-				3F440FC96E80EFBB306ED59D5681B4FF /* lossless.c in Sources */,
-				F9575D6F38F80FB421E676E44A86F5A3 /* lossless_enc.c in Sources */,
-				57922DD75AE60DEC9F29DF1DB2CC9519 /* lossless_enc_mips32.c in Sources */,
-				19DF5365B66E69037C22305E8EE1E3D9 /* lossless_enc_mips_dsp_r2.c in Sources */,
-				94F948B1278D421ED2E6F14B24B967E2 /* lossless_enc_msa.c in Sources */,
-				4B0EF983C56B5DAE1D6EDFBD25304623 /* lossless_enc_neon.c in Sources */,
-				208005557B135C7E10DE78FAE339AA90 /* lossless_enc_sse2.c in Sources */,
-				9CEBCD2D0B905A4CD5EFEE977DE3075E /* lossless_enc_sse41.c in Sources */,
-				ECF471BD35B4E19B2F3F7179ED0C6C51 /* lossless_mips_dsp_r2.c in Sources */,
-				0D9AD0FB1F5D8183823496586FFC4367 /* lossless_msa.c in Sources */,
-				49C051946C1C4462B4669B2D3968C5D1 /* lossless_neon.c in Sources */,
-				E8645FAB4CB36ACF0F84521DFDE11547 /* lossless_sse2.c in Sources */,
-				C5F8925276D2CCF139D5D04A334FCAF1 /* muxedit.c in Sources */,
-				82AD4799A1559328661BFC35F07E94D6 /* muxinternal.c in Sources */,
-				D0B0866D5E568C3DF118A99F82894A91 /* muxread.c in Sources */,
-				3670E24E6B5BEA995904BB563D44CADC /* near_lossless_enc.c in Sources */,
-				CAEF00E5AEFDAFEE05FB150596B8737A /* picture_csp_enc.c in Sources */,
-				AAF65BD90A7AB29D681401B5EF2680F5 /* picture_enc.c in Sources */,
-				1251339203F7B7922F75597AB9C6C07B /* picture_psnr_enc.c in Sources */,
-				1D988C4E7C54590425E3A768C2AC4ADE /* picture_rescale_enc.c in Sources */,
-				6EED7C6395C6033CFF1C286733B144C5 /* picture_tools_enc.c in Sources */,
-				DABC1FE340E4BE390AEFD12020868167 /* predictor_enc.c in Sources */,
-				BF5C423B46D6A4E15A8D6506FAB2B108 /* quant_dec.c in Sources */,
-				C6771FE8EEF854ADFA6D0552CD1B0218 /* quant_enc.c in Sources */,
-				AD5BE9D3CE6976B58A0709DE16960F76 /* quant_levels_dec_utils.c in Sources */,
-				DFA41CCDB1FE4452E8A05B2448FEA76E /* quant_levels_utils.c in Sources */,
-				DFA42816CA68994E80E154D78251F27B /* random_utils.c in Sources */,
-				102AF4276262AE3E556CA777260B9EEF /* rescaler.c in Sources */,
-				90F8B995B97EDB0DE2BF3C0C2885AE48 /* rescaler_mips32.c in Sources */,
-				B5B79D887A97489B117D6470C6F6C570 /* rescaler_mips_dsp_r2.c in Sources */,
-				1CC688F390A5E754800C2126F34D520E /* rescaler_msa.c in Sources */,
-				8A2467D58488A9A6F5ED348F451AEC3A /* rescaler_neon.c in Sources */,
-				F557DD1E7B9D490E621F371251FC27D5 /* rescaler_sse2.c in Sources */,
-				FEA1C737FE812330927E9A41DAECACF7 /* rescaler_utils.c in Sources */,
-				8D2B1754E423F35366EC327FC9C4F2F1 /* ssim.c in Sources */,
-				B952385ED2BAB00B78C1029C95D0189B /* ssim_sse2.c in Sources */,
-				E8E8E9D48DA62C05DAE73A19E68F7446 /* syntax_enc.c in Sources */,
-				B026769B8626E845CD0A98E5F53E142B /* thread_utils.c in Sources */,
-				85427219CC0C588AF77F5FB5BDFA3F29 /* token_enc.c in Sources */,
-				098744DEF0878DB05A6ABA9664058AEA /* tree_dec.c in Sources */,
-				737579A708EF778CDC201D0D8E4DFACE /* tree_enc.c in Sources */,
-				50EFE35A2A6C93CFCBDED66588B5733C /* upsampling.c in Sources */,
-				BF6F54D2B7550341855E50B86CFAD71F /* upsampling_mips_dsp_r2.c in Sources */,
-				16C878C54D92A7C132F9381440DCA3C1 /* upsampling_msa.c in Sources */,
-				17F4B097DEC3ADF58DD1F987FD45FB7A /* upsampling_neon.c in Sources */,
-				8B839314100CCF1C1CB70098366F2CE2 /* upsampling_sse2.c in Sources */,
-				3446231F5EFA8DFB5D740DC18928C9F3 /* utils.c in Sources */,
-				81AE222A8963864A3B5C07DCDBBA5F99 /* vp8_dec.c in Sources */,
-				CCF56E6B86A3EF8302BE4FE74C53CD05 /* vp8l_dec.c in Sources */,
-				0A5DE14808B51C1E7107D4B6B8701C21 /* vp8l_enc.c in Sources */,
-				EC4D944BB3EE58A14FFFC50A38986DD2 /* webp_dec.c in Sources */,
-				32BBF2626A7FC443C40EA556D9BCBA21 /* webp_enc.c in Sources */,
-				F66D94DFA85EF7EBCC881659642D7889 /* yuv.c in Sources */,
-				820E155F71366281401F6C28F013BAAB /* yuv_mips32.c in Sources */,
-				142EB92368E577016B3FF710177ABBEF /* yuv_mips_dsp_r2.c in Sources */,
-				50387CE601619F25C09C89077ADB4525 /* yuv_neon.c in Sources */,
-				296D117B2639CD7F5F675F00B393DB65 /* yuv_sse2.c in Sources */,
+				16EF20E5B52818488819760AEDA906D8 /* lossless.c in Sources */,
+				BE6003FD98447B42609E5A6267851863 /* lossless_enc.c in Sources */,
+				03126E65F97F5221C2ABA26C81A5906C /* lossless_enc_mips32.c in Sources */,
+				E3D89C0F99433A0A1C15E2612F52E392 /* lossless_enc_mips_dsp_r2.c in Sources */,
+				E2F2C76CCA5EBB050D8DE1397EEDF018 /* lossless_enc_msa.c in Sources */,
+				16C0D21A86AF245562B6E25272B8FBD3 /* lossless_enc_neon.c in Sources */,
+				AD6895C8BC630EBEA7FE0ADE150F429C /* lossless_enc_sse2.c in Sources */,
+				606A5F664EA9DCDC08685B8DC2E00947 /* lossless_enc_sse41.c in Sources */,
+				FD087AF9F649AD4775AB981E856D7D80 /* lossless_mips_dsp_r2.c in Sources */,
+				233FA540976B45FB72CEA8D5BBF05269 /* lossless_msa.c in Sources */,
+				4B677FE11B6F9D1B0F8255B4B25061D8 /* lossless_neon.c in Sources */,
+				2EF5D8488410EFA8F50C8AEE624FF273 /* lossless_sse2.c in Sources */,
+				E42F229D134C551D49C25B6782D35DCC /* muxedit.c in Sources */,
+				75B0DD9BABE38FD2EFFFA9D16D67EC12 /* muxinternal.c in Sources */,
+				09D33F08947CC5081C0A61D3326CD1EF /* muxread.c in Sources */,
+				C1185B14BCC27180C168F8034A090504 /* near_lossless_enc.c in Sources */,
+				98824057411F6BE22A9708CD6DA15361 /* picture_csp_enc.c in Sources */,
+				E914579722ADF7538F2B93608C7D8680 /* picture_enc.c in Sources */,
+				BDB5F1C2195B3584D06361892CCFB342 /* picture_psnr_enc.c in Sources */,
+				2445CF38E3385B1B9C2A640F23F70EC1 /* picture_rescale_enc.c in Sources */,
+				EF39EC700BDB9E8A5EF49C6B4DF3862C /* picture_tools_enc.c in Sources */,
+				0B31BF16DBCB02F001CA0A6D5DC8E0DB /* predictor_enc.c in Sources */,
+				283FEFD45B28B1FD6D725DB2A8291EF6 /* quant_dec.c in Sources */,
+				B5190C8667DCB3E80BE8C56F16D28422 /* quant_enc.c in Sources */,
+				1531A0BEB3CF491ABC4B7E8FDE415205 /* quant_levels_dec_utils.c in Sources */,
+				8C246848F99533E7EBC5CE7EA94DE1E1 /* quant_levels_utils.c in Sources */,
+				753391CA1C51BE4E046A4F455578510B /* random_utils.c in Sources */,
+				04D677B053D29F01EFCBE546D081B9CD /* rescaler.c in Sources */,
+				8E38FF8332FCEA195581DE41431887BA /* rescaler_mips32.c in Sources */,
+				D472BB5FFA7F18E00107F4A1D3DAD74D /* rescaler_mips_dsp_r2.c in Sources */,
+				3BB987708031B6300E4670B4A13A8FE7 /* rescaler_msa.c in Sources */,
+				001179A9FE922BC41FCEE89FE3453912 /* rescaler_neon.c in Sources */,
+				D80538B7C42C07BD7D64D590C091C048 /* rescaler_sse2.c in Sources */,
+				6F8835A72AE80C4586916F72BE637BF8 /* rescaler_utils.c in Sources */,
+				EB2FBB62EBBD2F9B09699272274E7D2E /* ssim.c in Sources */,
+				EB1C97C183DDD92EA5C812E2C3B0B668 /* ssim_sse2.c in Sources */,
+				79432D17BFF940D85D4C5D5A80AFF5DC /* syntax_enc.c in Sources */,
+				25EC176130C1C317D3AF10893EBA1A24 /* thread_utils.c in Sources */,
+				967D445620CA56F4C159D63FF3650CC9 /* token_enc.c in Sources */,
+				063F3279CD4E2141DA8AF5587193DBBD /* tree_dec.c in Sources */,
+				5C87011CEC436FB353C9B4C6D3A39E61 /* tree_enc.c in Sources */,
+				F906F3D7BB03A949023888088ACF132A /* upsampling.c in Sources */,
+				C4843B5285A039BDBEC490C34723F2CE /* upsampling_mips_dsp_r2.c in Sources */,
+				67C95928494CF05BD7B33620E6969B4D /* upsampling_msa.c in Sources */,
+				B60FA6E1CDA3A4BE7250950525166000 /* upsampling_neon.c in Sources */,
+				C9396D96CA245FC9F76AFA6FB077618D /* upsampling_sse2.c in Sources */,
+				B60ABD35F5AFEB6226A49225009FFD37 /* utils.c in Sources */,
+				E49611EEE66B39572FD12CA1B0603305 /* vp8_dec.c in Sources */,
+				A70EF5100DC963AD1B8466C2AF74FCBD /* vp8l_dec.c in Sources */,
+				0CD024A8B65BDBB62B6A15CE07519CEB /* vp8l_enc.c in Sources */,
+				FAF2287F455EAC712BEA09C9D008CCEF /* webp_dec.c in Sources */,
+				653D63A193AD0C4A227353E1EDE5B861 /* webp_enc.c in Sources */,
+				3A7B0AFDBFE553461124B391EB24763A /* yuv.c in Sources */,
+				87BA294631A4DEC7FC5EC73B877451B7 /* yuv_mips32.c in Sources */,
+				FEEA21A0D33FA0F390457C43F3EE2D98 /* yuv_mips_dsp_r2.c in Sources */,
+				A12AEB1E4B78756E45B32425AF25F79F /* yuv_neon.c in Sources */,
+				2A3B8B9A4FD4C3625CBAFB22EF68E03A /* yuv_sse2.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "LLPhotoItem.h"
 #import "UIView+LLWebCache.h"
-#import "FLAnimatedImage.h"
+#import "FLAnimatedImageView.h"
+
 @interface LLPhotoView : UIScrollView<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIView *imageContainerView;
-@property (nonatomic, strong)  FLAnimatedImageView*imageView;
+@property (nonatomic, strong) FLAnimatedImageView *imageView;
 @property (nonatomic, assign) NSInteger page;
 
 @property (nonatomic, assign) BOOL showProgress;

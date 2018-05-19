@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				5C8128EE20ACBC480089FAB3 /* LLPhotosBrowser */,
-				5C8128FB20ACBC480089FAB3 /* LLDemoController.h */,
 				5C8128FC20ACBC480089FAB3 /* AppDelegate.h */,
 				5C8128FD20ACBC480089FAB3 /* icon_loading_en.png */,
 				5C8128FE20ACBC480089FAB3 /* Assets.xcassets */,
@@ -89,6 +88,7 @@
 				5C81290020ACBC480089FAB3 /* LaunchScreen.storyboard */,
 				5C81290220ACBC480089FAB3 /* Main.storyboard */,
 				5C81290420ACBC480089FAB3 /* main.m */,
+				5C8128FB20ACBC480089FAB3 /* LLDemoController.h */,
 				5C81290520ACBC480089FAB3 /* LLDemoController.m */,
 				5C81290620ACBC480089FAB3 /* AppDelegate.m */,
 				5C81290720ACBC480089FAB3 /* Info.plist */,
@@ -101,17 +101,17 @@
 			isa = PBXGroup;
 			children = (
 				5C8128EF20ACBC480089FAB3 /* UIView+LLAdd.h */,
-				5C8128F020ACBC480089FAB3 /* LLPhotosBrowser.m */,
-				5C8128F120ACBC480089FAB3 /* LLPhotoView.m */,
-				5C8128F220ACBC480089FAB3 /* UIView+LLWebCache.m */,
-				5C8128F320ACBC480089FAB3 /* LLPhotoItem.m */,
-				5C8128F420ACBC480089FAB3 /* LLPageControl.m */,
-				5C8128F520ACBC480089FAB3 /* LLPhotosBrowser.h */,
 				5C8128F620ACBC480089FAB3 /* UIView+LLAdd.m */,
 				5C8128F720ACBC480089FAB3 /* UIView+LLWebCache.h */,
-				5C8128F820ACBC480089FAB3 /* LLPhotoView.h */,
+				5C8128F220ACBC480089FAB3 /* UIView+LLWebCache.m */,
 				5C8128F920ACBC480089FAB3 /* LLPageControl.h */,
+				5C8128F420ACBC480089FAB3 /* LLPageControl.m */,
+				5C8128F520ACBC480089FAB3 /* LLPhotosBrowser.h */,
+				5C8128F020ACBC480089FAB3 /* LLPhotosBrowser.m */,
+				5C8128F820ACBC480089FAB3 /* LLPhotoView.h */,
+				5C8128F120ACBC480089FAB3 /* LLPhotoView.m */,
 				5C8128FA20ACBC480089FAB3 /* LLPhotoItem.h */,
+				5C8128F320ACBC480089FAB3 /* LLPhotoItem.m */,
 			);
 			path = LLPhotosBrowser;
 			sourceTree = "<group>";
@@ -417,6 +417,7 @@
 			baseConfigurationReference = D855F52EB9E157A2DD775143 /* Pods-LLPhotosBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LLPhotosBrowser/Info.plist;
@@ -433,6 +434,7 @@
 			baseConfigurationReference = DE281DCD7C9854401094259E /* Pods-LLPhotosBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LLPhotosBrowser/Info.plist;
