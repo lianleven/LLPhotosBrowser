@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LLPhotoItem.h"
 #import "UIView+LLWebCache.h"
-#import "FLAnimatedImageView.h"
-
+#import <FLAnimatedImage/FLAnimatedImageView.h>
 @interface LLPhotoView : UIScrollView<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIView *imageContainerView;

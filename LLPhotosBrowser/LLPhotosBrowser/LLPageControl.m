@@ -35,7 +35,7 @@
     self.pagerLabel.frame = self.bounds;
 }
 - (void)setPagerCurrentNumber{
-    self.pagerLabel.text = [NSString stringWithFormat:@"%zd/%zd",(self.currentPage+1),self.numberOfPages];
+    self.pagerLabel.text = [NSString stringWithFormat:@"%@/%@",@(self.currentPage+1),@(self.numberOfPages)];
 }
 
 #pragma mark - Getters and Setters

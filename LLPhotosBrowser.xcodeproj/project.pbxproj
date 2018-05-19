@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				5C8128EE20ACBC480089FAB3 /* LLPhotosBrowser */,
-				5C8128FC20ACBC480089FAB3 /* AppDelegate.h */,
 				5C8128FD20ACBC480089FAB3 /* icon_loading_en.png */,
 				5C8128FE20ACBC480089FAB3 /* Assets.xcassets */,
 				5C8128FF20ACBC480089FAB3 /* ViewController.m */,
@@ -90,6 +89,7 @@
 				5C81290420ACBC480089FAB3 /* main.m */,
 				5C8128FB20ACBC480089FAB3 /* LLDemoController.h */,
 				5C81290520ACBC480089FAB3 /* LLDemoController.m */,
+				5C8128FC20ACBC480089FAB3 /* AppDelegate.h */,
 				5C81290620ACBC480089FAB3 /* AppDelegate.m */,
 				5C81290720ACBC480089FAB3 /* Info.plist */,
 				5C81290820ACBC480089FAB3 /* ViewController.h */,

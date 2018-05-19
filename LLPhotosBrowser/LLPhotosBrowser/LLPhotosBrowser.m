@@ -185,7 +185,6 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
         cell.imageView.image = item.thumbImage;
         [cell resizeSubviewSize];
     }
-    
     if (item.thumbClippedToTop) {
         CGRect fromFrame = [_fromView convertRect:_fromView.bounds toView:cell];
         CGRect originFrame = cell.imageContainerView.frame;
@@ -198,18 +197,18 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
         
         float oneTime = animated ? 0.25 : 0;
         [UIView animateWithDuration:oneTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
-            _blurBackground.alpha = 1;
+            self.blurBackground.alpha = 1;
         }completion:NULL];
         
         _scrollView.userInteractionEnabled = NO;
         [UIView animateWithDuration:oneTime delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             cell.imageContainerView.layer.transformScale = 1;
             cell.imageContainerView.frame = originFrame;
-            _pager.alpha = 1;
+            self.pager.alpha = 1;
         }completion:^(BOOL finished) {
-            _isPresented = YES;
-            [self scrollViewDidScroll:_scrollView];
-            _scrollView.userInteractionEnabled = YES;
+            self.isPresented = YES;
+            [self scrollViewDidScroll:self.scrollView];
+            self.scrollView.userInteractionEnabled = YES;
             [self hidePager];
             if (completion) completion();
         }];
@@ -223,7 +222,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
         
         float oneTime = animated ? 0.18 : 0;
         [UIView animateWithDuration:oneTime*2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
-            _blurBackground.alpha = 1;
+            self.blurBackground.alpha = 1;
         }completion:NULL];
         
         _scrollView.userInteractionEnabled = NO;
@@ -233,12 +232,12 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
         }completion:^(BOOL finished) {
             [UIView animateWithDuration:oneTime delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseInOut animations:^{
                 cell.imageView.layer.transformScale = 1.0;
-                _pager.alpha = 1;
+               self.pager.alpha = 1;
             }completion:^(BOOL finished) {
                 cell.imageContainerView.clipsToBounds = YES;
-                _isPresented = YES;
-                [self scrollViewDidScroll:_scrollView];
-                _scrollView.userInteractionEnabled = YES;
+                self.isPresented = YES;
+                [self scrollViewDidScroll:self.scrollView];
+                self.scrollView.userInteractionEnabled = YES;
                 [self hidePager];
                 if (completion) completion();
             }];
@@ -310,8 +309,8 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     }
     
     [UIView animateWithDuration:animated ? 0.2 : 0 delay:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionCurveEaseOut animations:^{
-        _pager.alpha = 0.0;
-        _blurBackground.alpha = 0.0;
+        self.pager.alpha = 0.0;
+        self.blurBackground.alpha = 0.0;
         if (isFromImageClipped) {
             
             CGRect fromFrame = [fromView convertRect:fromView.bounds toView:cell];
@@ -383,7 +382,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     intPage = intPage < 0 ? 0 : intPage >= _groupItems.count ? (int)_groupItems.count - 1 : intPage;
     _pager.currentPage = intPage;
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
-        _pager.alpha = 1;
+        self.pager.alpha = 1;
     }completion:^(BOOL finish) {
     }];
 }
@@ -401,7 +400,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 
 - (void)hidePager {
     [UIView animateWithDuration:0.3 delay:0.8 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut animations:^{
-        _pager.alpha = 0;
+        self.pager.alpha = 0;
     }completion:^(BOOL finish) {
     }];
 }
@@ -558,8 +557,8 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
             CGFloat alpha = (alphaDelta - fabs(deltaY) + 50) / alphaDelta;
             alpha = YY_CLAMP(alpha, 0, 1);
             [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveLinear animations:^{
-                _blurBackground.alpha = alpha;
-                _pager.alpha = alpha;
+                self.blurBackground.alpha = alpha;
+                self.pager.alpha = alpha;
             } completion:nil];
             
         } break;
@@ -582,12 +581,12 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
                 duration = YY_CLAMP(duration, 0.05, 0.3);
                 
                 [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionBeginFromCurrentState animations:^{
-                    _blurBackground.alpha = 0;
-                    _pager.alpha = 0;
+                    self.blurBackground.alpha = 0;
+                    self.pager.alpha = 0;
                     if (moveToTop) {
-                        _scrollView.bottom = 0;
+                        self.scrollView.bottom = 0;
                     } else {
-                        _scrollView.top = self.height;
+                        self.scrollView.top = self.height;
                     }
                 } completion:^(BOOL finished) {
                     [self removeFromSuperview];
@@ -598,9 +597,9 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
                 
             } else {
                 [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.9 initialSpringVelocity:v.y / 1000 options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
-                    _scrollView.top = 0;
-                    _blurBackground.alpha = 1;
-                    _pager.alpha = 1;
+                    self.scrollView.top = 0;
+                    self.blurBackground.alpha = 1;
+                    self.pager.alpha = 1;
                 } completion:^(BOOL finished) {
                     
                 }];
