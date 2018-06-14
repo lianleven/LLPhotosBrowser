@@ -1,7 +1,7 @@
   
 Pod::Spec.new do |s|
   s.name         = 'LLPhotosBrowser'
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "A simple iOS photo browser"
   s.homepage     = 'https://github.com/lianleven/LLPhotosBrowser'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.platform     = :ios, '8.0'
   s.source_files = 'LLPhotosBrowser/LLPhotosBrowser/*.{h,m}'
-  s.dependency 'SDWebImage/GIF', '~> 4.0'
+  s.dependency 'SDWebImage/GIF'
   s.requires_arc = true
 end
