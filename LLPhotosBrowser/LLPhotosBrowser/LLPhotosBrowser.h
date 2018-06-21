@@ -16,6 +16,7 @@
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
 @property (nonatomic, readonly) NSInteger currentPage;
 @property (nonatomic, strong, readonly) LLPageControl *pager;
+@property (nonatomic, copy) void(^dismissCompletionBlock)(void);
 
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

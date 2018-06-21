@@ -290,6 +290,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
             [self removeFromSuperview];
             [self cancelAllImageLoad];
             if (completion) completion();
+            [self dismissCompletion];
         }];
         return;
     }
@@ -344,7 +345,12 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
 - (void)dismiss {
     [self dismissAnimated:YES completion:nil];
 }
-
+- (void)dismissCompletion{
+    if (self.dismissCompletionBlock) {
+        self.dismissCompletionBlock();
+        self.dismissCompletionBlock = nil;
+    }
+}
 
 - (void)cancelAllImageLoad {
     [_cells enumerateObjectsUsingBlock:^(LLPhotoView *cell, NSUInteger idx, BOOL *stop) {
