@@ -336,6 +336,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
             cell.imageContainerView.layer.anchorPoint = CGPointMake(0.5, 0.5);
             [self removeFromSuperview];
             if (completion) completion();
+            [self dismissCompletion];
         }];
     }];
     
@@ -596,6 +597,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
                     }
                 } completion:^(BOOL finished) {
                     [self removeFromSuperview];
+                    [self dismissCompletionBlock];
                 }];
                 
                 _background.image = _snapshotImage;
