@@ -597,7 +597,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
                     }
                 } completion:^(BOOL finished) {
                     [self removeFromSuperview];
-                    [self dismissCompletionBlock];
+                    [self dismissCompletion];
                 }];
                 
                 _background.image = _snapshotImage;
