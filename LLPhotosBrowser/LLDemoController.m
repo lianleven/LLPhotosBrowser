@@ -132,34 +132,19 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
                        
                        // animated gif: http://cinemagraphs.com/
                        @"http://i.imgur.com/uoBwCLj.gif",
-                       @"http://i.imgur.com/8KHKhxI.gif",
-                       @"http://i.imgur.com/WXJaqof.gif",
-                       
-                       // animated gif: https://dribbble.com/markpear
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1780193/dots18.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1809343/dots17.1.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1845612/dots22.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1820014/big-hero-6.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1819006/dots11.0.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1799885/dots21.gif",
-                       
-                       // animaged gif: https://dribbble.com/jonadinges
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/2025999/batman-beyond-the-rain.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1855350/r_nin.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1963497/way-back-home.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1913272/depressed-slurp-cycle.gif",
-                       
-                       // jpg: https://dribbble.com/snootyfox
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1839353/pilsner.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1833469/porter.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1521183/farmers.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1391053/tents.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1399501/imperial_beer.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1488711/fishin.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1466318/getaway.jpg",
-                       
+                       @"http://pic35.photophoto.cn/20150409/0005018337384017_b.jpg",
+                       @"http://cdn.duitang.com/uploads/item/201507/10/20150710045602_wHEBf.jpeg",
+                       @"http://c.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=5547913f8426cffc697fb7b68c3166a6/241f95cad1c8a7862b15ada86109c93d70cf505d.jpg",
+                       @"http://pic13.photophoto.cn/20091008/0005018325060806_b.jpg",
+                       @"http://pic28.photophoto.cn/20130830/0005018373595008_b.jpg",
+                       @"http://im5.leaderhero.com/wallpaper/20140312/08376831-7.jpg",
+                       @"http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=d9ae111646086e067ea537086a611181/1c950a7b02087bf46be6dacef8d3572c11dfcf8b.jpg",
+                       @"http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=b6f407e414178a82da3177e39e6a19f8/b8014a90f603738d9da5f10ab91bb051f819ec2f.jpg",
+                       @"http://ww2.sinaimg.cn/large/85cc5ccbgy1ffnf5i8hpog20dw099u0y.jpg",
+                       @"http://img5.duitang.com/uploads/item/201411/29/20141129014255_4hnZt.thumb.700_0.gif",
+                       @"http://img.zcool.cn/community/0160ba577b19390000018c1bfa91bc.jpg@900w_1l_2o_100sh.jpg",
+                       @"http://cdn.duitang.com/uploads/item/201311/20/20131120200037_CW2vK.thumb.700_0.gif",
+                       @"http://img.zcool.cn/community/018a0459813aeaa80121560389b97c.gif@2o.jpg",
                        // animated webp and apng: http://littlesvr.ca/apng/gif_apng_webp.html
                        @"http://littlesvr.ca/apng/images/BladeRunner.png",
                        @"http://littlesvr.ca/apng/images/Contact.webp",
