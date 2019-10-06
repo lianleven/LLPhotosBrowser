@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, LLImageFormat) {
                placeholder:(UIImage *_Nullable)placeholder
                    options:(SDWebImageOptions)options
                 completion:(SDExternalCompletionBlock _Nullable )completion;
-- (void)ll_setImageWithURL:(NSURL *_Nullable)imageURL placeholder:(UIImage *)placeholder progress:(SDImageLoaderProgressBlock _Nullable )progressBlock completion:(SDExternalCompletionBlock _Nullable )completion;
+- (void)ll_setImageWithURL:(NSURL *_Nullable)imageURL placeholder:(UIImage *_Nullable)placeholder progress:(SDImageLoaderProgressBlock _Nullable )progressBlock completion:(SDExternalCompletionBlock _Nullable )completion;
 + (void)ll_requestImageWithURL:(NSURL *_Nullable)imageURL;
 - (void)ll_cancelCurrentImageLoad;
 
