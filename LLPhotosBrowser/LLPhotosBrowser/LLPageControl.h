@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
     LLPageControlTypeNumber, // such as 1/20
     LLPageControlTypeSystem, 
 } LLPageControlType;
-
+NS_ASSUME_NONNULL_BEGIN
 @interface LLPageControl : UIView
 
 @property (nonatomic, strong, readonly) UIPageControl *pager;
@@ -27,3 +27,4 @@ typedef enum : NSUInteger {
 @property(nonatomic) BOOL hidesForSinglePage;          // hide the the indicator if there is only one page. default is NO
 
 @end
+NS_ASSUME_NONNULL_END

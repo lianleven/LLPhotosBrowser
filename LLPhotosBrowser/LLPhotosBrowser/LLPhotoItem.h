@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIView+LLAdd.h"
+NS_ASSUME_NONNULL_BEGIN
 @import UIKit;
 @interface LLPhotoItem : NSObject
 
@@ -20,3 +21,4 @@
 + (instancetype)photoItemWithThumbView:(UIView *)thumbView imageURL:(NSURL *)imageURL;
 
 @end
+NS_ASSUME_NONNULL_END

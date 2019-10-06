@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LLPhotoItem.h"
 #import "UIView+LLWebCache.h"
+NS_ASSUME_NONNULL_BEGIN
 @interface LLPhotoView : UIScrollView<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIView *imageContainerView;
@@ -24,3 +25,4 @@
 - (void)resizeSubviewSize;
 
 @end
+NS_ASSUME_NONNULL_END

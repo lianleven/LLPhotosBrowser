@@ -11,6 +11,7 @@
 #import "LLPhotoView.h"
 #import "LLPageControl.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface LLPhotosBrowser : UIView
 
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
@@ -27,9 +28,10 @@
 - (void)presentFromImageView:(UIView *)fromView
                  toContainer:(UIView *)container
                     animated:(BOOL)animated
-                  completion:(void (^)(void))completion;
+                  completion:(void ( ^ _Nullable)(void))completion;
 
-- (void)dismissAnimated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)dismissAnimated:(BOOL)animated completion:(void ( ^ _Nullable)(void))completion;
 - (void)dismiss;
 
 @end
+NS_ASSUME_NONNULL_END
