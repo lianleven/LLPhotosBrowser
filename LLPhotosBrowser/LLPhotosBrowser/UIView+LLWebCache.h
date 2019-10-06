@@ -21,25 +21,22 @@ typedef NS_ENUM(NSInteger, LLImageFormat) {
 @interface UIView (LLWebCache)
 
 
-- (void)ll_setImageWithURL:(NSURL *)imageURL placeholder:(UIImage *)placeholder;
-- (void)ll_setImageWithURL:(NSURL *)imageURL
-placeholder:(UIImage *)placeholder
+- (void)ll_setImageWithURL:(NSURL *_Nullable)imageURL placeholder:(UIImage *_Nullable)placeholder;
+- (void)ll_setImageWithURL:(NSURL *_Nullable)imageURL
+               placeholder:(UIImage *_Nullable)placeholder
                    options:(SDWebImageOptions)options
-                completion:(SDExternalCompletionBlock)completion;
-- (void)ll_setImageWithURL:(NSURL *)imageURL
-               placeholder:(UIImage *)placeholder
-                  progress:(SDWebImageDownloaderProgressBlock)progressBlock
-                completion:(SDExternalCompletionBlock)completion;
-+ (void)ll_requestImageWithURL:(NSURL *)imageURL;
+                completion:(SDExternalCompletionBlock _Nullable )completion;
+- (void)ll_setImageWithURL:(NSURL *_Nullable)imageURL placeholder:(UIImage *)placeholder progress:(SDImageLoaderProgressBlock _Nullable )progressBlock completion:(SDExternalCompletionBlock _Nullable )completion;
++ (void)ll_requestImageWithURL:(NSURL *_Nullable)imageURL;
 - (void)ll_cancelCurrentImageLoad;
 
 
-- (NSURL *)ll_imageURL;
+- (NSURL *_Nullable)ll_imageURL;
 // cache
-+ (UIImage *)imageCacheWithURL:(NSURL *)imageURL;
-+ (void)removeImageForKey:(NSString *)key;
++ (void)imageCacheWithURL:(NSURL *_Nullable)imageURL completed:(SDImageCacheQueryCompletionBlock _Nullable )completed;
++ (void)removeImageForKey:(NSString *_Nullable)key;
 + (void)removeAllCacheImage;
-+ (void)ll_setImage:(UIImage *)image imageData:(NSData *)imageData forKey:(NSString *)key;
++ (void)ll_setImage:(UIImage *_Nullable)image imageData:(NSData *_Nullable)imageData forKey:(NSString *_Nullable)key;
 
 
 + (LLImageFormat)ll_imageFormatForImageData:(nullable NSData *)data;

@@ -8,7 +8,6 @@
 
 #import "LLDemoController.h"
 #import "UIView+LLWebCache.h"
-#import "FLAnimatedImage.h"
 #import "LLPhotosBrowser.h"
 
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
@@ -19,7 +18,7 @@
 typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
 @interface LLDemoControllerCell : UITableViewCell<UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) FLAnimatedImageView *webImageView;
+@property (nonatomic, strong) UIImageView *webImageView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicator;
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
 @property (nonatomic, strong) UIButton *button;
@@ -33,7 +32,7 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
     self.contentView.backgroundColor = [UIColor clearColor];
     self.size = CGSizeMake(kScreenWidth, kCellHeight);
     self.contentView.size = self.size;
-    _webImageView = [FLAnimatedImageView new];
+    _webImageView = [UIImageView new];
     _webImageView.size = self.size;
     _webImageView.clipsToBounds = YES;
     _webImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -131,38 +130,23 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
     NSArray *links = @[
                        
                        // animated gif: http://cinemagraphs.com/
-                       @"http://i.imgur.com/uoBwCLj.gif",
-                       @"http://i.imgur.com/8KHKhxI.gif",
-                       @"http://i.imgur.com/WXJaqof.gif",
+                       @"https://images.squarespace-cdn.com/content/v1/51c748abe4b0c275d0aa86bf/1519576325144-H2GPLI8JDEHMH8HBJM7O/ke17ZwdGBToddI8pDm48kOOQfKsvBBorSwHVUCJjBOBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIRaThxu6nsdNOw5WRrV_0G9NHKuV4AXKjkZDjcwRQgtY/INDIA-980.gif?format=1500w",
+                       @"https://images.squarespace-cdn.com/content/v1/51c748abe4b0c275d0aa86bf/1519764039655-85CFKJ5LS63TZSZVTURD/ke17ZwdGBToddI8pDm48kOKrF9i_mtuin_uYbw_VTGZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxULxrzzz3CCNCAz1R7vR2WrpwNnxuBgtb6vvkfUM0O4jBA2BPboc6Lzb0JGNnKbCU/tumblr_nfro6qnt591qzcq51o1_500.gif?format=1500w",
+                       @"https://images.squarespace-cdn.com/content/v1/51c748abe4b0c275d0aa86bf/1519577557025-4GFNOHSM9TE2CH1ETLYI/ke17ZwdGBToddI8pDm48kAhXJpvrnxCVYLrw11p9D11Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzpw2Vx11zKvEJOy8iCS1eEBjlDB46MI7MqzKK5c4shXPFulGH7SpNcxoDP6cY-FJk/Lincoln_Cinemagraph_615.gif?format=1500w",
                        
                        // animated gif: https://dribbble.com/markpear
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1780193/dots18.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1809343/dots17.1.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1845612/dots22.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1820014/big-hero-6.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1819006/dots11.0.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/345826/screenshots/1799885/dots21.gif",
+                       @"https://images.squarespace-cdn.com/content/v1/51c748abe4b0c275d0aa86bf/1519577354952-08TNJ0KLBH5KUWUGU945/ke17ZwdGBToddI8pDm48kPQXnCelw_ZHZHJ0S_zUYJFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyNwX1LwSyygiAUvLkdvd06aTywZWHJZvTFXmZ1EWjDNXW-iOY3h16vp-WNE8aWbRI/Armani-Central-Park-6151.gif?format=1500w",
+
                        
-                       // animaged gif: https://dribbble.com/jonadinges
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/2025999/batman-beyond-the-rain.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1855350/r_nin.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1963497/way-back-home.gif",
-                       @"https://d13yacurqjgara.cloudfront.net/users/288987/screenshots/1913272/depressed-slurp-cycle.gif",
+
                        
                        // jpg: https://dribbble.com/snootyfox
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1839353/pilsner.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1833469/porter.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1521183/farmers.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1391053/tents.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1399501/imperial_beer.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1488711/fishin.jpg",
-                       @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1466318/getaway.jpg",
+                       @"https://pic1.zhimg.com/v2-3b4fc7e3a1195a081d0259246c38debc_1200x500.jpg",
+                       @"https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg",
                        
                        // animated webp and apng: http://littlesvr.ca/apng/gif_apng_webp.html
-                       @"http://littlesvr.ca/apng/images/BladeRunner.png",
-                       @"http://littlesvr.ca/apng/images/Contact.webp",
+                       @"http://littlesvr.ca/apng/images/GenevaDrive.webp",
+                       @"http://littlesvr.ca/apng/images/SteamEngine.webp",
                        ];
     
     _imageLinks = links;

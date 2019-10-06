@@ -17,7 +17,7 @@
 #include <stddef.h>  // for size_t
 
 #ifndef _MSC_VER
-#include <inttypes.h>
+#include <stdint.h>
 #if defined(__cplusplus) || !defined(__STRICT_ANSI__) || \
     (defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L)
 #define WEBP_INLINE inline
@@ -49,4 +49,4 @@ typedef long long int int64_t;
 // Macro to check ABI compatibility (same major revision number)
 #define WEBP_ABI_IS_INCOMPATIBLE(a, b) (((a) >> 8) != ((b) >> 8))
 
-#endif  /* WEBP_WEBP_TYPES_H_ */
+#endif  // WEBP_WEBP_TYPES_H_

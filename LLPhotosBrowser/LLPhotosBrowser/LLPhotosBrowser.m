@@ -71,7 +71,7 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     [tap requireGestureRecognizerToFail: tap2];
     [self addGestureRecognizer:tap2];
     
-    UILongPressGestureRecognizer *press = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress)];
+    UILongPressGestureRecognizer *press = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     press.delegate = self;
     [self addGestureRecognizer:press];
     
@@ -177,9 +177,11 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     LLPhotoItem *item = _groupItems[self.currentPage];
     
     if (!item.thumbClippedToTop) {
-        if ([UIView imageCacheWithURL:item.largeImageURL]) {
-            cell.item = item;
-        }
+        [UIView imageCacheWithURL:item.largeImageURL completed:^(UIImage * _Nullable image, NSData * _Nullable data, SDImageCacheType cacheType) {
+            if (image) {
+                cell.item = item;
+            }
+        }];
     }
     if (!cell.item) {
         cell.imageView.image = item.thumbImage;
@@ -528,22 +530,26 @@ static inline CGSize LL_CGSizePixelCeil(CGSize size) {
     }
 }
 
-- (void)longPress {
+- (void)longPress:(UIGestureRecognizer *)gestureRecognizer {
     if (!_isPresented) return;
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        LLPhotoView *tile = [self cellForPage:self.currentPage];
+           if (!tile.imageView.image) return;
+           id imageItem = tile.imageView.image;
+           UIActivityViewController *activityViewController =
+           [[UIActivityViewController alloc] initWithActivityItems:@[imageItem] applicationActivities:nil];
+           if ([activityViewController respondsToSelector:@selector(popoverPresentationController)]) {
+               activityViewController.popoverPresentationController.sourceView = self;
+           }
 
-    LLPhotoView *tile = [self cellForPage:self.currentPage];
-    if (!tile.imageView.image) return;
-    id imageItem = tile.imageView.image;
-    UIActivityViewController *activityViewController =
-    [[UIActivityViewController alloc] initWithActivityItems:@[imageItem] applicationActivities:nil];
-    if ([activityViewController respondsToSelector:@selector(popoverPresentationController)]) {
-        activityViewController.popoverPresentationController.sourceView = self;
+           UIViewController *toVC = self.toContainerView.ll_viewController;
+           if (!toVC) toVC = self.ll_viewController;
+           if (!toVC) toVC = [LLPhotosBrowser findBestViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
+           activityViewController.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
+               
+           };
+           [toVC presentViewController:activityViewController animated:YES completion:nil];
     }
-
-    UIViewController *toVC = self.toContainerView.ll_viewController;
-    if (!toVC) toVC = self.ll_viewController;
-    if (!toVC) toVC = [LLPhotosBrowser findBestViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
-    [toVC presentViewController:activityViewController animated:YES completion:nil];
 }
 
 - (void)pan:(UIPanGestureRecognizer *)g {

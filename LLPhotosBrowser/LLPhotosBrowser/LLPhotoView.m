@@ -26,7 +26,7 @@
     _imageContainerView.clipsToBounds = YES;
     [self addSubview:_imageContainerView];
     
-    _imageView = [FLAnimatedImageView new];
+    _imageView = [UIImageView new];
     _imageView.clipsToBounds = YES;
     _imageView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.500];
     [_imageContainerView addSubview:_imageView];
