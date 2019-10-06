@@ -42,7 +42,31 @@
                 completion:(SDExternalCompletionBlock)completion{
     if ([self isKindOfClass:[UIImageView class]]) {
         UIImageView *imageView = (UIImageView *)self;
-        [imageView sd_setImageWithURL:imageURL placeholderImage:placeholder options:options progress:progressBlock completed:completion];
+        [imageView sd_setImageWithURL:imageURL placeholderImage:placeholder options:options progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            if ([NSThread isMainThread]) {
+                if (progressBlock) {
+                    progressBlock(receivedSize,expectedSize,targetURL);
+                }
+            }else{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (progressBlock) {
+                        progressBlock(receivedSize,expectedSize,targetURL);
+                    }
+                });
+            }
+        } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            if ([NSThread isMainThread]) {
+                if (completion) {
+                    completion(image,error,cacheType,imageURL);
+                }
+            }else{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (completion) {
+                        completion(image,error,cacheType,imageURL);
+                    }
+                });
+            }
+        }];
     }else if ([self isKindOfClass:[UIButton class]]){
         UIButton *button = (UIButton *)self;
         [button sd_setImageWithURL:imageURL forState:UIControlStateNormal placeholderImage:placeholder options:options completed:completion];
@@ -58,7 +82,31 @@
 + (void)ll_downloadImageWithURL:(NSURL *)imageURL
                        progress:(SDImageLoaderProgressBlock)progressBlock
                       completed:(SDInternalCompletionBlock)completedBlock;{
-    [[SDWebImageManager sharedManager] loadImageWithURL:imageURL options:SDWebImageRetryFailed progress:progressBlock completed:completedBlock];
+    [[SDWebImageManager sharedManager] loadImageWithURL:imageURL options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        if ([NSThread isMainThread]) {
+            if (progressBlock) {
+                progressBlock(receivedSize,expectedSize,targetURL);
+            }
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (progressBlock) {
+                    progressBlock(receivedSize,expectedSize,targetURL);
+                }
+            });
+        }
+    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        if ([NSThread isMainThread]) {
+            if (completedBlock) {
+                completedBlock(image,data,error,cacheType,finished,imageURL);
+            }
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completedBlock) {
+                    completedBlock(image,data,error,cacheType,finished,imageURL);
+                }
+            });
+        }
+    }];
 }
 
 - (void)ll_cancelCurrentImageLoad{

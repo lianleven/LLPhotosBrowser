@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSArray <LLPhotoItem *>*groupItems;
 @property (nonatomic, readonly) NSInteger currentPage;
 @property (nonatomic, strong, readonly) LLPageControl *pager;
-@property (nonatomic, copy) void(^dismissCompletionBlock)(void);
+@property (nonatomic, copy) void(^_Nullable dismissCompletionBlock)(void);
 
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

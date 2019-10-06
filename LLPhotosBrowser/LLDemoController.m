@@ -203,6 +203,17 @@ typedef void(^LLDemoControllerCellDidSelectedBlcok)(LLDemoControllerCell *cell);
 - (void)tableView:(UITableView *)tableView didSelectCell:(LLDemoControllerCell *)cell{
     UIView *fromView = cell.webImageView;
     NSMutableArray *items = [NSMutableArray new];
+    [UIView removeAllCacheImage];
+    _imageLinks = @[@"http://www.vanabali.com/Upload/20190415/1555306123444903.jpg?x-oss-process=image/resize,m_fill,w_180,h_270",
+                    @"https://img.wowoqq.com/allimg/171130/1-1G1300I102-52.jpg",
+                    @"https://cdn.pixabay.com/photo/2019/09/30/16/36/mite-4516249__340.jpg",
+                    @"https://pic.feizl.com/upload/allimg/190430/gxtxq0ugfdqegfk.jpg",
+                    @"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnThQagcpxVLPOtEOH87bnqBwUlFRGA6MIw7jZw9wpntze-h5dTw",
+                    @"https://img-blog.csdnimg.cn/20190301234832808.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly94aXVsaWFuLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70",
+                    @"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD8-R4ZTfe8PGkKRM-gBJng7iTUYgCWqpDJLlVAD1nf70Iw-32",
+                    @"http://www.51pptmoban.com/d/file/2015/11/27/2123f7686d354b4d1b67b99a7f657747.jpg",
+                    @"http://pic1.win4000.com/wallpaper/2019-08-29/5d6748d4f34bd.jpg",
+    ];
     for (NSInteger i = 0,max = _imageLinks.count;i < max;i++) {
         LLDemoControllerCell *ce = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         UIView *view = ce.webImageView;
