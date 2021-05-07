@@ -7,8 +7,8 @@
 //
 
 #import "UIView+LLWebCache.h"
-#import <SDWebImage/SDWebImage.h>
-#import <SDWebImageWebPCoder/SDWebImageWebPCoder.h>
+#import "SDWebImage.h"
+#import "SDWebImageWebPCoder.h"
 #import "UIButton+WebCache.h"
 #import "UIView+WebCache.h"
 #import "NSData+ImageContentType.h"

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 typedef NS_ENUM(NSInteger, LLImageFormat) {
     LLImageFormatUndefined = -1,
