@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "UIView+LLAdd.h"
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
-@import UIKit;
 @interface LLPhotoItem : NSObject
 
 @property (nonatomic, strong) UIView *thumbView; ///< thumb image, used for animation position calculation
